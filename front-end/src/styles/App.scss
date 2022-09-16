@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+body {
+  background-color: $background;
+}
+.app {
+  transition: all 500ms;
+}
+@media screen and (min-width: 1920px) {
+  .app {
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media screen and (min-width: 3072px) {
+  .app {
+    width: 50%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media screen and (min-width: 4000px) {
+  .app {
+    width: 35%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media screen and (min-width: 6000px) {
+  .app {
+    width: 25%;
+    margin: 0 auto 0 auto;
+  }
+}

@@ -1,0 +1,36 @@
+@import url("https://db.onlinewebfonts.com/c/ae238c3ee498c52a23aab0d9f5e94d6b?family=dana-fanum");
+body {
+  overflow-x: hidden;
+  font-family: "dana-FaNum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  font-family: "dana-fanum";
+}
+button,
+input {
+  background-color: transparent;
+  font-family: "dana-fanum";
+}
+
+button {
+  cursor: pointer;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
