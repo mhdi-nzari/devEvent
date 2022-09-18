@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
+import Header from "components/header";
+
 import ArrowOutlineIcon from "../assists/icons/arrow-ouline.svg";
 import InProgressIcon from "../assists/icons/in-progress.svg";
 import CheckIcon from "../assists/icons/check-outline.svg";
@@ -18,6 +20,7 @@ import "../styles/event.scss";
 import SliderWrapper from "components/sliderWrapper";
 import { SwiperSlide } from "swiper/react";
 import MultiEventSlider from "components/multiEventSlider";
+import AnimatedPage from "components/animatedPage";
 
 function Event() {
   const location = useLocation();
@@ -44,160 +47,171 @@ function Event() {
   ];
 
   return (
-    <main className="event">
-      <section className="event__path__container">
-        <Link to={"/"}>خانه</Link>
-        <img src={ArrowOutlineIcon} alt="" />
+    <AnimatedPage>
+      <main className="event">
+        <section className="event__path__container">
+          <Link to={"/"}>خانه</Link>
+          <img src={ArrowOutlineIcon} alt="" />
 
-        <Link to={"/events"}>رویدادها</Link>
-        <img src={ArrowOutlineIcon} alt="" />
+          <Link to={"/events"}>رویدادها</Link>
+          <img src={ArrowOutlineIcon} alt="" />
 
-        <Link to={`/events/${eventName.replaceAll(" ", "-")}`}>رویداد {eventName}</Link>
-      </section>
+          <Link to={`/events/${eventName.replaceAll(" ", "-")}`}>رویداد {eventName}</Link>
+        </section>
 
-      <div className="event__container">
-        <header className="container__header">
-          <img src={InProgressIcon} alt="" />
-          <h2>رویداد {eventName}</h2>
-        </header>
+        <div className="event__container">
+          <Header title={`رویداد ${eventName}`} icon={InProgressIcon} containerClassName="container" />
 
-        <div className="container__content">
-          <section className="content__section">
-            <header className="section__header">
-              <div className="haeder__right">
-                <figure className="right__organizer">
-                  <div className="organizer-logo">
-                    <img src={hamyarLogo} alt="" />
+          <div className="container__content">
+            <section className="content__section">
+              <header className="section__header">
+                <div className="haeder__right">
+                  <figure className="right__organizer">
+                    <div className="organizer__logo">
+                      <img src={hamyarLogo} alt="" />
+                    </div>
+                    <div className="organizer__name">
+                      <h4>برگزار کننده | حامی رویداد</h4>
+                      <figcaption>همیار اکادمی</figcaption>
+                    </div>
+                  </figure>
+                  <figure className="right__title">
+                    <div className="title__image">
+                      <img src={CheckIcon} alt="" />
+                    </div>
+                    <figcaption>بوت کمپ آموزشی همیار وردپرس</figcaption>
+                  </figure>
+                  <div className="right__details">
+                    {details.map((item, index) => (
+                      <figure className="details__item" key={index}>
+                        <div>
+                          <img src={item.icon} alt="" />
+                        </div>
+                        <figcaption>{item.header}</figcaption>
+                      </figure>
+                    ))}
                   </div>
-                  <div className="organizer-name">
-                    <h4>برگزار کننده | حامی رویداد</h4>
-                    <figcaption>همیار اکادمی</figcaption>
-                  </div>
-                </figure>
-                <figure className="right__title">
-                  <div className="title_image">
-                    <img src={CheckIcon} alt="" />
-                  </div>
-                  <figcaption>بوت کمپ آموزشی همیار وردپرس</figcaption>
-                </figure>
-                <div className="right__details">
-                  {details.map((item, index) => (
-                    <figure className="details__item" key={index}>
-                      <div>
-                        <img src={item.icon} alt="" />
-                      </div>
-                      <figcaption>{item.header}</figcaption>
-                    </figure>
-                  ))}
+                  <a href="" target={"_blank"} rel="noreferrer">
+                    <button>ثبت نام زود هنگام</button>
+                  </a>
                 </div>
-                <a href="" target={"_blank"} rel="noreferrer">
-                  <button>ثبت نام زود هنگام</button>
+                <figure className="header__left">
+                  <SliderWrapper direction="vertical" pagination>
+                    <SwiperSlide>
+                      <img src={hamyarSpace} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={hamyarSpace} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={hamyarSpace} alt="" />
+                    </SwiperSlide>
+                  </SliderWrapper>
+                </figure>
+              </header>
+              <div className="section__dscr">
+                <h6>توضیحات</h6>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها
+                  و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                  آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+                  ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که
+                  تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                  دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+              </div>
+            </section>
+            <aside className="event__sidebar">
+              <header className="sidebar__header">
+                <div className="header__icon-title">
+                  <div className="header__icon">
+                    <img src={CheckIcon} alt="" className="checkIcon" />
+                  </div>
+                  <span>رویداد هفته آینده</span>
+                </div>
+                <Link to={"/events"}>
+                  <button>مشاهده همه</button>
+                </Link>
+              </header>
+              <div className="event__watch">
+                <img src={hamyarSpace} alt="" />
+                <a href="https://google.com" target={"_blank"} rel="noreferrer">
+                  <button>
+                    <img src={RedirectIcon} alt="" />
+                    <span>مشاهده رویداد</span>
+                  </button>
                 </a>
               </div>
-              <figure className="header__left">
-                <SliderWrapper direction="vertical" pagination>
-                  <SwiperSlide>
+              <header className="sidebar__header second">
+                <div className="header__icon-title">
+                  <div className="header__icon">
+                    <img src={MoreIcon} alt="" />
+                  </div>
+                  <h2>رویداد هفته آینده</h2>
+                </div>
+                <Link to={"/events"}>
+                  <button>مشاهده همه</button>
+                </Link>
+              </header>
+              <div className="sidebar__more-events">
+                <div className="more-events__event">
+                  <div className="event__image">
                     <img src={hamyarSpace} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide>
+                  </div>
+                  <div className="event__content">
+                    <h6>رویداد Skillup Quera</h6>
+                    <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
+                  </div>
+                  <Link to={`/events/${"Skillup Quera".replaceAll(" ", "-")}`}>
+                    <button>
+                      <img src={LineArrow} alt="" />
+                    </button>
+                  </Link>
+                </div>
+                <div className="more-events__event">
+                  <div className="event__image">
                     <img src={hamyarSpace} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide>
+                  </div>
+                  <div className="event__content">
+                    <h6>رویداد Skillup Quera</h6>
+                    <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
+                  </div>
+                  <Link to={`/events/${"Skillup Quera".replaceAll(" ", "-")}`}>
+                    <button>
+                      <img src={LineArrow} alt="" />
+                    </button>
+                  </Link>
+                </div>
+                <div className="more-events__event">
+                  <div className="event__image">
                     <img src={hamyarSpace} alt="" />
-                  </SwiperSlide>
-                </SliderWrapper>
-              </figure>
-            </header>
-            <div className="section__dscr">
-              <h6>توضیحات</h6>
-              <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
-                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
-                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
-                شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
-                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
-                اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-              </p>
-            </div>
-          </section>
-          <aside className="event__sidebar">
-            <header className="sidebar__header">
-              <div className="header__icon-title">
-                <div className="header__icon">
-                  <img src={CheckIcon} alt="" className="checkIcon" />
+                  </div>
+                  <div className="event__content">
+                    <h6>رویداد Skillup Quera</h6>
+                    <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
+                  </div>
+                  <Link to={`/events/${"Skillup Quera".replaceAll(" ", "-")}`}>
+                    <button>
+                      <img src={LineArrow} alt="" />
+                    </button>
+                  </Link>
                 </div>
-                <span>رویداد هفته آینده</span>
               </div>
-              <button>مشاهده همه</button>
-            </header>
-            <div className="event__watch">
-              <img src={hamyarSpace} alt="" />
-              <button>
-                <img src={RedirectIcon} alt="" />
-                <span>مشاهده رویداد</span>
-              </button>
-            </div>
-            <header className="sidebar__header second">
-              <div className="header__icon-title">
-                <div className="header__icon">
-                  <img src={MoreIcon} alt="" />
-                </div>
-                <h2>رویداد هفته آینده</h2>
-              </div>
-              <button>مشاهده همه</button>
-            </header>
-            <div className="sidebar__more-events">
-              <div className="more-events__event">
-                <div className="event__image">
-                  <img src={hamyarSpace} alt="" />
-                </div>
-                <div className="event__content">
-                  <h6>رویداد Skillup Quera</h6>
-                  <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
-                </div>
-                <button>
-                  <img src={LineArrow} alt="" />
-                </button>
-              </div>
-              <div className="more-events__event">
-                <div className="event__image">
-                  <img src={hamyarSpace} alt="" />
-                </div>
-                <div className="event__content">
-                  <h6>رویداد Skillup Quera</h6>
-                  <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
-                </div>
-                <button>
-                  <img src={LineArrow} alt="" />
-                </button>
-              </div>
-              <div className="more-events__event">
-                <div className="event__image">
-                  <img src={hamyarSpace} alt="" />
-                </div>
-                <div className="event__content">
-                  <h6>رویداد Skillup Quera</h6>
-                  <p>این رویداد توسط مرجع رسمی آموزشی کشور یعنی کوئرا برگذار شده که مدرک آن به تمامی شرکت کنند ...</p>
-                </div>
-                <button>
-                  <img src={LineArrow} alt="" />
-                </button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-
-      <section className="event__events">
-        <div className="events__header">
-          <img src={ChartIcon} alt="" />
-          <h2>رویداد های دیگر ....</h2>
+            </aside>
+          </div>
         </div>
 
-        <MultiEventSlider />
-      </section>
-    </main>
+        <section className="event__events">
+          <div className="events__header">
+            <img src={ChartIcon} alt="" />
+            <h2>رویداد های دیگر ....</h2>
+          </div>
+
+          <MultiEventSlider />
+        </section>
+      </main>
+    </AnimatedPage>
   );
 }
 

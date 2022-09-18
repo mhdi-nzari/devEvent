@@ -16,6 +16,10 @@
       width: 0.35rem;
     }
     a {
+      transition: all 1s;
+      &:hover {
+        color: $lighterHeader;
+      }
       &:last-child {
         color: $purpleColor;
       }
@@ -75,7 +79,7 @@
               font-size: 1rem;
               color: $pathnameColor;
             }
-            h3 {
+            figcaption {
               font-size: 1.1rem;
               color: $mainHeader;
             }
@@ -95,7 +99,7 @@
               width: 1.35rem;
             }
           }
-          h2 {
+          figcaption {
             font-weight: 600;
             font-size: 1.25rem;
             color: $lighterHeader;

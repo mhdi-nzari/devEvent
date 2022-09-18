@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import HomeLayout from "pages/home";
+import AnimatedPage from "components/animatedPage";
 
 import Navbar from "components/navbar";
 import Events from "pages/events";
@@ -16,19 +17,21 @@ function App() {
         <Navbar />
         <h1 hidden>Dev Events Farsi</h1>
       </header>
-      
+
       <div className="app">
-        <Routes>
-          <Route path="/">
-            <Route index element={<HomeLayout />} />
-          </Route>
-          <Route path="/events">
-            <Route index element={<Events />} />
-            <Route path=":event" element={<Event />} />
-          </Route>
-          <Route path="/timetable" element={<HomeLayout />} />
-          <Route path="/about" element={<HomeLayout />} />
-        </Routes>
+        <AnimatedPage>
+          <Routes>
+            <Route path="/">
+              <Route index element={<HomeLayout />} />
+            </Route>
+            <Route path="/events">
+              <Route index element={<Events />} />
+              <Route path=":event" element={<Event />} />
+            </Route>
+            <Route path="/timetable" element={<HomeLayout />} />
+            <Route path="/about" element={<HomeLayout />} />
+          </Routes>
+        </AnimatedPage>
       </div>
       <Footer />
     </div>

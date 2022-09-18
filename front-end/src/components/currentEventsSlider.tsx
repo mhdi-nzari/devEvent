@@ -10,6 +10,7 @@ import ClockImage from "../assists/icons/clock.svg";
 
 import EventSpaceImage from "../assists/event-image.png";
 import EventImage from "../assists/dev-summit.png";
+import { Link } from "react-router-dom";
 
 function CurrentEventsSlider() {
   const text =
@@ -69,7 +70,9 @@ function CurrentEventsSlider() {
             </div>
             <div className="buttons-container">
               <button className="buttons__capacity btn disabled">ظرفیت ثبت نام تکمیل</button>
-              <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              <Link to={`/events/${"Dev Summit"}`}>
+                <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -126,7 +129,9 @@ function CurrentEventsSlider() {
             </div>
             <div className="buttons-container">
               <button className="buttons__capacity btn disabled">ظرفیت ثبت نام تکمیل</button>
-              <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              <Link to={`/events/${"Dev Summit"}`}>
+                <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -183,7 +188,9 @@ function CurrentEventsSlider() {
             </div>
             <div className="buttons-container">
               <button className="buttons__capacity btn disabled">ظرفیت ثبت نام تکمیل</button>
-              <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              <Link to={`/events/${"Dev Summit"}`}>
+                <button className="buttons__see-details btn third">مشاهده جزئیات</button>
+              </Link>
             </div>
           </div>
         </div>
