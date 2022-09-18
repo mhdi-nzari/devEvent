@@ -5,31 +5,31 @@ import "../styles/footer.scss";
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="main-container">
-        <div className="call-container">
+    <footer>
+      <div className="footer__container">
+        <div className="footer__container__call-us">
           <span>تماس</span>
-          <div className="call-image-container">
+          <a href="https://google.com" target={"_blank"} rel="noreferrer">
             <img src={callIcon} alt="" />
-          </div>
-          <div className="call-image-container">
+          </a>
+          <a href="https://google.com" target={"_blank"} rel="noreferrer">
             <img src={callIcon} alt="" />
-          </div>
+          </a>
         </div>
-        <div className="info">
-          <div className="name--logo">
+        <figure className="footer__container__info">
+          <div className="info__name-logo">
             <img src={webIcon} alt="" />
-            <span>رویداد</span>
+            <figcaption>رویداد</figcaption>
           </div>
           <p>تمامی حقوق مادی و معنوی برای این وبسایت محفوظ است. ©1400</p>
-        </div>
-        <div className="links">
+        </figure>
+        <div className="footer__container__links">
           <a>درباره</a>
           <a>قوانین</a>
           <a>خط مشی</a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

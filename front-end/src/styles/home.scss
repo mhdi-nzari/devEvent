@@ -1,11 +1,11 @@
 @import "./variables.scss";
 
-.home-container {
-  padding: 9rem 1rem 0 1rem;
+.home {
+  padding: 15rem 1rem 0 1rem;
   &::before {
     content: "";
     position: absolute;
-    inset: 10.25rem auto auto -17%;
+    inset: 7.25rem auto auto -17%;
     transform: rotate(53.18deg);
     height: 17rem;
     width: 18rem;
@@ -14,487 +14,581 @@
     opacity: 0.5;
     outline: $outlineColor solid 0.5rem;
   }
-}
-.new-one-container {
-  @include flex(center);
-  position: relative;
-  padding: 0 2.2rem 0 1rem;
-  background-color: $lightestBackground;
-  height: 2rem;
-  width: fit-content;
-  border-radius: 1rem;
-  column-gap: 1rem;
-  span {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: $lighterHeader;
-    &.new-header {
-      margin-right: 0.25rem;
-      font-size: 1rem;
-      font-weight: 700;
-      color: $greenColor;
-    }
-    &.dot {
-      position: absolute;
-      inset: 50% 0.8rem auto auto;
-      transform: translateY(-50%);
-      height: 1rem;
-      width: 1rem;
-      border-radius: 100%;
-      background-color: $greenColor;
-      outline: $lightGreenColor solid 3px;
-    }
-  }
-}
-.in-progress-events {
-  margin: 2rem auto 5rem auto;
-  .header {
+  &__new-event {
     @include flex(center);
-    column-gap: 1rem;
-    img {
-      width: 2.2rem;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: $lighterHeader;
-    }
-  }
-  .main-container {
-    @include flex(center, space-between);
-    margin-top: 2rem;
-    height: 30rem;
-    img.event-space-image {
-      width: 70%;
-      height: 100%;
-      border-radius: 2rem;
-    }
-  }
-  .information-container {
-    width: 26.5rem;
-    height: 100%;
-    background: $darkBackground;
-    border-radius: 2rem;
+    padding: 0 2.2rem 0 1rem;
     position: relative;
-    @include flex(center, flex-start, column);
-    .header {
-      @include flex(flex-start, center, column);
-      position: absolute;
-      inset: 0.75rem auto 0 auto;
-      padding: 0 2.5rem;
-      width: 95%;
-      height: 51%;
-      background: url("../assists/orange-box.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      img.event-image {
-        width: 3rem;
-        height: 3rem;
+    height: 2rem;
+    width: fit-content;
+    column-gap: 1rem;
+    border-radius: 1rem;
+    background-color: $lightestBackground;
+    span {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: $lighterHeader;
+      &.new-event__icon {
+        position: absolute;
+        inset: 50% 0.8rem auto auto;
+        transform: translateY(-50%);
+        height: 1rem;
+        width: 1rem;
         border-radius: 100%;
-        outline: $lighterBackgrond solid 4px;
+        background-color: $greenColor;
+        animation: pulse 1500ms infinite;
       }
-      h3 {
-        margin-top: 1rem;
-        width: 75%;
-        height: 1.7rem;
-        overflow: hidden;
-        font-size: 1.25rem;
-        color: $lighterBackgrond;
-      }
-      p {
-        margin-top: 0.4rem;
-        width: 75%;
-        font-size: 0.8rem;
-        line-height: 175%;
-        color: $lightestBackground;
-      }
-      .top-container {
-        @include flex(center, space-between);
-        position: absolute;
-        inset: 0 auto auto 10%;
-        height: 1.5rem;
-        width: 8rem;
-        .timer-container {
-          @include flex(center);
-          padding: 0 0.5rem;
-          height: 100%;
-          width: fit-content;
-          column-gap: 0.5rem;
-          border-radius: 0 0 0.5rem 0.5rem;
-          background-color: $lighterBackgrond;
-          img {
-            width: 1rem;
-          }
-          span {
-            font-size: 0.8rem;
-            margin-top: 0.1rem;
-          }
-        }
-        .ticket-container {
-          @include center;
-          height: 100%;
-          width: 1.5rem;
-          border-radius: 0 0 0.5rem 0.5rem;
-          background-color: $lighterBackgrond;
-          img {
-            width: 95%;
-          }
-        }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 10% auto auto 2.5%;
-        width: 45%;
-        height: 80%;
-        background: url("../assists/star-overlay.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
-    .details-container {
-      @include flex(flex-start, space-between);
-      flex-wrap: wrap;
-      position: relative;
-      top: 55.5%;
-      width: 95%;
-      height: 9.75rem;
-      .detail {
-        @include flex(center);
-        height: 2.75rem;
-        width: 50%;
-        column-gap: 0.5rem;
-        overflow: hidden;
-        &:first-child {
-          width: 100%;
-        }
-        &:nth-child(2) {
-          width: 40%;
-        }
-        &:nth-child(3) {
-          justify-content: flex-end;
-          width: 60%;
-        }
-        .image-contianer {
-          @include center;
-          height: 2.5rem;
-          width: 2.5rem;
-          border-radius: 100%;
-          background-color: $outlineColor;
-          img {
-            width: 1.1rem;
-          }
-        }
-        span {
-          color: $outlineColor;
-          font-size: 0.9rem;
-          font-weight: 400;
-        }
-      }
-    }
-    .buttons-container {
-      @include flex(center, space-between);
-      position: absolute;
-      inset: auto 2.5% 4% 2.5%;
-      width: 95%;
-      height: 2.25rem;
-      button {
-        height: 100%;
-        width: 37.5%;
-        border-radius: 0.5rem;
-        &:first-child {
-          font-weight: 700;
-          font-size: 0.7rem;
-          color: $lighterBackgrond;
-          border: 2px dashed $redColor;
-          background-color: #ff4e4e10;
-        }
-        &:last-child {
-          @include customizeButton($orangeColor, $lighterBackgrond);
-          font-weight: 900;
-          color: $purpleColor;
-        }
+      &.new-event__title {
+        margin-right: 0.25rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: $greenColor;
       }
     }
   }
-}
-.supporters {
-  margin: 2rem auto 5rem auto;
-  .header {
-    @include flex(center);
-    column-gap: 1rem;
-    img {
-      width: 2.2rem;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: $lighterHeader;
-    }
+  &__current-events {
+    margin: 0 auto 5rem auto;
   }
-  .supporters-images-container {
-    @include flex(center, space-between);
-    margin-top: 5rem;
-    width: 100%;
-    img {
-      height: 4rem;
-    }
-  }
-}
-.current-events {
-  margin: 10rem auto 5rem auto;
-  .header {
-    @include flex(center);
-    column-gap: 1rem;
-    img {
-      width: 2.2rem;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: $lighterHeader;
-    }
-  }
-  .current-events-container {
+  .current-events {
     margin-top: 2rem;
-    margin: 2rem auto 0 auto;
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem calc((100% - (3 * 26rem)) / 2);
-    .current-event-container {
-      width: 26rem;
-      height: 28rem;
-      box-shadow: $boxShadow;
-      background-color: $lighterBackgrond;
-      border-radius: 1.25rem 1.25rem 0.5rem 0.5rem;
-      .header {
-        margin: 1rem auto 0 auto;
+    &__header {
+      @include flex(center);
+      column-gap: 1rem;
+      img {
+        width: 2.2rem;
+      }
+      h2 {
         position: relative;
-        width: 95%;
-        height: 15rem;
-        .current-event-image {
-          position: absolute;
-          top: 0;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+      }
+      &::after {
+        content: "...";
+        position: relative;
+        inset: auto auto -0.05rem 0.75rem;
+        font-weight: 600;
+        font-size: 1.45rem;
+        color: $lighterHeader;
+        animation: three-dots 1.5s infinite;
+      }
+    }
+    .swiper {
+      @include flex(center, space-between);
+      margin-top: 2rem;
+      width: 100%;
+      height: 30rem;
+      transition: all 1s;
+      .swiper-pagination-bullet {
+        width: 0.8rem !important;
+        height: 0.8rem !important;
+        background-color: $lighterBackground !important;
+        opacity: 1 !important;
+      }
+      .swiper-pagination-bullet-active {
+        height: 2.5rem !important;
+        background-color: $purpleColor !important;
+        border-radius: 0.5rem !important;
+      }
+    }
+    &__container {
+      @include flex(center, space-between);
+      height: 30rem;
+      .swiper-slide {
+        @include flex(center, space-between);
+      }
+      &__image {
+        width: 70%;
+        height: 100%;
+        border-radius: 2rem;
+        overflow: hidden;
+        img {
           width: 100%;
-          height: 12.25rem;
-        }
-        .event-image {
-          position: absolute;
-          inset: 10.75rem 3.9rem auto auto;
-          width: 3.5rem;
-          height: 3.5rem;
-          border-radius: 100%;
-        }
-        .timer-container {
-          @include flex(center);
-          position: absolute;
-          inset: 5% auto auto 5%;
-          height: 1.5rem;
-          width: fit-content;
-          padding: 0 0.5rem;
-          column-gap: 0.5rem;
-          border-radius: 0px 0.6rem 0.6rem 0.6rem;
-          background-color: $lighterBackgrond;
-          img {
-            width: 1rem;
+          height: 100%;
+          transition: transform 2s ease-out;
+          &:hover {
+            transform: scale(1.1);
           }
-          span {
+        }
+      }
+      &__content {
+        @include flex(center, flex-start, column);
+        position: relative;
+        height: 100%;
+        width: 26.5rem;
+        border-radius: 2rem;
+        background: $darkBackground;
+        .content__header {
+          @include flex(flex-start, center, column);
+          position: absolute;
+          inset: 0.75rem auto 0 auto;
+          padding: 0 2.5rem;
+          width: 95%;
+          height: 51%;
+          background: url("../assists/orange-box.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          &__image {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            outline: $lighterBackground solid 4px;
+          }
+          figcaption {
+            margin-top: 1rem;
+            width: 75%;
+            height: 1.7rem;
+            overflow: hidden;
+            font-size: 1.25rem;
+            color: $lighterBackground;
+          }
+          summary {
+            margin-top: 0.4rem;
+            width: 75%;
             font-size: 0.8rem;
-            margin-top: 0.1rem;
+            line-height: 175%;
+            color: $lightestBackground;
           }
-        }
-        .location--rate-container {
-          @include center;
-          position: absolute;
-          inset: -1rem auto auto -0.5rem;
-          height: 105%;
-          width: 105%;
-          z-index: 1;
-          backdrop-filter: blur(7px);
-          border-radius: 1.25rem;
-          button {
-            @include flex(center, center);
-            position: relative;
-            border: none;
-            column-gap: 1rem;
-            backdrop-filter: blur(25px);
-            background: rgba(136, 136, 136, 0.4);
-            &.see-location {
-              width: 10.5rem;
-              height: 2.25rem;
-              border-radius: 1rem;
-              span {
-                font-size: 0.85rem;
-                font-weight: 600;
-                color: $lighterBackgrond;
-              }
-              img {
-                width: 1.4rem;
-              }
-            }
-          }
-          .rate-container {
+          .top-container {
             @include flex(center, space-between);
             position: absolute;
-            inset: 1.5rem 5% auto 0;
-            width: 90%;
-            .rate {
-              @include flex(center, center);
-              padding: 0.5rem;
-              height: 2.25rem;
+            inset: 0 auto auto 10%;
+            height: 1.5rem;
+            width: 8.5rem;
+            &__timer {
+              @include flex(center);
+              padding: 0 0.5rem;
+              height: 100%;
+              width: fit-content;
               column-gap: 0.5rem;
-              border-radius: 1.25rem;
-              color: $lighterBackgrond;
-              backdrop-filter: blur(25px);
-              background: rgba(161, 161, 161, 0.6);
+              border-radius: 0 0 0.5rem 0.5rem;
+              background-color: $lighterBackground;
               img {
-                width: 1.5rem;
+                width: 1rem;
+              }
+              time {
+                font-size: 0.8rem;
+                margin-top: 0.1rem;
               }
             }
-            .like {
+            &__ticket {
               @include center;
-              padding: 0.5rem;
-              height: 2.5rem;
-              column-gap: 0.5rem;
-              border-radius: 1.25rem;
-              color: $lighterBackgrond;
-              backdrop-filter: blur(25px);
-              background: rgba(161, 161, 161, 0.25);
+              height: 100%;
+              width: 1.5rem;
+              border-radius: 0 0 0.5rem 0.5rem;
+              background-color: $lighterBackground;
               img {
-                width: 1.5rem;
+                width: 95%;
+              }
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 10% auto auto 2.5%;
+            width: 45%;
+            height: 80%;
+            background: url("../assists/star-overlay.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        .content__list {
+          @include flex(flex-start, space-between);
+          flex-wrap: wrap;
+          position: relative;
+          top: 55.5%;
+          width: 95%;
+          height: 9.75rem;
+          .list__item {
+            @include flex(center);
+            height: 2.75rem;
+            width: 50%;
+            column-gap: 0.5rem;
+            overflow: hidden;
+            &:first-child {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              width: 40%;
+            }
+            &:nth-child(3) {
+              justify-content: flex-end;
+              width: 60%;
+            }
+            .item__image {
+              @include center;
+              height: 2.5rem;
+              width: 2.5rem;
+              border-radius: 100%;
+              background-color: $outlineColor;
+              img {
+                width: 1.1rem;
+              }
+            }
+            span {
+              color: $outlineColor;
+              font-size: 0.9rem;
+              font-weight: 400;
+            }
+          }
+        }
+        .buttons-container {
+          @include flex(center, space-between);
+          position: absolute;
+          inset: auto 2.5% 4% 2.5%;
+          width: 95%;
+          height: 2.25rem;
+          button {
+            height: 100%;
+            width: 37.5%;
+            border-radius: 0.5rem;
+            &.buttons__see-details {
+              font-weight: 900;
+              color: $purpleColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__supporters {
+    margin: 2rem auto 5rem auto;
+    .supporters__header {
+      @include flex(center);
+      column-gap: 1rem;
+      img {
+        width: 2.2rem;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+      }
+    }
+    .supporters__list {
+      @include flex(center, space-between);
+      margin-top: 5rem;
+      width: 100%;
+      img {
+        height: 4rem;
+      }
+    }
+  }
+  &__events {
+    margin: 10rem auto 5rem auto;
+    .events__header {
+      @include flex(center);
+      column-gap: 1rem;
+      img {
+        width: 2.2rem;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+      }
+    }
+    .swiper {
+      @include flex(center, space-between);
+      width: 100%;
+      height: 100%;
+      height: 30rem;
+    }
+    .events__container {
+      margin-top: 2rem;
+      margin: 2rem auto 0 auto;
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem calc((100% - (3 * 26rem)) / 2);
+      .events__container__content {
+        width: 26rem;
+        height: 28rem;
+        box-shadow: $boxShadow;
+        background-color: $lighterBackground;
+        border-radius: 1.25rem 1.25rem 0.5rem 0.5rem;
+        .content__header {
+          margin: 1rem auto 0 auto;
+          position: relative;
+          width: 95%;
+          height: 15rem;
+          transition: all 500ms ease-out;
+          .header-image {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 12.25rem;
+          }
+          .header-logo {
+            position: absolute;
+            inset: 10.75rem 3.9rem auto auto;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 100%;
+          }
+          .header-timer {
+            @include flex(center);
+            position: absolute;
+            inset: 5% auto auto 5%;
+            height: 1.5rem;
+            width: fit-content;
+            padding: 0 0.5rem;
+            column-gap: 0.5rem;
+            border-radius: 0px 0.6rem 0.6rem 0.6rem;
+            background-color: $lighterBackground;
+            img {
+              width: 1rem;
+            }
+            time {
+              font-size: 0.8rem;
+              margin-top: 0.1rem;
+            }
+          }
+          &:hover .header-hover {
+            opacity: 1;
+            backdrop-filter: blur(7px);
+            transition: all 500ms ease-out;
+          }
+          .header-hover {
+            @include center;
+            position: absolute;
+            inset: -1rem auto auto -0.5rem;
+            height: 105%;
+            width: 105%;
+            z-index: 1;
+            opacity: 0;
+            backdrop-filter: blur(0);
+            border-radius: 1.25rem;
+            transition: all 500ms ease-out;
+            button {
+              @include flex(center, center);
+              position: relative;
+              border: none;
+              column-gap: 1rem;
+              backdrop-filter: blur(25px);
+              background: rgba(136, 136, 136, 0.4);
+              &.see-location {
+                width: 10.5rem;
+                height: 2.25rem;
+                border-radius: 1rem;
+                a {
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  color: $lighterBackground;
+                }
+                img {
+                  width: 1.4rem;
+                }
+              }
+            }
+            &__rate {
+              @include flex(center, space-between);
+              position: absolute;
+              inset: 1.5rem 5% auto 0;
+              width: 90%;
+              &__caption {
+                @include flex(center, center);
+                padding: 0.5rem;
+                height: 2.25rem;
+                column-gap: 0.5rem;
+                border-radius: 1.25rem;
+                color: $lighterBackground;
+                backdrop-filter: blur(25px);
+                background: rgba(161, 161, 161, 0.6);
+                img {
+                  width: 1.5rem;
+                }
+              }
+              &__like {
+                @include center;
+                padding: 0.5rem;
+                height: 2.5rem;
+                column-gap: 0.5rem;
+                border-radius: 1.25rem;
+                color: $lighterBackground;
+                backdrop-filter: blur(25px);
+                background: rgba(161, 161, 161, 0.25);
+                img {
+                  width: 1.5rem;
+                }
               }
             }
           }
         }
-      }
-      .details {
-        @include flex();
-        flex-wrap: wrap;
-        margin: 1.5rem auto 0 auto;
-        height: 7rem;
-        width: 95%;
-        .detail-container {
-          @include flex(center);
-          height: 2.25rem;
-          column-gap: 0.5rem;
-          .icon-container {
-            @include center;
-            width: 2.25rem;
+        .caption {
+          @include flex();
+          flex-wrap: wrap;
+          margin: 1.5rem auto 0 auto;
+          height: 7rem;
+          width: 95%;
+          &__item {
+            @include flex(center);
             height: 2.25rem;
-            border-radius: 0.5rem;
-            background-color: $overlayBackground;
-            img {
-              height: 1.25rem;
+            column-gap: 0.5rem;
+            &__icon {
+              @include center;
+              width: 2.25rem;
+              height: 2.25rem;
+              border-radius: 0.5rem;
+              background-color: $overlayBackground;
+              img {
+                height: 1.25rem;
+              }
+            }
+            &:nth-child(1) {
+              width: 57.5%;
+            }
+            &:nth-child(2) {
+              width: 42.5%;
+              justify-content: flex-end;
+            }
+            &:nth-child(3) {
+              width: 100%;
             }
           }
-          &:nth-child(1) {
-            width: 57.5%;
-          }
-          &:nth-child(2) {
-            width: 42.5%;
-            justify-content: flex-end;
-          }
-          &:nth-child(3) {
-            width: 100%;
+        }
+        &__button {
+          @include center;
+          button {
+            width: 18rem;
+            height: 2rem;
+            font-weight: 900;
+            font-size: 0.85rem;
+            border-radius: 0.5rem;
           }
         }
       }
-      .details-button-container {
-        @include center;
-        button {
-          @include customizeButton($purpleColor, $orangeColor);
-          width: 18rem;
-          height: 2rem;
+    }
+  }
+  .email-reciever {
+    @include center;
+    background-color: $lighterBackground;
+    box-shadow: $boxShadow;
+    width: 105%;
+    height: 32rem;
+    margin-right: -1.15%;
+    color: $lighterHeader;
+    h5 {
+      font-weight: 800;
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      text-align: center;
+      &.first {
+        width: 66%;
+        line-height: 2.5rem;
+      }
+      &.last {
+        margin-top: 0.75rem;
+      }
+    }
+    &__form {
+      @include flex(center);
+      padding: 0 2rem 0 1rem;
+      margin-top: 3rem;
+      height: 5rem;
+      width: 46rem;
+      border-radius: 4rem;
+      background-color: $lighterHeader;
+      .form__icon {
+        width: 2.25rem;
+      }
+      .form__input {
+        margin: 0 3rem 0 1rem;
+        position: relative;
+        width: 60%;
+        input {
+          width: 100%;
+          outline: none;
+          border: none;
+          font-size: 1.2rem;
+          color: $lighterBackground;
+          &::placeholder {
+            color: #656565;
+            font-size: 1.1rem;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 50% -1.5rem auto auto;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 125%;
+          border-radius: 1rem;
+          background-color: #656565;
+        }
+      }
+      .form__button {
+        @include flex(center, space-between);
+        padding: 0 1.5rem;
+        height: 75%;
+        width: 30%;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        border-radius: 3rem;
+        background-color: $orangeColor;
+        transition: all 1s ease-out;
+        span {
+          color: $lighterBackground;
+          font-size: 1.25rem;
           font-weight: 900;
-          font-size: 0.85rem;
-          border-radius: 0.5rem;
-          color: $lighterBackgrond;
+        }
+        img {
+          width: 2.25rem;
+          transition: all 1s ease-out;
+          transition-delay: 500ms;
+        }
+        &.active {
+          margin-right: 5%;
+          padding-right: 2.75rem;
+          width: 25%;
+          img {
+            margin-left: -4rem;
+            opacity: 0;
+            width: 2.25rem;
+            transition-delay: 0;
+          }
+        }
+        &:hover {
+          img {
+            margin-left: -4rem;
+            opacity: 0;
+            width: 2.25rem;
+          }
         }
       }
     }
   }
 }
-.email-giver {
-  @include center;
-  background-color: $lighterBackgrond;
-  box-shadow: $boxShadow;
-  width: 105%;
-  height: 32rem;
-  margin-right: -1.15%;
-  color: $lighterHeader;
-  h5 {
-    font-weight: 800;
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+
+// animations
+
+@keyframes pulse {
+  0% {
+    box-shadow: $lightGreenColor 0 0 0 0;
   }
-  p {
-    font-size: 1.25rem;
-    text-align: center;
-    &.first {
-      width: 66%;
-      line-height: 2.5rem;
-    }
-    &.last {
-      margin-top: 0.75rem;
-    }
+  80% {
+    box-shadow: $transparentGreenColor 0 0 0 7px;
   }
-  .email-container {
-    @include flex(center);
-    padding: 0 2rem 0 1rem;
-    margin-top: 3rem;
-    height: 5rem;
-    width: 46rem;
-    border-radius: 4rem;
-    background-color: $lighterHeader;
-    .email-icon {
-      width: 2.25rem;
-    }
-    .input-container {
-      margin: 0 3rem 0 1rem;
-      position: relative;
-      width: 60%;
-      input {
-        width: 100%;
-        outline: none;
-        border: none;
-        font-size: 1.2rem;
-        color: $lighterBackgrond;
-        &::placeholder {
-          color: #656565;
-          font-size: 1.1rem;
-        }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 50% -1.5rem auto auto;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 125%;
-        border-radius: 1rem;
-        background-color: #656565;
-      }
-    }
-    button {
-      @include flex(center, space-between);
-      padding: 0 1.5rem;
-      height: 75%;
-      width: 30%;
-      border: none;
-      outline: none;
-      border-radius: 3rem;
-      background-color: $orangeColor;
-      span {
-        color: $lighterBackgrond;
-        font-size: 1.25rem;
-        font-weight: 900;
-      }
-      img {
-        width: 2.25rem;
-      }
-    }
+}
+
+@keyframes three-dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
   }
 }

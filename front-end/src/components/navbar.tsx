@@ -1,7 +1,6 @@
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 
-import { StateContext } from "modules/context";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import websiteIcon from "../assists/icon.svg";
 import avatarIcon from "../assists/icons/avatar-outline.svg";
@@ -11,9 +10,9 @@ import notificationsIcon from "../assists/icons/notification-outline.svg";
 import "../styles/navbar.scss";
 
 function Navbar() {
-  const { newNotifications } = useContext(StateContext);
-
   const location = useLocation();
+
+  const [SearchBar, setSearchBar] = useState(false);
 
   const links = [
     {
@@ -26,41 +25,84 @@ function Navbar() {
     },
   ];
 
+  const searchBarHandler = (e?: any) => {
+    if (SearchBar) {
+      if (e) {
+        e.preventDefault();
+
+        // form submit codes
+      }
+      setSearchBar(false);
+    } else {
+      setSearchBar(true);
+    }
+  };
+
+  useEffect(() => {
+    // this will give us pageYOffset when component mounted
+    var prevScrollpos = window.pageYOffset;
+
+    function onScroll() {
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos >= currentScrollPos) {
+          // surely this could be coded by useState
+          // but this one is more optimzed.
+          document.getElementById("nav")!.style.top = "0";
+          // top 0 is regular navbar top property so it makes  it visiable.
+        } else {
+          document.getElementById("nav")!.style.top = "-100%";
+        }
+        // then preScrollpos will update to current page Y offset
+        // to become ready for next scroll eventListner.
+        prevScrollpos = currentScrollPos;
+      };
+    }
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <div className="navbar">
-      <div className="right-container">
+    <nav className="nav" id="nav">
+      <div className="nav__right">
         <Link to={"/"}>
-          <div className="name--logo-container">
+          <figure className="nav__right__logo">
             <img src={websiteIcon} alt="" />
-            <h2>رویداد</h2>
-          </div>
+            <figcaption>رویداد</figcaption>
+          </figure>
         </Link>
 
-        <ul className="links">
-          <li className={newNotifications ? "new-notification" : ""}>
-            <Link
+        <ul className="nav__right__menu">
+          <li>
+            <NavLink
+              end
               to={"/"}
-              className={
-                "/" === location.pathname || location.pathname.slice(0, 7) === "/events" ? "active" : "disabled"
+              className={({ isActive }) =>
+                isActive ? "active" : location.pathname.slice(0, 7) === "/events" ? "active" : ""
               }
             >
               خانه
-            </Link>
+            </NavLink>
           </li>
-
           {links.map((item, index) => (
             <li>
-              <Link to={item.path} className={item.path === location.pathname ? "active" : ""} key={item.path}>
+              <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} key={item.path}>
                 {item.header}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="left-container">
-        <button>
-          <img src={searchIcon} alt="" />
+      <div className="nav__left">
+        <button className={`nav__left__search ${SearchBar ? "search--active" : ""}`}>
+          <img src={searchIcon} alt="" onClick={searchBarHandler} />
+          <form id="search-form" onSubmit={searchBarHandler}>
+            <input type="text" placeholder="جستجوی رویداد" />
+          </form>
         </button>
         <button className={true ? "notification" : ""}>
           <img src={notificationsIcon} alt="" />
@@ -69,7 +111,7 @@ function Navbar() {
           <img src={avatarIcon} alt="" />
         </button>
       </div>
-    </div>
+    </nav>
   );
 }
 

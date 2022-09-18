@@ -1,19 +1,25 @@
 @import "./variables.scss";
 
-.navbar {
+.nav {
   @include flex(center, space-between);
+  position: fixed;
+  inset: 0 0 auto auto;
   padding: 0 3rem;
   height: 7rem;
+  width: 100%;
+  z-index: 5;
+  transition: all 500ms;
   box-shadow: $boxShadow;
-  background-color: $lighterBackgrond;
+  background-color: $lighterBackground;
   div,
   ul {
     @include flex(center);
   }
-  .right-container {
-    .name--logo-container {
+  &__right {
+    &__logo {
+      @include flex(center);
       column-gap: 1.1rem;
-      h2 {
+      figcaption {
         font-size: 1.25em;
         font-weight: 400;
       }
@@ -30,7 +36,7 @@
         background-color: $SeparatorColor;
       }
     }
-    .links {
+    &__menu {
       margin-right: 4.7rem;
       list-style: none;
       column-gap: 1.8rem;
@@ -42,32 +48,33 @@
           transition: all 500ms;
           &.active {
             color: $mainHeader;
+            &::before {
+              content: "";
+              position: absolute;
+              inset: -0.4rem -0.2rem auto auto;
+              height: 0.4rem;
+              width: 0.4rem;
+              border-radius: 100%;
+              background-color: $darkBlueColor;
+            }
           }
-        }
-        &.new-notification {
-          a::before {
-            content: "";
-            position: absolute;
-            inset: -0.4rem -0.2rem auto auto;
-            height: 0.4rem;
-            width: 0.4rem;
-            opacity: 1;
-            border-radius: 100%;
-            background-color: $darkBlueColor;
+          &:hover {
+            color: $mainHeader;
           }
         }
       }
     }
   }
-  .left-container {
+  &__left {
     column-gap: 0.6rem;
+    width: fit-content;
     button {
       @include center;
       height: 3.25em;
       width: 3.25em;
       border-radius: 10px;
       border: 1px solid $borderColor;
-      transition: all 500s;
+      transition: all 1s;
       img {
         height: 1.5rem;
       }
@@ -77,8 +84,51 @@
         }
       }
       &:first-child {
+        @include flex(center, space-between, row-reverse);
+        padding: 0 0.5rem;
+        transition: all 1s;
+        overflow: hidden;
         img {
           height: 1.4rem;
+          margin-right: 1rem;
+        }
+        form {
+          position: relative;
+          input {
+            margin-left: 0.5rem;
+            width: 11rem;
+            height: 1.4rem;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            line-height: 1.1rem;
+            color: $mainHeader;
+            background-color: transparent;
+            &::placeholder {
+              color: $pathnameColor;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 50% auto auto -0.25rem;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 75%;
+            background-color: $outlineColor;
+          }
+        }
+        &.search--active {
+          width: 15rem;
+          box-shadow: $boxShadow;
+        }
+        &:hover {
+          @extend .search--active;
+        }
+      }
+      &:nth-child(2) {
+        &:hover {
+          animation: wave 750ms infinite;
         }
       }
       &.notification {
@@ -94,5 +144,22 @@
         }
       }
     }
+  }
+}
+@keyframes wave {
+  20% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

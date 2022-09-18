@@ -1,29 +1,31 @@
 @import "./variables.scss";
 
-.footer {
+footer {
+  position: absolute;
+  bottom: 0;
   height: 15rem;
   width: 100%;
   color: $lighterHeader;
   box-shadow: $boxShadow;
   background-color: #494949;
-  .main-container {
+  .footer__container {
     @include flex(center, space-between);
     padding: 0 5rem;
     height: 100%;
     width: 100%;
-    .call-container {
+    &__call-us {
       @include flex();
       margin-top: 2rem;
       width: 25%;
       height: 60%;
-      color: $lighterBackgrond;
+      color: $lighterBackground;
       span {
         margin-left: 3rem;
       }
-      div {
+      a {
         @include center;
         margin-right: 1rem;
-        background-color: $lighterBackgrond;
+        background-color: $lighterBackground;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 100%;
@@ -32,18 +34,18 @@
         }
       }
     }
-    .info {
+    &__info {
       @include center;
       height: 70%;
       row-gap: 1rem;
-      .name--logo {
+      .name-logo {
         @include flex(center);
         column-gap: 1rem;
         img {
           width: 4.25rem;
         }
         span {
-          color: $lighterBackgrond;
+          color: $lighterBackground;
           font-size: 1.75rem;
         }
       }
@@ -53,19 +55,19 @@
         color: #888888;
       }
     }
-    .links {
+    &__links {
       @include flex();
       margin-top: 2rem;
       width: 25%;
       height: 60%;
-      color: $lighterBackgrond;
+      color: $lighterBackground;
       a {
         margin-left: 3rem;
       }
       div {
         @include center;
         margin-right: 1rem;
-        background-color: $lighterBackgrond;
+        background-color: $lighterBackground;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 100%;
@@ -78,28 +80,28 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .footer .main-container {
+  .footer__container {
     width: 82%;
     margin: 0 50% 0 50%;
     transform: translateX(49%);
   }
 }
 @media screen and (min-width: 3072px) {
-  .footer .main-container {
+  .footer__container {
     width: 51.5%;
     margin: 0 50% 0 50%;
     transform: translateX(49%);
   }
 }
 @media screen and (min-width: 4000px) {
-  .footer .main-container {
+  .footer__container {
     width: 36%;
     margin: 0 50% 0 50%;
     transform: translateX(49%);
   }
 }
 @media screen and (min-width: 6000px) {
-  .footer .main-container {
+  .footer__container {
     width: 25.5%;
     margin: 0 50% 0 50%;
     transform: translateX(49%);
