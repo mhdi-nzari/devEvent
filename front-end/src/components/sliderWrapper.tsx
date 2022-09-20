@@ -19,7 +19,7 @@ function SliderWrapper({
       direction={direction}
       autoplay={{
         delay: 3000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }}
       pagination={{
         clickable: true,

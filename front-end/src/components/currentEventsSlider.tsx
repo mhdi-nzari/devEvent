@@ -7,6 +7,7 @@ import CalendarIcon from "../assists/icons/calendar.svg";
 import MealIcon from "../assists/icons/meal.svg";
 import TicketImage from "../assists/icons/ticket.svg";
 import ClockImage from "../assists/icons/clock.svg";
+import OrangeBox from "../assists/orange-box.png";
 
 import EventSpaceImage from "../assists/event-image.png";
 import EventImage from "../assists/dev-summit.png";
@@ -25,6 +26,7 @@ function CurrentEventsSlider() {
           </div>
           <div className="current-events__container__content">
             <figure className="content__header">
+              <img src={OrangeBox} alt="" className="orange-box" />
               <img src={EventImage} alt="" className="content__header__image" />
               <figcaption>رویداد Dev Summit</figcaption>
               <summary>{text.length >= 110 ? text.slice(0, 128) + "..." : text}</summary>
@@ -84,6 +86,7 @@ function CurrentEventsSlider() {
           </div>
           <div className="current-events__container__content">
             <figure className="content__header">
+              <img src={OrangeBox} alt="" className="orange-box" />
               <img src={EventImage} alt="" className="content__header__image" />
               <figcaption>رویداد Dev Summit</figcaption>
               <summary>{text.length >= 110 ? text.slice(0, 128) + "..." : text}</summary>
@@ -143,6 +146,7 @@ function CurrentEventsSlider() {
           </div>
           <div className="current-events__container__content">
             <figure className="content__header">
+              <img src={OrangeBox} alt="" className="orange-box" />
               <img src={EventImage} alt="" className="content__header__image" />
               <figcaption>رویداد Dev Summit</figcaption>
               <summary>{text.length >= 110 ? text.slice(0, 128) + "..." : text}</summary>
