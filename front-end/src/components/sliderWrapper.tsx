@@ -25,6 +25,7 @@ function SliderWrapper({
         clickable: true,
       }}
       modules={pagination ? [Pagination, Autoplay] : [Autoplay]}
+      navigation={true}
       className="mySwiper"
     >
       {children}

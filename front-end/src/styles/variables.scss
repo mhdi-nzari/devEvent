@@ -18,6 +18,12 @@ $outlineColor: #d9d9d9;
 $redColor: #ff4e4e;
 $overlayBackground: #f4f4f4;
 $pathnameColor: #a7a7a7;
+$capacityTitle: #c7c7c7;
+$capacityCount: #494949;
+$lighterOutline: #f1f1f1;
+$commentBackground: #ebebeb;
+$buttonOverlay: #dddddd;
+$commentTextColor: #868686;
 
 @mixin flex($align: flex-start, $justify: flex-start, $direction: row) {
   display: flex;

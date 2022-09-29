@@ -5,7 +5,7 @@ import AnimatedPage from "components/animatedPage";
 
 import Navbar from "components/navbar";
 import Events from "pages/events";
-import Event from "pages/event";
+import Event from "pages/singleEvent";
 import Footer from "components/footer";
 
 import "./styles/App.scss";
@@ -21,9 +21,7 @@ function App() {
       <div className="app">
         <AnimatedPage>
           <Routes>
-            <Route path="/">
-              <Route index element={<HomeLayout />} />
-            </Route>
+            <Route path="/" element={<HomeLayout />} />
             <Route path="/events">
               <Route index element={<Events />} />
               <Route path=":event" element={<Event />} />

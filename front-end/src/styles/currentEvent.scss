@@ -1,0 +1,192 @@
+@import "./variables.scss";
+
+.current-event {
+  margin-top: 2rem;
+  .header__container {
+    &::after {
+      content: "...";
+      position: relative;
+      inset: auto auto -0.05rem 0.75rem;
+      font-weight: 600;
+      font-size: 1.45rem;
+      color: $lighterHeader;
+      animation: three-dots 1.5s infinite;
+    }
+  }
+  &__container {
+    @include flex(center, space-between);
+    margin-top: 2rem;
+    height: 30rem;
+    column-gap: 2rem;
+    .swiper-slide {
+      @include flex(center, space-between);
+    }
+    &__image {
+      width: 65rem;
+      height: 100%;
+      border-radius: 2rem;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: transform 2s ease-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__content {
+      @include flex(center, flex-start, column);
+      position: relative;
+      height: 100%;
+      width: 26.5rem;
+      border-radius: 2rem;
+      background: $darkBackground;
+      .content__header {
+        @include flex(flex-start, center, column);
+        position: absolute;
+        inset: 0.75rem auto 0 auto;
+        padding: 0 2.5rem;
+        width: 95%;
+        height: 51%;
+        z-index: 2;
+        .orange-box {
+          position: absolute;
+          inset: 0 auto auto 0;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+        }
+        &__image {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 100%;
+          outline: $lighterBackground solid 4px;
+        }
+        figcaption {
+          margin-top: 1rem;
+          width: 75%;
+          height: 1.7rem;
+          overflow: hidden;
+          font-size: 1.25rem;
+          color: $lighterBackground;
+        }
+        summary {
+          margin-top: 0.4rem;
+          width: 75%;
+          font-size: 0.8rem;
+          line-height: 175%;
+          color: $lightestBackground;
+        }
+        .top-container {
+          @include flex(center, space-between);
+          position: absolute;
+          inset: 0 auto auto 10%;
+          height: 1.5rem;
+          width: 8.5rem;
+          &__timer {
+            @include flex(center);
+            padding: 0 0.5rem;
+            height: 100%;
+            width: fit-content;
+            column-gap: 0.5rem;
+            border-radius: 0 0 0.5rem 0.5rem;
+            background-color: $lighterBackground;
+            img {
+              width: 1rem;
+            }
+            time {
+              font-size: 0.8rem;
+              margin-top: 0.1rem;
+            }
+          }
+          &__ticket {
+            @include center;
+            height: 100%;
+            width: 1.5rem;
+            border-radius: 0 0 0.5rem 0.5rem;
+            background-color: $lighterBackground;
+            img {
+              width: 95%;
+            }
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 10% auto auto 2.5%;
+          width: 45%;
+          height: 80%;
+          background: url("../assists/star-overlay.png");
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .content__list {
+        @include flex(flex-start, space-between);
+        flex-wrap: wrap;
+        position: relative;
+        top: 55.5%;
+        width: 95%;
+        height: 9.75rem;
+        .list__item {
+          @include flex(center);
+          height: 2.75rem;
+          width: 50%;
+          column-gap: 0.5rem;
+          overflow: hidden;
+          &:first-child {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            width: 40%;
+          }
+          &:nth-child(3) {
+            justify-content: flex-end;
+            width: 60%;
+          }
+          .item__image {
+            @include center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 100%;
+            background-color: $outlineColor;
+            img {
+              width: 1.1rem;
+            }
+          }
+          span {
+            color: $outlineColor;
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+        }
+      }
+      .buttons-container {
+        @include flex(center, space-between);
+        position: absolute;
+        inset: auto 2.5% 4% 2.5%;
+        width: 95%;
+        height: 2.25rem;
+        button {
+          height: 100%;
+          width: 37.5%;
+          border-radius: 0.5rem;
+          font-weight: 900;
+          color: $lighterBackground;
+        }
+        a {
+          height: 100%;
+          width: 37.5%;
+          button {
+            height: 100%;
+            width: 100%;
+            border-radius: 0.5rem;
+            color: $purpleColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "./variables.scss";
+
+.path__container {
+  @include flex(center);
+  padding: 0 1.5rem;
+  height: 4rem;
+  font-size: 1.1em;
+  column-gap: 1.25rem;
+  border-radius: 0.5rem;
+  color: $pathnameColor;
+  box-shadow: $boxShadow;
+  background-color: $lighterBackground;
+  .link {
+    @include flex(center);
+    column-gap: 0.8rem;
+    svg {
+      width: 1.1rem;
+      path {
+        transition: all 1s;
+      }
+      &.link__icon-home {
+        width: 1.2rem;
+      }
+    }
+    &.active {
+      color: $purpleColor;
+      svg {
+        path {
+          fill: $purpleColor;
+        }
+      }
+    }
+    a {
+      transition: all 1s;
+    }
+    &:hover {
+      a {
+        color: $lighterHeader;
+      }
+      svg {
+        path {
+          fill: $lighterHeader;
+        }
+        &.link__icon-home {
+          path {
+            fill: none;
+            stroke: $lighterHeader;
+          }
+        }
+      }
+    }
+  }
+  &__arrow {
+    width: 0.35rem;
+  }
+}

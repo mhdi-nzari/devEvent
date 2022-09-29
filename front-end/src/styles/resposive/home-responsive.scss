@@ -1,0 +1,515 @@
+// @media screen and (max-width: 1396px) {
+//   .home {
+//     &::before {
+//       position: absolute;
+//       inset: 8rem 97% auto auto;
+//       width: 12rem;
+//       height: 11rem;
+//     }
+//     .current-event {
+//       &__container {
+//         row-gap: 1rem;
+//         height: 30rem;
+//         &__image {
+//           width: 75%;
+//           height: 100%;
+//           border-radius: 1rem;
+//           img {
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//         &__content {
+//           height: 100%;
+//           width: 40%;
+//         }
+//       }
+//     }
+//     &__supporters {
+//       .supporters__list {
+//         margin-top: 2.5rem !important;
+//         justify-content: center !important;
+//         flex-wrap: wrap;
+//         gap: 1.5rem;
+//         img {
+//           height: 2.75rem !important;
+//         }
+//       }
+//     }
+//     &__events {
+//       margin: 0 auto 5rem auto;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1024px) {
+//   .home {
+//     .current-event {
+//       .swiper {
+//         @include flex(center, space-between, column);
+//         height: 37.5rem;
+//         width: 25rem;
+//         .swiper-pagination {
+//           transform: translateY(225%);
+//         }
+//         .swiper-pagination-bullet {
+//           width: 0.5rem !important;
+//           height: 0.5rem !important;
+//         }
+//         .swiper-pagination-bullet-active {
+//           height: 1.5rem !important;
+//         }
+//       }
+//       &__container {
+//         @include flex(center, space-between, column-reverse);
+//         row-gap: 1rem;
+//         height: 35rem;
+//         &__image {
+//           width: 25rem;
+//           height: 30%;
+//           border-radius: 1rem;
+//           img {
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//         &__content {
+//           height: 70%;
+//           width: 25rem;
+//           border-radius: 1rem;
+//           .content__header {
+//             padding: 0 1.5rem;
+//             width: 95%;
+//             height: 46%;
+//             &__image {
+//               width: 3rem;
+//               height: 3rem;
+//               outline: $lighterBackground solid 2px;
+//             }
+//             figcaption {
+//               margin-top: 0.5rem;
+//               height: 1.5rem;
+//               font-size: 0.9rem;
+//             }
+//             summary {
+//               width: 85%;
+//               font-size: 0.65rem;
+//             }
+//             .top-container {
+//               height: 1.1rem;
+//               width: 7rem;
+//               &__timer {
+//                 border-radius: 0 0 0.4rem 0.4rem;
+//                 img {
+//                   width: 0.8rem;
+//                 }
+//                 time {
+//                   font-size: 0.7rem;
+//                 }
+//               }
+//               &__ticket {
+//                 width: 1.25rem;
+//                 border-radius: 0 0 0.4rem 0.4rem;
+//                 img {
+//                   width: 75%;
+//                 }
+//               }
+//             }
+//             &::before {
+//               inset: 10% auto auto 7.5%;
+//               width: 35%;
+//             }
+//           }
+//           .content__list {
+//             top: 52.5%;
+//             height: 8.25rem;
+//             .list__item {
+//               height: 2rem;
+//               column-gap: 0.25rem;
+//               .item__image {
+//                 height: 2rem;
+//                 width: 2rem;
+//                 img {
+//                   width: 0.9rem;
+//                 }
+//               }
+//               span {
+//                 font-size: 0.75rem;
+//               }
+//             }
+//           }
+//           .buttons-container {
+//             width: 95%;
+//             top: 88.5%;
+//             height: 2rem;
+//             button {
+//               height: 100%;
+//               width: 7.5rem;
+//               border-radius: 0.5rem;
+//               font-size: 0.55rem;
+//               font-weight: 900;
+//               color: $lighterBackground;
+//             }
+//             a {
+//               height: 90%;
+//               width: 7rem;
+//               button {
+//                 font-size: 0.65rem;
+//                 border-radius: 0.5rem !important;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//     &__supporters {
+//       .supporters__list {
+//         margin-top: 2.5rem !important;
+//         justify-content: center !important;
+//         flex-wrap: wrap;
+//         gap: 1.5rem;
+//         img {
+//           height: 2.75rem !important;
+//         }
+//       }
+//     }
+//     .email-reciever {
+//       h5 {
+//         font-weight: 800;
+//         font-size: 4vw;
+//       }
+//       p {
+//         font-size: 2.5vw;
+//         &.first {
+//           width: 80vw;
+//           line-height: 5vw !important;
+//         }
+//       }
+//       &__form {
+//         @include flex(center);
+//         padding: 0 4vw 0 1.5vw;
+//         height: 9vw;
+//         width: 75vw;
+//         .form__icon {
+//           width: 3.75vw;
+//         }
+//         .form__input {
+//           margin: 0 5vw 0 2vw;
+//           input {
+//             font-size: 2.5vw;
+//             &::placeholder {
+//               font-size: 2vw;
+//             }
+//           }
+//         }
+//         .form__button {
+//           @include flex(center, space-between);
+//           padding: 0 2vw;
+//           height: 75%;
+//           width: 35%;
+//           span {
+//             font-size: 2.25vw;
+//           }
+//           img {
+//             width: 4.25vw;
+//           }
+//           &.active {
+//             padding-right: 3.5vw;
+//             img {
+//               margin-left: -8vw;
+//               width: 4.25vw;
+//             }
+//           }
+//           &:hover {
+//             img {
+//               margin-left: -8vw;
+//               width: 4.25vw;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 910px) {
+//   .events__container {
+//     justify-content: center !important;
+//   }
+// }
+// @media screen and (max-width: 425px) {
+//   .home {
+//     padding: 9rem 1rem 0 1rem;
+//     &::before {
+//       inset: 4rem 99% auto auto;
+//     }
+//     &__new-event {
+//       padding: 0 1.1rem 0 0.5rem;
+//       height: 1.5rem;
+//       span {
+//         font-size: 0.8rem;
+//         &.new-event__icon {
+//           inset: 50% 0.4rem auto auto;
+//           height: 0.85rem;
+//           width: 0.85rem;
+//         }
+//         &.new-event__title {
+//           margin-right: 0.6rem;
+//           font-size: 0.85rem;
+//         }
+//       }
+//     }
+//     .current-event {
+//       &__header {
+//         column-gap: 0.5rem;
+//         img {
+//           width: 1.75rem;
+//         }
+//         h2 {
+//           font-size: 1.1rem;
+//         }
+//         &::after {
+//           inset: auto auto -0.05rem 0.25rem;
+//           font-size: 1.1rem;
+//         }
+//       }
+//       .swiper {
+//         height: 37.5rem;
+//         width: 100%;
+//         .swiper-pagination {
+//           transform: translateY(225%);
+//         }
+//       }
+//       &__container {
+//         @include flex(center, space-between, column-reverse);
+//         row-gap: 1rem;
+//         height: 35rem;
+//         &__image {
+//           width: 100%;
+//           height: 35%;
+//           border-radius: 1rem;
+//           img {
+//             width: auto;
+//             height: 100%;
+//           }
+//         }
+//         &__content {
+//           height: 70%;
+//           width: 100%;
+//           border-radius: 1rem;
+//           .content__header {
+//             padding: 0 1.5rem;
+//             width: 95%;
+//             height: 46%;
+//             &__image {
+//               width: 3rem;
+//               height: 3rem;
+//               outline: $lighterBackground solid 2px;
+//             }
+//             figcaption {
+//               margin-top: 0.5rem;
+//               height: 1.5rem;
+//               font-size: 0.9rem;
+//             }
+//             summary {
+//               width: 85%;
+//               font-size: 0.65rem;
+//             }
+//             .top-container {
+//               height: 1.1rem;
+//               width: 7rem;
+//               &__timer {
+//                 border-radius: 0 0 0.4rem 0.4rem;
+//                 img {
+//                   width: 0.8rem;
+//                 }
+//                 time {
+//                   font-size: 0.7rem;
+//                 }
+//               }
+//               &__ticket {
+//                 width: 1.25rem;
+//                 border-radius: 0 0 0.4rem 0.4rem;
+//                 img {
+//                   width: 75%;
+//                 }
+//               }
+//             }
+//             &::before {
+//               inset: 10% auto auto 7.5%;
+//               width: 35%;
+//             }
+//           }
+//           .content__list {
+//             top: 52.5%;
+//             height: 8.25rem;
+//             .list__item {
+//               height: 2rem;
+//               column-gap: 0.25rem;
+//               .item__image {
+//                 height: 2rem;
+//                 width: 2rem;
+//                 img {
+//                   width: 0.9rem;
+//                 }
+//               }
+//               span {
+//                 font-size: 0.75rem;
+//               }
+//             }
+//           }
+//           .buttons-container {
+//             width: 95%;
+//             top: 88.5%;
+//             height: 2rem;
+//             button {
+//               height: 100%;
+//               width: 7.5rem;
+//               border-radius: 0.5rem;
+//               font-size: 0.55rem;
+//               font-weight: 900;
+//               color: $lighterBackground;
+//             }
+//             a {
+//               height: 90%;
+//               width: 7rem;
+//               button {
+//                 font-size: 0.65rem;
+//                 border-radius: 0.5rem !important;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//     &__supporters {
+//       .supporters__header {
+//         column-gap: 0.5rem;
+//         img {
+//           width: 1.75rem;
+//         }
+//         h2 {
+//           font-size: 1.1rem;
+//         }
+//       }
+//       .supporters__list {
+//         img {
+//           height: 2rem !important;
+//         }
+//       }
+//     }
+//     &__events {
+//       margin: 0 auto 5rem auto;
+//       width: 100% !important;
+//       .events__header {
+//         column-gap: 0.5rem;
+//         img {
+//           width: 1.75rem;
+//         }
+//         h2 {
+//           font-size: 1.1rem;
+//         }
+//       }
+//       .events__container__content {
+//         height: 26rem !important;
+//         .content__header {
+//           height: 13.5rem !important;
+//           .header-logo {
+//             position: absolute;
+//             inset: 79.5% 15.5% auto auto !important;
+//             width: 15% !important;
+//             height: 20.5% !important;
+//             border-radius: 0%;
+//           }
+//         }
+//         .caption {
+//           margin-top: 1rem !important;
+//           &__item {
+//             height: 2rem !important;
+//             &__icon {
+//               width: 2rem !important;
+//               height: 2rem !important;
+//               img {
+//                 height: 1rem;
+//               }
+//             }
+//             span {
+//               font-size: 0.67rem;
+//             }
+//           }
+//         }
+//         &__button {
+//           button {
+//             width: 14.5rem !important;
+//             margin: 0 auto;
+//           }
+//         }
+//         &:first-child,
+//         &:nth-child(2) {
+//           display: none;
+//         }
+//       }
+//     }
+//     .email-reciever {
+//       h5 {
+//         font-size: 7vw;
+//       }
+//       p {
+//         font-size: 4vw;
+//         line-height: 8vw;
+//         width: 90vw;
+//         &.first {
+//           line-height: 8vw !important;
+//         }
+//       }
+//       &__form {
+//         @include flex(center);
+//         padding: 0 4vw 0 1.5vw;
+//         height: 12vw;
+//         width: 90vw;
+//         .form__icon {
+//           width: 5vw;
+//         }
+//         .form__input {
+//           margin: 0 5vw 0 2vw;
+//           input {
+//             font-size: 3.5vw;
+//             &::placeholder {
+//               font-size: 3.25vw;
+//             }
+//           }
+//           &::before {
+//             inset: 50% -3vw auto auto;
+//             height: 80%;
+//             width: 1px;
+//           }
+//         }
+//         .form__button {
+//           @include flex(center, space-between);
+//           padding: 0 2vw;
+//           height: 75%;
+//           width: 30%;
+//           span {
+//             font-size: 2.75vw;
+//           }
+//           img {
+//             width: 5vw;
+//           }
+//           &.active {
+//             padding-right: 5vw;
+//             img {
+//               margin-left: -8vw;
+//               width: 4.25vw;
+//             }
+//           }
+//           &:hover {
+//             img {
+//               margin-left: -8vw;
+//               width: 4.25vw;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

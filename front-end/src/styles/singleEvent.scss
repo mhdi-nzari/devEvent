@@ -1,0 +1,597 @@
+@import "./variables.scss";
+
+.event {
+  padding: 10rem 1rem 0 1rem;
+  &__container {
+    margin: 4rem auto 0 auto;
+    .header__container {
+      h1 {
+        @include flex(baseline);
+        column-gap: 0.5rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+        transform: translateY(-0.25rem);
+        span::first-letter {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+  .container__content {
+    @include flex(center, space-between);
+    margin: 3rem 0 5rem 0;
+  }
+  .content__section {
+    padding: 4rem 1.5rem;
+    height: 60rem;
+    width: 67.5rem;
+    border-radius: 0.75rem;
+    box-shadow: $boxShadow;
+    background-color: $lighterBackground;
+    .section__header {
+      .header__top {
+        @include flex(center, space-between);
+        .haeder__right {
+          margin-left: 2.5rem;
+          padding: 1rem;
+          height: 27rem;
+          width: 50%;
+          border: 1px solid $outlineColor;
+          border-radius: 1rem;
+          .right__header {
+            position: relative;
+            .header__right {
+              @include flex(center);
+              column-gap: 1.25rem;
+              .header__logo {
+                @include center;
+                width: 5.5rem;
+                height: 5.5rem;
+                border-radius: 100%;
+                border: 3px solid $purpleColor;
+                img {
+                  width: 4rem;
+                  height: 4rem;
+                  border-radius: 100%;
+                }
+              }
+              .header__name {
+                @include flex(flex-start, flex-start, column);
+                row-gap: 0.75rem;
+                h4 {
+                  font-weight: 300;
+                  font-size: 1rem;
+                  color: $pathnameColor;
+                }
+                figcaption {
+                  font-size: 1.1rem;
+                  color: $mainHeader;
+                }
+              }
+            }
+            .header__save {
+              position: absolute;
+              inset: 0 auto auto 0.25rem;
+              width: 1.5rem;
+            }
+          }
+          .right__title {
+            @include flex(center);
+            margin-top: 2.75rem;
+            column-gap: 1.25rem;
+            .title__image {
+              @include center;
+              height: 2.4rem;
+              width: 2.4rem;
+              border-radius: 5px;
+              background-color: $purpleColor;
+              img {
+                width: 1.35rem;
+              }
+            }
+            figcaption {
+              font-weight: 600;
+              font-size: 1.25rem;
+              color: $lighterHeader;
+            }
+          }
+          .right__details {
+            @include flex(flex-start, space-between);
+            flex-wrap: wrap;
+            margin-top: 2.25rem;
+            width: 100%;
+            height: 7rem;
+            .details__item {
+              @include flex(center);
+              column-gap: 1rem;
+              width: 50%;
+              height: 2.76rem;
+              div {
+                @include center;
+                height: 2.4rem;
+                width: 2.4rem;
+                border-radius: 5px;
+                background-color: $overlayBackground;
+                img {
+                  width: 1.35rem;
+                  opacity: 0.5;
+                }
+              }
+              span {
+                color: $lighterHeader;
+                width: 72.5%;
+                height: 1.5rem;
+                overflow: hidden;
+              }
+            }
+          }
+          button {
+            @include customizeButton($orangeColor, $purpleColor);
+            margin-top: 2rem;
+            width: 28rem;
+            height: 2.5rem;
+            font-size: 1.05rem;
+            font-weight: 900;
+            border-radius: 10px;
+            color: $lighterBackground;
+            &::before {
+              width: 0.5rem;
+            }
+            &::after {
+              width: 0.5rem;
+            }
+          }
+        }
+        .header__left {
+          @include flex(center, space-between);
+          width: 50%;
+          height: 27rem;
+          overflow: hidden;
+          transition: all 1s;
+          border-radius: 1.5rem;
+          .swiper-pagination-bullet {
+            width: 0.9rem !important;
+            height: 0.9rem !important;
+            background-color: $lighterBackground !important;
+            opacity: 1 !important;
+          }
+          .swiper-pagination-bullet-active {
+            width: 2.75rem !important;
+            background-color: $purpleColor !important;
+            border-radius: 0.5rem !important;
+          }
+          .swiper-slide {
+            @include center;
+            width: 100%;
+            height: 27rem;
+            img {
+              width: 100%;
+              height: 27rem;
+            }
+          }
+        }
+      }
+      .header__bottom {
+        @include flex(center);
+        margin-top: 1.75rem;
+        width: 100%;
+        height: 3.5rem;
+        .header__capacity {
+          @include flex(center);
+          margin-left: 2.5rem;
+          height: 100%;
+          width: 50%;
+          border-radius: 0.5rem;
+          border: 1px solid $outlineColor;
+          .capacity__item {
+            @include flex(center, space-between);
+            position: relative;
+            width: 50%;
+            padding: 0 1rem;
+            font-size: 1rem;
+            .item__logo {
+              @include flex(center);
+              img {
+                width: 2rem;
+              }
+              .item__title {
+                margin-right: 0.75rem;
+                font-weight: 400;
+                color: $capacityTitle;
+              }
+            }
+            .item__content {
+              margin-right: 0.75rem;
+              font-weight: 700;
+              color: $capacityCount;
+            }
+            &:first-child {
+              padding-left: 1.25rem;
+              &::after {
+                content: "";
+                position: absolute;
+                inset: 50% auto auto 0;
+                width: 2px;
+                height: 75%;
+                transform: translateY(-50%);
+                border-radius: 1rem;
+                background-color: $outlineColor;
+              }
+            }
+            &:last-child {
+              padding-right: 1.5rem;
+            }
+          }
+        }
+        .header__location {
+          position: relative;
+          padding: 0;
+          height: 100%;
+          width: 50%;
+          overflow: hidden;
+          border-radius: 0.5rem;
+          box-shadow: $boxShadow;
+          .location__link {
+            @include center;
+            height: 100%;
+            width: 100%;
+            img {
+              width: 120%;
+            }
+          }
+          .link__title {
+            @include center;
+            position: absolute;
+            inset: 0 auto auto 0;
+            height: 100%;
+            width: 100%;
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: $lighterBackground;
+            background-color: rgba(151, 151, 151, 0.7);
+          }
+        }
+      }
+    }
+    .section__dscr {
+      margin-top: 2.5rem;
+      h6 {
+        font-size: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+      }
+      p {
+        margin: 1.25rem 1.5rem 0 0;
+        height: 15rem;
+        font-size: 1.125rem;
+        line-height: 2.5rem;
+        color: $pathnameColor;
+        overflow-y: auto;
+      }
+    }
+  }
+  &__sidebar {
+    padding: 2.5rem 1.1rem 0 1.1rem;
+    position: relative;
+    height: 60rem;
+    width: 25%;
+    border-radius: 0.75rem;
+    box-shadow: $boxShadow;
+    background-color: $lighterBackground;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -0.375rem auto auto 50%;
+      width: 60%;
+      height: 0.75rem;
+      border-radius: 1rem;
+      transform: translate(-50%);
+      background-color: $purpleColor;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: calc(100% - 0.375rem) auto auto 50%;
+      width: 60%;
+      height: 0.75rem;
+      border-radius: 1rem;
+      transform: translate(-50%);
+      background-color: $purpleColor;
+    }
+    .sidebar__header {
+      @include flex(center, space-between);
+      .header__icon-title {
+        @include flex(center);
+        column-gap: 1rem;
+        .header__icon {
+          @include center;
+          height: 2.4rem;
+          width: 2.4rem;
+          border-radius: 5px;
+          background-color: $overlayBackground;
+          img {
+            width: 1.35rem;
+            &.checkIcon {
+              filter: invert(1);
+            }
+          }
+        }
+        h2 {
+          font-size: 1.1rem;
+          color: $lighterHeader;
+        }
+      }
+      button {
+        height: 2.2rem;
+        width: 6rem;
+        font-size: 0.9rem;
+        color: $mainHeader;
+        border-radius: 6px;
+        border: 1px solid $purpleColor;
+        transition: all 250ms;
+        &:active {
+          background-color: $purpleColor;
+          color: $lighterBackground;
+        }
+      }
+      &.second {
+        margin-top: 2rem;
+      }
+    }
+    .event__watch {
+      position: relative;
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 14rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      img {
+        height: 100%;
+        width: fit-content;
+        filter: blur(10px);
+      }
+      button {
+        @include flex(center, center);
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: 13em;
+        height: 3rem;
+        border: none;
+        column-gap: 1rem;
+        border-radius: 10px;
+        background-color: $lighterBackground;
+        outline: 5px solid #ffffff30;
+        img {
+          filter: invert(0);
+          width: 1.25rem;
+        }
+        span {
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: $lighterHeader;
+        }
+      }
+    }
+    .sidebar__more-events {
+      @include flex(center, space-between, column);
+      margin-top: 1.25rem;
+      row-gap: 0.5rem;
+      width: 100%;
+      height: fit-content;
+      .more-events__event {
+        @include flex(center);
+        position: relative;
+        padding: 1rem;
+        height: 8rem;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: $boxShadow;
+        border-radius: 0.75rem;
+        column-gap: 0.75rem;
+        background: $lighterBackground;
+        box-shadow: $boxShadow;
+        .event__image {
+          width: 16rem;
+          height: 6.6rem;
+          overflow: hidden;
+          border-radius: 0.75rem;
+          img {
+            height: 100%;
+            width: fit-content;
+          }
+        }
+        .event__content {
+          h6 {
+            width: 100%;
+            height: 1.4rem;
+            font-size: 1rem;
+            overflow: hidden;
+            color: $lighterHeader;
+          }
+          p {
+            @include flex(center);
+            margin-top: 0.25rem;
+            width: 100%;
+            height: 5rem;
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            color: $pathnameColor;
+          }
+        }
+        button {
+          position: absolute;
+          inset: auto auto 0 0;
+          width: 2rem;
+          height: 2rem;
+          border: 2px solid $orangeColor;
+          border-radius: 0 0.57rem 0.75rem 1rem;
+          transition: all 250ms;
+          &:active {
+            background-color: $orangeColor;
+            svg {
+              path {
+                fill: $lighterBackground;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidebar__email-newsletters {
+      @include flex(center);
+      position: relative;
+      margin-top: 2.5rem;
+      height: 3.75rem;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: $boxShadow;
+      border: 1px solid $orangeColor;
+      input {
+        margin-right: 5%;
+        height: 2.75rem;
+        width: 67.5%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $mainHeader;
+        &::placeholder {
+          font-weight: 600;
+          color: $lighestHeader;
+        }
+      }
+      button {
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 27.5%;
+        height: 100%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        border: none;
+        color: $lighterBackground;
+        border-radius: 1rem 0 2.5rem 1rem;
+        background-color: $orangeColor;
+        transition: all 250ms;
+        &:active {
+          color: $orangeColor;
+          border: 2px solid $orangeColor;
+          background-color: $lighterBackground;
+        }
+      }
+    }
+  }
+  &__events {
+    margin: 0rem auto 10rem auto;
+    .events__header {
+      @include flex(center);
+      column-gap: 1rem;
+      img {
+        width: 2.2rem;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $lighterHeader;
+      }
+    }
+    .events__container {
+      @include flex(center, space-between);
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      margin: 2rem auto 0 auto;
+      width: 100%;
+      .swiper {
+        @include flex(center);
+      }
+      .events__container__content {
+        width: 22.5rem;
+        height: 28rem;
+        border-radius: 2.25rem;
+        box-shadow: $boxShadow;
+        background-color: $lighterBackground;
+        .content__header {
+          margin: 1.5rem auto 0 auto;
+          position: relative;
+          width: 92.5%;
+          height: 12.5rem;
+          transition: all 500ms ease-out;
+          .header-image {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 12.25rem;
+            border-radius: 1.75rem 1.75rem 6rem 0.5rem;
+          }
+          .header__header__container {
+            @include center;
+            position: absolute;
+            inset: 10.75rem auto auto 1rem;
+            width: 3.75rem;
+            height: 3.75rem;
+            overflow: hidden;
+            border-radius: 100%;
+            box-shadow: 0px 16px 45px rgba(0, 0, 0, 0.175);
+            background-color: $lighterBackground;
+            .header-logo {
+              width: 3.25rem;
+              height: 3.25rem;
+              border-radius: 100%;
+            }
+          }
+        }
+        .caption {
+          @include flex();
+          flex-wrap: wrap;
+          margin: 3rem auto 0 auto;
+          height: 7rem;
+          width: 92.5%;
+          &__item {
+            @include flex(center);
+            height: 2.25rem;
+            column-gap: 0.5rem;
+            &__icon {
+              @include center;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 0.5rem;
+              background-color: $overlayBackground;
+              img {
+                height: 1.15rem;
+              }
+            }
+            &:nth-child(1) {
+              width: 57.5%;
+            }
+            &:nth-child(2) {
+              width: 42.5%;
+              justify-content: flex-end;
+            }
+            &:nth-child(3) {
+              width: 100%;
+            }
+            span {
+              width: 75%;
+              height: 1.2rem;
+              font-weight: 700;
+              font-size: 0.85rem;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        &__button {
+          @include center;
+          button {
+            width: 18rem;
+            height: 2rem;
+            font-size: 0.85rem;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

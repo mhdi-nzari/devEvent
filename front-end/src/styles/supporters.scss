@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.supporters {
+  margin: 5rem auto 5rem auto;
+  .supporters__list {
+    @include flex(center, space-between);
+    margin-top: 5rem;
+    width: 100%;
+    img {
+      height: 4rem;
+    }
+  }
+}

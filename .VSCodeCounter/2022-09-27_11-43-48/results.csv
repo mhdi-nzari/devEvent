@@ -1,0 +1,92 @@
+"filename", "language", "Markdown", "TypeScript", "JSON with Comments", "SCSS", "CSS", "TypeScript React", "XML", "JSON", "HTML", "comment", "blank", "total"
+"c:\Vito\dev-events\README.md", "Markdown", 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"c:\Vito\dev-events\front-end\.d.ts", "TypeScript", 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 1, 16
+"c:\Vito\dev-events\front-end\README.md", "Markdown", 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 47
+"c:\Vito\dev-events\front-end\package-lock.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 28802, 0, 0, 1, 28803
+"c:\Vito\dev-events\front-end\package.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 1, 55
+"c:\Vito\dev-events\front-end\public\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 1, 18
+"c:\Vito\dev-events\front-end\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 1, 26
+"c:\Vito\dev-events\front-end\src\App.tsx", "TypeScript React", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 7, 40
+"c:\Vito\dev-events\front-end\src\assists\icon.svg", "XML", 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\Vito\dev-events\front-end\src\assists\icons\arrow-ouline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\arrow.svg", "XML", 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\Vito\dev-events\front-end\src\assists\icons\avatar-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\calendar.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\capacity.svg", "XML", 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 1, 18
+"c:\Vito\dev-events\front-end\src\assists\icons\chart.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\check-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\clock.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\comment.svg", "XML", 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"c:\Vito\dev-events\front-end\src\assists\icons\compass.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\cost-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\cost.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\email.svg", "XML", 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"c:\Vito\dev-events\front-end\src\assists\icons\fill.svg", "XML", 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 1, 13
+"c:\Vito\dev-events\front-end\src\assists\icons\filter-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\home-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 6
+"c:\Vito\dev-events\front-end\src\assists\icons\in-progress.svg", "XML", 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 1, 9
+"c:\Vito\dev-events\front-end\src\assists\icons\like-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\line-arrow.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\linear-chart.svg", "XML", 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\Vito\dev-events\front-end\src\assists\icons\location-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\location.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\map-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\meal.svg", "XML", 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1, 8
+"c:\Vito\dev-events\front-end\src\assists\icons\menu.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\more.svg", "XML", 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\Vito\dev-events\front-end\src\assists\icons\notification-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\redirect.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\save.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\search-outline.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\star.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\Vito\dev-events\front-end\src\assists\icons\tel.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\icons\ticket.svg", "XML", 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\Vito\dev-events\front-end\src\assists\icons\watch.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\Vito\dev-events\front-end\src\assists\logos\7learn.svg", "XML", 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 1, 30
+"c:\Vito\dev-events\front-end\src\assists\logos\digikala.svg", "XML", 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 1, 11
+"c:\Vito\dev-events\front-end\src\assists\logos\iran-host.svg", "XML", 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 1, 12
+"c:\Vito\dev-events\front-end\src\assists\logos\rtl-theme.svg", "XML", 0, 0, 0, 0, 0, 0, 42, 0, 0, 0, 1, 43
+"c:\Vito\dev-events\front-end\src\assists\logos\zhakat.svg", "XML", 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 1, 26
+"c:\Vito\dev-events\front-end\src\components\animatedPage.tsx", "TypeScript React", 0, 0, 0, 0, 0, 16, 0, 0, 0, 5, 4, 25
+"c:\Vito\dev-events\front-end\src\components\currentEvent.tsx", "TypeScript React", 0, 0, 0, 0, 0, 81, 0, 0, 0, 2, 10, 93
+"c:\Vito\dev-events\front-end\src\components\emailReceiver.tsx", "TypeScript React", 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 6, 40
+"c:\Vito\dev-events\front-end\src\components\eventsFilter.tsx", "TypeScript React", 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 5, 47
+"c:\Vito\dev-events\front-end\src\components\footer.tsx", "TypeScript React", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 4, 37
+"c:\Vito\dev-events\front-end\src\components\header.tsx", "TypeScript React", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 4, 18
+"c:\Vito\dev-events\front-end\src\components\homeEvents.tsx", "TypeScript React", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 6, 19
+"c:\Vito\dev-events\front-end\src\components\multiEventSlider.tsx", "TypeScript React", 0, 0, 0, 0, 0, 85, 0, 0, 0, 4, 7, 96
+"c:\Vito\dev-events\front-end\src\components\navbar.tsx", "TypeScript React", 0, 0, 0, 0, 0, 163, 0, 0, 0, 7, 17, 187
+"c:\Vito\dev-events\front-end\src\components\newEvent.tsx", "TypeScript React", 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 3, 14
+"c:\Vito\dev-events\front-end\src\components\pathContainer.tsx", "TypeScript React", 0, 0, 0, 0, 0, 74, 0, 0, 0, 0, 7, 81
+"c:\Vito\dev-events\front-end\src\components\sliderWrapper.tsx", "TypeScript React", 0, 0, 0, 0, 0, 31, 0, 0, 0, 1, 4, 36
+"c:\Vito\dev-events\front-end\src\components\supporters.tsx", "TypeScript React", 0, 0, 0, 0, 0, 23, 0, 0, 0, 2, 7, 32
+"c:\Vito\dev-events\front-end\src\index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 5, 18
+"c:\Vito\dev-events\front-end\src\layouts\layout.tsx", "TypeScript React", 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 3, 13
+"c:\Vito\dev-events\front-end\src\modules\context.ts", "TypeScript", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6
+"c:\Vito\dev-events\front-end\src\pages\events.tsx", "TypeScript React", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 4, 19
+"c:\Vito\dev-events\front-end\src\pages\home.tsx", "TypeScript React", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 8, 29
+"c:\Vito\dev-events\front-end\src\pages\singleEvent.tsx", "TypeScript React", 0, 0, 0, 0, 0, 313, 0, 0, 0, 1, 15, 329
+"c:\Vito\dev-events\front-end\src\react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"c:\Vito\dev-events\front-end\src\styles\App.scss", "SCSS", 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 2, 39
+"c:\Vito\dev-events\front-end\src\styles\currentEvent.scss", "SCSS", 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 2, 193
+"c:\Vito\dev-events\front-end\src\styles\emailReceiver.scss", "SCSS", 0, 0, 0, 104, 0, 0, 0, 0, 0, 0, 2, 106
+"c:\Vito\dev-events\front-end\src\styles\events.scss", "SCSS", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 3
+"c:\Vito\dev-events\front-end\src\styles\eventsFilter.scss", "SCSS", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 3, 4
+"c:\Vito\dev-events\front-end\src\styles\footer.scss", "SCSS", 0, 0, 0, 77, 0, 0, 0, 0, 0, 0, 2, 79
+"c:\Vito\dev-events\front-end\src\styles\header.scss", "SCSS", 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Vito\dev-events\front-end\src\styles\home.scss", "SCSS", 0, 0, 0, 38, 0, 0, 0, 0, 0, 1, 4, 43
+"c:\Vito\dev-events\front-end\src\styles\homeEvents.scss", "SCSS", 0, 0, 0, 181, 0, 0, 0, 0, 0, 0, 2, 183
+"c:\Vito\dev-events\front-end\src\styles\index.css", "CSS", 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 3, 36
+"c:\Vito\dev-events\front-end\src\styles\navbar.scss", "SCSS", 0, 0, 0, 168, 0, 0, 0, 0, 0, 0, 3, 171
+"c:\Vito\dev-events\front-end\src\styles\newEvent.scss", "SCSS", 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 2, 34
+"c:\Vito\dev-events\front-end\src\styles\pathContainer.scss", "SCSS", 0, 0, 0, 55, 0, 0, 0, 0, 0, 0, 2, 57
+"c:\Vito\dev-events\front-end\src\styles\resposive\event-responsive.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 727, 3, 730
+"c:\Vito\dev-events\front-end\src\styles\resposive\footer-resposive.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 1, 57
+"c:\Vito\dev-events\front-end\src\styles\resposive\home-responsive.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 513, 3, 516
+"c:\Vito\dev-events\front-end\src\styles\resposive\navbar-resposive.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 207, 4, 211
+"c:\Vito\dev-events\front-end\src\styles\singleEvent.scss", "SCSS", 0, 0, 0, 632, 0, 0, 0, 0, 0, 3, 2, 637
+"c:\Vito\dev-events\front-end\src\styles\supporters.scss", "SCSS", 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Vito\dev-events\front-end\src\styles\variables.scss", "SCSS", 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 7, 135
+"c:\Vito\dev-events\front-end\tsconfig.json", "JSON with Comments", 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 1, 23
+"c:\Vito\dev-events\license.md", "Markdown", 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 22
+"Total", "-", 45, 19, 22, 1670, 33, 1025, 281, 28881, 17, 1530, 255, 33778

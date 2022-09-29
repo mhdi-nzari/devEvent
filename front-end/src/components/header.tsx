@@ -1,15 +1,16 @@
+import "../styles/header.scss";
+
 interface Props {
   icon: string;
   title: string;
-  containerClassName: string;
 }
 
-function Header({ icon, title, containerClassName }: Props) {
+function Header({ icon, title }: Props) {
   return (
-    <header className={containerClassName + "__header"}>
+    <div className={"header__container"}>
       <img src={icon} alt="" />
       <h2>{title}</h2>
-    </header>
+    </div>
   );
 }
 

@@ -19,7 +19,11 @@ function Navbar() {
 
   const links = [
     {
-      header: "جدوا زمان بندی",
+      header: "رویدادها",
+      path: "/events",
+    },
+    {
+      header: "جدول زمان بندی",
       path: "/timetable",
     },
     {
@@ -81,13 +85,7 @@ function Navbar() {
 
           <ul className="nav__right__menu">
             <li>
-              <NavLink
-                end
-                to={"/"}
-                className={({ isActive }) =>
-                  isActive ? "active" : location.pathname.slice(0, 7) === "/events" ? "active" : ""
-                }
-              >
+              <NavLink end to={"/"}>
                 خانه
               </NavLink>
             </li>

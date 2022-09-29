@@ -1,0 +1,105 @@
+@import "./variables.scss";
+
+.email-reciever {
+  @include center;
+  background-color: $lighterBackground;
+  box-shadow: $boxShadow;
+  width: 105%;
+  height: 32rem;
+  margin-right: -1.15%;
+  color: $lighterHeader;
+  h5 {
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.25rem;
+    text-align: center;
+    &.first {
+      width: 66%;
+      line-height: 2.5rem;
+    }
+    &.last {
+      margin-top: 0.75rem;
+    }
+  }
+  &__form {
+    @include flex(center);
+    padding: 0 2rem 0 1rem;
+    margin-top: 3rem;
+    height: 5rem;
+    width: 46rem;
+    border-radius: 4rem;
+    background-color: $lighterHeader;
+    .form__icon {
+      width: 2.25rem;
+    }
+    .form__input {
+      margin: 0 3rem 0 1rem;
+      position: relative;
+      width: 60%;
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        font-size: 1.2rem;
+        color: $lighterBackground;
+        &::placeholder {
+          color: #656565;
+          font-size: 1.1rem;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 50% -1.5rem auto auto;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 125%;
+        border-radius: 1rem;
+        background-color: #656565;
+      }
+    }
+    .form__button {
+      @include flex(center, space-between);
+      padding: 0 1.5rem;
+      height: 75%;
+      width: 30%;
+      border: none;
+      outline: none;
+      overflow: hidden;
+      border-radius: 3rem;
+      background-color: $orangeColor;
+      transition: all 1s ease-out;
+      span {
+        color: $lighterBackground;
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+      img {
+        width: 2.25rem;
+        transition: all 1s ease-out;
+        transition-delay: 500ms;
+      }
+      &.active {
+        margin-right: 5%;
+        padding-right: 2.75rem;
+        width: 25%;
+        img {
+          margin-left: -4rem;
+          opacity: 0;
+          width: 2.25rem;
+          transition-delay: 0;
+        }
+      }
+      &:hover {
+        img {
+          margin-left: -4rem;
+          opacity: 0;
+          width: 2.25rem;
+        }
+      }
+    }
+  }
+}
