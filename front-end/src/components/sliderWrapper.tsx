@@ -1,10 +1,9 @@
-import { Pagination, Autoplay } from "swiper";
+import SwiperCore, { Pagination, Autoplay } from "swiper";
 import { Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
 
 function SliderWrapper({
   children,
@@ -15,6 +14,7 @@ function SliderWrapper({
   direction: "horizontal" | "vertical" | undefined;
   pagination: boolean | undefined;
 }) {
+  SwiperCore.use([Autoplay]);
   return (
     <Swiper
       direction={direction}

@@ -33,11 +33,12 @@
       @include center;
       height: 100%;
       width: 100%;
-      border-radius: clamp(1.5rem, 4vw, 2rem);
+      max-width: 75rem;
       overflow: hidden;
+      border-radius: clamp(1.5rem, 4vw, 2rem);
       img {
-        height: 100%;
-        transition: transform 2s ease-out;
+        object-fit: cover;
+        transition: transform 2s ease-in-out;
         &:hover {
           transform: scale(1.1);
         }
