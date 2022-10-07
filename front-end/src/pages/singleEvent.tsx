@@ -7,22 +7,22 @@ import AnimatedPage from "components/animatedPage";
 import PathContainer from "components/pathContainer";
 import SliderWrapper from "../components/sliderWrapper";
 import SingleEventEvents from "components/singleEventEvents";
-// Icons
-import InProgressIcon from "../assists/icons/in-progress.svg";
-import CheckIcon from "../assists/icons/check-outline.svg";
-import CostIcon from "../assists/icons/cost-outline.svg";
-import WatchIcon from "../assists/icons/watch.svg";
-import CalendarIcon from "../assists/icons/calendar.svg";
-import MealIcon from "../assists/icons/meal.svg";
-import RedirectIcon from "../assists/icons/redirect.svg";
-import MoreIcon from "../assists/icons/more.svg";
-import SaveIcon from "../assists/icons/save.svg";
-import FillIcon from "../assists/icons/fill.svg";
-import CapacityIcon from "../assists/icons/capacity.svg";
-import MapImage from "../assists/map-image.png";
 
-import hamyarLogo from "../assists/logos/hamyar-logo.png";
-import hamyarSpace from "../assists/hamyar-space.png";
+// Icons
+import InProgressIcon from "../assets/icons/in-progress.svg";
+import CheckIcon from "../assets/icons/check-outline.svg";
+import CostIcon from "../assets/icons/cost-outline.svg";
+import WatchIcon from "../assets/icons/watch.svg";
+import CalendarIcon from "../assets/icons/calendar.svg";
+import MealIcon from "../assets/icons/meal.svg";
+import RedirectIcon from "../assets/icons/redirect.svg";
+import MoreIcon from "../assets/icons/more.svg";
+import FillIcon from "../assets/icons/fill.svg";
+import CapacityIcon from "../assets/icons/capacity.svg";
+import MapImage from "../assets/map-image.png";
+
+import hamyarSpace from "../assets/hamyar-space.png";
+import hamyarLogo from "../assets/logos/hamyar-logo.png";
 
 import "../styles/singleEvent.scss";
 
@@ -291,6 +291,7 @@ function Event() {
         </div>
 
         <Comments />
+
         <SingleEventEvents />
       </main>
     </AnimatedPage>

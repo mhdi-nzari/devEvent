@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import Header from "components/header";
 
 // Icons
-import MealIcon from "../assists/icons/meal.svg";
-import OrangeBox from "../assists/orange-box.png";
-import watchIcon from "../assists/icons/watch.svg";
-import ClockImage from "../assists/icons/clock.svg";
-import TicketImage from "../assists/icons/ticket.svg";
-import CalendarIcon from "../assists/icons/calendar.svg";
-import InProgressIcon from "../assists/icons/in-progress.svg";
-import LocationIconOutline from "../assists/icons/location-outline.svg";
+import MealIcon from "../assets/icons/meal.svg";
+import OrangeBox from "../assets/orange-box.png";
+import watchIcon from "../assets/icons/watch.svg";
+import ClockImage from "../assets/icons/clock.svg";
+import TicketImage from "../assets/icons/ticket.svg";
+import CalendarIcon from "../assets/icons/calendar.svg";
+import InProgressIcon from "../assets/icons/in-progress.svg";
+import LocationIconOutline from "../assets/icons/location-outline.svg";
 
 // Event example images
-import EventSpaceImage from "../assists/event-image.png";
-import EventImage from "../assists/dev-summit.png";
+import EventSpaceImage from "../assets/event-image.png";
+import EventImage from "../assets/dev-summit.png";
 
 import "../styles/currentEvent.scss";
 
@@ -30,7 +30,7 @@ function CurrentEvent() {
           <img src={EventSpaceImage} alt="" />
         </div>
         <div className="current-event__container__content">
-          <figure className="content__header">
+          <div className="content__header">
             <img src={OrangeBox} alt="" className="orange-box" />
             <img src={EventImage} alt="" className="content__header__image" />
             <figcaption>رویداد Dev Summit</figcaption>
@@ -49,8 +49,7 @@ function CurrentEvent() {
                 </div>
               )}
             </div>
-          </figure>
-
+          </div>
           <div className="content__list">
             <div className="list__item">
               <div className="item__image">

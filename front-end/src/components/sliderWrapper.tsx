@@ -4,6 +4,7 @@ import { Swiper } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 function SliderWrapper({
   children,

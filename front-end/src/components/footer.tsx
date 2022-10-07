@@ -1,8 +1,7 @@
-import callIcon from "../assists/icons/tel.svg";
-import webIcon from "../assists/icon.svg";
+import callIcon from "../assets/icons/tel.svg";
+import webIcon from "../assets/icon.svg";
 
 import "../styles/footer.scss";
-
 function Footer() {
   return (
     <footer>

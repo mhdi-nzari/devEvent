@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Emailicon from "../assists/icons/email.svg";
-import ArrowIcon from "../assists/icons/arrow.svg";
+import Emailicon from "../assets/icons/email.svg";
+import ArrowIcon from "../assets/icons/arrow.svg";
 
 import "../styles/emailReceiver.scss";
 

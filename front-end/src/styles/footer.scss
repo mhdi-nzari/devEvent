@@ -1,4 +1,5 @@
-@import "./variables.scss";
+@import "variables";
+@import "mediaQueries";
 
 footer {
   height: 15rem;
@@ -12,11 +13,12 @@ footer {
     height: 100%;
     width: 100%;
     &__call-us {
-      @include flex();
+      @include flex;
       margin-top: 2rem;
       width: 25%;
       height: 60%;
       color: $lighterBackground;
+
       span {
         margin-left: 3rem;
       }
@@ -24,11 +26,11 @@ footer {
         @include center;
         margin-right: 1rem;
         background-color: $lighterBackground;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: clamp(2rem, 6vw, 2.5rem);
+        height: clamp(2rem, 6vw, 2.5rem);
         border-radius: 100%;
         img {
-          width: 1.5rem;
+          width: clamp(1rem, 2vw, 1.5rem);
         }
       }
     }
@@ -38,7 +40,7 @@ footer {
       row-gap: 1rem;
       .info__name-logo {
         @include flex(center, flex-start, column);
-        row-gap: .5rem;
+        row-gap: 0.5rem;
         img {
           width: 4.25rem;
         }
@@ -54,25 +56,63 @@ footer {
       }
     }
     &__links {
-      @include flex();
+      @include flex(flex-start, space-between);
       margin-top: 2rem;
       width: 25%;
       height: 60%;
       color: $lighterBackground;
       a {
-        margin-left: 3rem;
+        margin: 0 0.5rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
       }
-      div {
-        @include center;
-        margin-right: 1rem;
-        background-color: $lighterBackground;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 100%;
-        img {
-          width: 1.5rem;
+    }
+    @include tablet {
+      @include flex(center, space-between, column);
+      height: 30rem;
+      &__call-us {
+        width: 13rem;
+        justify-content: center;
+      }
+      &__info {
+        width: 13rem;
+        p {
+          width: 100%;
         }
+      }
+      &__links {
+        width: 13rem;
       }
     }
   }
+  @include tablet {
+    height: fit-content;
+  }
 }
+// @media screen and (max-width: 487px) {
+//   footer {
+//     padding-bottom: 2rem;
+//     height: fit-content !important;
+//     .footer__container {
+//       flex-direction: column !important;
+//       row-gap: 3rem;
+//       width: 100%;
+//       &__call-us {
+//         width: fit-content;
+//       }
+//       .info__name-logo {
+//         @include flex(center, center, column);
+//         margin-top: 2rem;
+//         width: fit-content;
+//         row-gap: 1rem;
+//         color: $lighterBackground;
+//       }
+//       &__links {
+//         width: fit-content;
+//         column-gap: 2.5rem;
+//         a {
+//           margin-left: 0 !important;
+//         }
+//       }
+//     }
+//   }
+// }

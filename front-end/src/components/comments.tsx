@@ -1,16 +1,16 @@
 import Comment from "./comment";
 
-import CommentIcon from "../assists/icons/comment.svg";
-import DoubleTIcon from "../assists/icons/double-t.svg";
-import UnderlineColorsIcon from "../assists/icons/underline-colors.svg";
-import OrderedListIcon from "../assists/icons/ordered-list.svg";
-import UnOrderedListIcon from "../assists/icons/unordered-list.svg";
-import JustifyTextIcon from "../assists/icons/justify-text.svg";
-import RightTextIcon from "../assists/icons/right-text.svg";
-import CenterTextIcon from "../assists/icons/right-text.svg";
-import UnderlineIcon from "../assists/icons/underline.svg";
-import ItalicIcon from "../assists/icons/italic.svg";
-import BoldIcon from "../assists/icons/bold.svg";
+import CommentIcon from "../assets/icons/comment.svg";
+import DoubleTIcon from "../assets/icons/double-t.svg";
+import UnderlineColorsIcon from "../assets/icons/underline-colors.svg";
+import OrderedListIcon from "../assets/icons/ordered-list.svg";
+import UnOrderedListIcon from "../assets/icons/unordered-list.svg";
+import JustifyTextIcon from "../assets/icons/justify-text.svg";
+import RightTextIcon from "../assets/icons/right-text.svg";
+import CenterTextIcon from "../assets/icons/right-text.svg";
+import UnderlineIcon from "../assets/icons/underline.svg";
+import ItalicIcon from "../assets/icons/italic.svg";
+import BoldIcon from "../assets/icons/bold.svg";
 
 import "../styles/comments.scss";
 

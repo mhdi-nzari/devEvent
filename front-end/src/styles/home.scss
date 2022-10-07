@@ -1,28 +1,22 @@
-@import "./variables.scss";
+@import "variables";
+@import "mediaQueries";
 
 .home {
   padding: 15rem 1rem 0 1rem;
   &::before {
     content: "";
     position: absolute;
-    inset: 7.25rem auto auto -17%;
+    inset: 7.25rem auto auto clamp(-12.25rem, -11.5rem, -12rem);
     transform: rotate(53.18deg);
-    height: 17rem;
-    width: 18rem;
+    height: clamp(12.5rem, 20vw, 17rem);
+    width: clamp(12.5rem, 20vw, 17rem);
     border-radius: 1.5rem;
     background-color: $purpleColor;
     opacity: 0.5;
     outline: $outlineColor solid 0.5rem;
-  }
-}
-
-// animations
-@keyframes pulse {
-  0% {
-    box-shadow: $lightGreenColor 0 0 0 0;
-  }
-  80% {
-    box-shadow: $transparentGreenColor 0 0 0 7px;
+    @media screen and (min-width: 1800px) {
+      display: none;
+    }
   }
 }
 

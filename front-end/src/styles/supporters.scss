@@ -1,13 +1,40 @@
-@import "./variables.scss";
+@import "variables";
+@import "mediaQueries";
 
 .supporters {
   margin: 5rem auto 5rem auto;
+  @include tablet {
+    margin: 4rem auto 2.5rem auto;
+  }
   .supporters__list {
     @include flex(center, space-between);
-    margin-top: 5rem;
+    margin-top: clamp(2.5rem, 4vw, 4rem);
     width: 100%;
+
+    @media screen and (max-width: 1289px) {
+      @include flex(center, center);
+      gap: 4rem 3rem;
+      flex-wrap: wrap;
+    }
     img {
       height: 4rem;
+    }
+    &.slider {
+      display: none;
+    }
+    @include tablet {
+      &.static {
+        display: none;
+      }
+      &.slider {
+        display: flex;
+        .swiper-slide {
+          @include flex(center, center);
+          img {
+            width: 60%;
+          }
+        }
+      }
     }
   }
 }

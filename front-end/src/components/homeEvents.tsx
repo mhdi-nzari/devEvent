@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 import Header from "./header";
 
-import ClockImage from "../assists/icons/clock.svg";
-import LocationIcon from "../assists/icons/location.svg";
-import CostIcon from "../assists/icons/cost.svg";
-import MapIcon from "../assists/icons/map-outline.svg";
-import likeIcon from "../assists/icons/like-outline.svg";
-import starIcon from "../assists/icons/star.svg";
-import CompassIcon from "../assists/icons/compass.svg";
+import ClockImage from "../assets/icons/clock.svg";
+import LocationIcon from "../assets/icons/location.svg";
+import CostIcon from "../assets/icons/cost.svg";
+import MapIcon from "../assets/icons/map-outline.svg";
+import likeIcon from "../assets/icons/like-outline.svg";
+import starIcon from "../assets/icons/star.svg";
+import CompassIcon from "../assets/icons/compass.svg";
 
-import EventImage from "../assists/dev-summit.png";
-import CurrentEventImage from "../assists/current-events-image.png";
+import EventImage from "../assets/dev-summit.png";
+import CurrentEventImage from "../assets/current-events-image.png";
 
 import "../styles/homeEvents.scss";
 

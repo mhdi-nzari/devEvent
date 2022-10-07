@@ -1,8 +1,8 @@
 import Reply from "./reply";
 
-import AavandProfile from "../assists/aavand.png";
-import LikeIcon from "../assists/icons/like.svg";
-import EditIcon from "../assists/icons/edit.svg";
+import AavandProfile from "../assets/aavand.png";
+import LikeIcon from "../assets/icons/like.svg";
+import EditIcon from "../assets/icons/edit.svg";
 
 function Comment() {
   return (

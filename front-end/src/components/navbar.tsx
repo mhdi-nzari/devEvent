@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-import websiteIcon from "../assists/icon.svg";
-import menuIcon from "../assists/icons/menu.svg";
-import avatarIcon from "../assists/icons/avatar-outline.svg";
-import searchIcon from "../assists/icons/search-outline.svg";
-import notificationsIcon from "../assists/icons/notification-outline.svg";
+import websiteIcon from "../assets/icon.svg";
+import menuIcon from "../assets/icons/menu.svg";
+import avatarIcon from "../assets/icons/avatar-outline.svg";
+import searchIcon from "../assets/icons/search-outline.svg";
+import notificationsIcon from "../assets/icons/notification-outline.svg";
 
 import "../styles/navbar.scss";
 

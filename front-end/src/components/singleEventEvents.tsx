@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 
-import ChartIcon from "../assists/icons/linear-chart.svg";
-import CompassIcon from "../assists/icons/compass.svg";
-import LocationIcon from "../assists/icons/location.svg";
-import CostColorIcon from "../assists/icons/cost.svg";
+import ChartIcon from "../assets/icons/linear-chart.svg";
+import CompassIcon from "../assets/icons/compass.svg";
+import LocationIcon from "../assets/icons/location.svg";
+import CostColorIcon from "../assets/icons/cost.svg";
 
-import hamyarLogo from "../assists/logos/hamyar-logo.png";
-import hamyarSpace from "../assists/hamyar-space.png";
+import hamyarLogo from "../assets/logos/hamyar-logo.png";
+import hamyarSpace from "../assets/hamyar-space.png";
 
 import "../styles/singleEventEvents.scss";
 
