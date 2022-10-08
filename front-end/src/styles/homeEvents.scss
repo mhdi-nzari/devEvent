@@ -55,10 +55,27 @@
         }
         .header-logo {
           position: absolute;
-          inset: clamp(9.75rem, 5vw + 6rem, 10.25rem) clamp(3rem, 5vw, 4.25rem) auto auto;
+          inset: clamp(9.9rem, 5vw + 6rem, 10.25rem) clamp(3.7rem, 5vw, 3.75rem) auto auto;
           width: clamp(3.5rem, 5vw, 3.75rem);
           height: clamp(3.5rem, 5vw, 3.75rem);
           border-radius: 100%;
+          &::before {
+            content: "";
+            position: absolute;
+            inset: -15% -65% auto auto;
+            z-index: 1;
+            width: 225%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("../assets/s.png");
+          }
+          img {
+            position: inherit;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
         }
         .header-timer {
           @include flex(center);

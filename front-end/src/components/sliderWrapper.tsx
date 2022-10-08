@@ -1,4 +1,4 @@
-import SwiperCore, { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper } from "swiper/react";
 
 // Import Swiper styles
@@ -14,17 +14,17 @@ function SliderWrapper({
   direction: "horizontal" | "vertical" | undefined;
   pagination: boolean | undefined;
 }) {
-  SwiperCore.use([Autoplay]);
   return (
     <Swiper
       direction={direction}
       autoplay={{
         delay: 3000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
       }}
       pagination={{
         clickable: true,
       }}
+      loop={true}
       modules={pagination ? [Pagination, Autoplay] : [Autoplay]}
       navigation={true}
       className="mySwiper"

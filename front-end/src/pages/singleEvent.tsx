@@ -22,7 +22,7 @@ import CapacityIcon from "../assets/icons/capacity.svg";
 import MapImage from "../assets/map-image.png";
 
 import hamyarSpace from "../assets/hamyar-space.png";
-import hamyarLogo from "../assets/logos/hamyar-logo.png";
+import hamyarLogo from "../assets/hamyar-logo.png";
 
 import "../styles/singleEvent.scss";
 

@@ -38,7 +38,9 @@ function HomeEvents() {
                   stroke="white"
                 />
               </svg>
-              <img src={EventImage} alt="" className="header-logo" />
+              <div className="header-logo">
+                <img src={EventImage} alt="" />
+              </div>
               <div className="header-timer">
                 <img src={ClockImage} alt="" />
                 <time>
