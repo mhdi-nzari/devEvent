@@ -33,38 +33,36 @@ function Comments() {
               <option value="heading2">عنوان دوم</option>
               <option value="heading3">عنوان سوم</option>
             </select>
-            <div className="new-comment__edit-list">
-              <button>
-                <img src={DoubleTIcon} alt="" />
-              </button>
-              <button>
-                <img src={UnderlineColorsIcon} alt="" />
-              </button>
-              <button>
-                <img src={OrderedListIcon} alt="" />
-              </button>
-              <button>
-                <img src={UnOrderedListIcon} alt="" />
-              </button>
-              <button>
-                <img src={JustifyTextIcon} alt="" />
-              </button>
-              <button>
-                <img src={RightTextIcon} alt="" />
-              </button>
-              <button>
-                <img src={CenterTextIcon} alt="" />
-              </button>
-              <button>
-                <img src={UnderlineIcon} alt="" />
-              </button>
-              <button>
-                <img src={ItalicIcon} alt="" />
-              </button>
-              <button>
-                <img src={BoldIcon} alt="" />
-              </button>
-            </div>
+            <button className="first-button">
+              <img src={DoubleTIcon} alt="" />
+            </button>
+            <button>
+              <img src={UnderlineColorsIcon} alt="" />
+            </button>
+            <button>
+              <img src={OrderedListIcon} alt="" />
+            </button>
+            <button>
+              <img src={UnOrderedListIcon} alt="" />
+            </button>
+            <button>
+              <img src={JustifyTextIcon} alt="" />
+            </button>
+            <button>
+              <img src={RightTextIcon} alt="" />
+            </button>
+            <button>
+              <img src={CenterTextIcon} alt="" />
+            </button>
+            <button>
+              <img src={UnderlineIcon} alt="" />
+            </button>
+            <button>
+              <img src={ItalicIcon} alt="" />
+            </button>
+            <button>
+              <img src={BoldIcon} alt="" />
+            </button>
           </div>
           <form className="new-comment__form">
             <textarea className="new-comment__textarea" placeholder="نظر خودتون رو در مورد این برنامه بنویسید ..." />
