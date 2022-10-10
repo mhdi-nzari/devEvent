@@ -64,6 +64,9 @@
           @include sidebar {
             height: clamp(20rem, 22.5vw + 10rem, 27rem);
           }
+          @include mobile {
+            height: fit-content;
+          }
           .right__header {
             position: relative;
             .header__right {
@@ -133,9 +136,13 @@
           .right__details {
             @include flex(flex-start, space-between);
             flex-wrap: wrap;
-            margin-top: clamp(0.75rem, 1vw + 1rem, 2.25rem);
+            margin: clamp(0.75rem, 1vw + 1rem, 2.25rem) 0 clamp(0.75rem, 1vw + 1rem, 1.5rem) 0;
             width: 100%;
-            height: clamp(5rem, 5vw + 3.5rem, 8rem);
+            row-gap: clamp(1vw, 1vw + 1rem, 2.25rem);
+            height: fit-content;
+            @include mobile {
+              margin: clamp(0.75rem, 1vw + 1rem, 2.25rem) 0 0 0;
+            }
             .details__item {
               @include flex(center);
               column-gap: clamp(0.5rem, 1vw + 0.25rem, 1rem);
@@ -192,6 +199,10 @@
             width: 50%;
             padding: 0 1rem;
             font-size: clamp(0.5rem, 1vw + 0.15rem, 1rem);
+            @include mobile {
+              padding: 0 0.5rem;
+              font-size: clamp(0.5rem, 0.5vw + 0.5rem, 0.7rem);
+            }
             .item__logo {
               @include flex(center);
               img {
@@ -210,6 +221,9 @@
             }
             &:first-child {
               padding-left: 1.25rem;
+              @include tablet {
+                padding-left: 0.5rem;
+              }
               &::after {
                 content: "";
                 position: absolute;
@@ -223,6 +237,9 @@
             }
             &:last-child {
               padding-right: 1.5rem;
+              @include tablet {
+                padding-right: 0.5rem;
+              }
             }
           }
         }
@@ -307,6 +324,10 @@
         line-height: clamp(1.25rem, 1.5vw + 1.5rem, 2.5rem);
         color: $pathnameColor;
         overflow-y: auto;
+        @include mobile {
+          font-size: 0.75rem;
+          height: fit-content;
+        }
       }
     }
   }

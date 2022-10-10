@@ -92,7 +92,7 @@ function Event() {
                           width="26"
                           height="33"
                           viewBox="0 0 26 33"
-                          fill="none"
+                          fill="#000000"
                           xmlns="http://www.w3.org/2000/svg"
                           className={`header__save ${saved ? "active" : ""}`}
                           onClick={saveHandler}
