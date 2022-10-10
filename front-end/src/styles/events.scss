@@ -238,8 +238,8 @@
             height: 2.5rem;
             input {
               appearance: none;
-              height: 1.65rem;
-              width: 1.65rem;
+              height: 1.4rem;
+              width: 1.4rem;
               border: 1px solid $purpleColor;
               border-radius: 100%;
               &:checked {
@@ -249,8 +249,8 @@
                   content: "";
                   position: absolute;
                   inset: 50% 50% auto auto;
-                  width: 1.05rem;
-                  height: 1.05rem;
+                  width: 0.85rem;
+                  height: 0.85rem;
                   border-radius: 100%;
                   transform: translate(50%, -50%);
                   background-color: $lighterBackground;

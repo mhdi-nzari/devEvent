@@ -164,6 +164,20 @@ function Events() {
                   </div>
                   <LocationRadio title="اصفهان" />
                   <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />  
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
+                  <LocationRadio title="اصفهان" />
+                  <LocationRadio title="یزد" />
                 </div>
               </FilterCollpaseExpand>
               <FilterCollpaseExpand title="نوع مراسم">

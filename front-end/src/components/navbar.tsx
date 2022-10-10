@@ -23,10 +23,6 @@ function Navbar() {
       path: "/events",
     },
     {
-      header: "جدول زمان بندی",
-      path: "/timetable",
-    },
-    {
       header: "درباره ما",
       path: "/about",
     },
