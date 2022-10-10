@@ -7,8 +7,8 @@
   height: 4rem;
   font-size: 1.1em;
   column-gap: 1.25rem;
-  border-radius: 0.5rem;
-  color: $pathnameColor;
+  border-radius:$radius-base;
+  color: $capacityTitle;
   box-shadow: $boxShadow;
   background-color: $lighterBackground;
   .link {

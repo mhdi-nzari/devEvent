@@ -11,7 +11,7 @@
   background-color: $lightestBackground;
   span {
     margin-right: max(0.5rem);
-    font-weight: 400;
+    font-weight: 500;
     font-size: clamp(0.65rem, 3vw, 0.9rem);
     color: $lighterHeader;
     &.new-event__icon {

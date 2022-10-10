@@ -21,7 +21,7 @@ function HomeEvents() {
       <Header title="رویداد های جاری" icon={CompassIcon} />
       <div className="events__container">
         {Array.apply(0, new Array(3)).map((item, index) => (
-          <div className="events__container__content">
+          <div className="events__container__content" key={index}>
             <div className="content__header">
               <img src={CurrentEventImage} alt="" className="header-image" />
               <svg

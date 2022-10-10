@@ -38,9 +38,9 @@
           }
           &.disabled {
             box-shadow: none;
-            border: 1px solid $pathnameColor;
+            border: 1px solid $capacityTitle;
             path {
-              stroke: $pathnameColor;
+              stroke: $capacityTitle;
             }
           }
         }
@@ -106,7 +106,7 @@
             @include center;
             width: 2rem;
             height: 2rem;
-            border-radius: 0.5rem;
+            border-radius:$radius-base;
             background-color: $overlayBackground;
             img {
               height: 1.15rem;
@@ -139,7 +139,7 @@
           width: 18rem;
           height: 2rem;
           font-size: 0.85rem;
-          border-radius: 0.5rem;
+          border-radius:$radius-base;
         }
       }
     }

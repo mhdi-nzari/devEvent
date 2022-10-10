@@ -26,7 +26,7 @@
       height: 28rem;
       box-shadow: $boxShadow;
       background-color: $lighterBackground;
-      border-radius: 1.25rem 1.25rem 0.5rem 0.5rem;
+      border-radius: 1.25rem;
       @include mobile {
         width: 100%;
         height: fit-content;
@@ -43,8 +43,8 @@
           top: 0;
           width: 100%;
           height: clamp(11.75rem, 5vw + 8rem, 12.25rem);
-          border-radius: 0.5rem;
-          border-radius: 1rem 1rem 3rem 1rem;
+          border-radius:$radius-base;
+         
         }
         .header-frame {
           position: absolute;
@@ -181,7 +181,7 @@
             @include center;
             width: clamp(2rem, 3vw, 2.25rem);
             height: clamp(2rem, 3vw, 2.25rem);
-            border-radius: 0.5rem;
+            border-radius: $radius-base;
             background-color: $overlayBackground;
             img {
               height: clamp(1.1rem, 2vw, 1.25rem);
@@ -206,9 +206,9 @@
         button {
           width: 18rem;
           height: 2rem;
-          font-weight: 900;
+          font-weight: 800;
           font-size: clamp(0.65rem, 2vw, 0.85rem);
-          border-radius: 0.5rem;
+          border-radius:$radius-base;
           @include mobile {
             width: 75vw !important;
           }

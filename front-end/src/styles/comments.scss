@@ -17,7 +17,7 @@
       margin-right: -0.25rem;
       font-weight: 400;
       font-size: 1.2rem;
-      color: $lighestHeader;
+      color: $capacityTitle;
     }
   }
   .comments__content {
@@ -75,7 +75,7 @@
           font-family: "dana-fanum";
           color: $lighterHeader;
           &::placeholder {
-            color: $pathnameColor;
+            color: $capacityTitle;
           }
         }
         div {
@@ -151,7 +151,7 @@
               time,
               span {
                 font-size: 1.1rem;
-                color: $lighestHeader;
+                color: $capacityTitle;
               }
               time {
                 position: relative;
@@ -186,7 +186,7 @@
             .data__position {
               @include flex(center);
               font-size: 1.05rem;
-              color: $lighestHeader;
+              color: $capacityTitle;
               span:nth-child(2) {
                 margin: 0 0.5rem;
               }
@@ -227,7 +227,7 @@
           margin: 2rem 6rem 1rem 0;
           width: calc(100% - 6rem);
           background-color: transparent;
-          border: 1px solid $lighestHeader;
+          border: 1px solid $capacityTitle;
         }
       }
     }
