@@ -26,7 +26,6 @@ function App() {
               <Route index element={<Events />} />
               <Route path=":event" element={<Event />} />
             </Route>
-            <Route path="/timetable" element={<HomeLayout />} />
             <Route path="/about" element={<HomeLayout />} />
           </Routes>
         </AnimatedPage>
