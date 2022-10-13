@@ -1,0 +1,36 @@
+@import "variables";
+@import "mediaQueries";
+
+.home {
+  padding: 15rem 1rem 0 1rem;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 7.25rem auto auto clamp(-12.25rem, -11.5rem, -12rem);
+    transform: rotate(53.18deg);
+    height: clamp(12.5rem, 20vw, 17rem);
+    width: clamp(12.5rem, 20vw, 17rem);
+    border-radius: 1.5rem;
+    background-color: $purpleColor;
+    opacity: 0.5;
+    outline: $SeparatorColor solid 0.5rem;
+    @media screen and (min-width: 1800px) {
+      display: none;
+    }
+  }
+}
+
+@keyframes three-dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}

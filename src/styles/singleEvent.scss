@@ -1,0 +1,546 @@
+@import "variables";
+@import "mediaQueries";
+
+.event {
+  padding: 10rem 1rem 0 1rem;
+  &__container {
+    margin: clamp(2.25rem, 2vw + 2rem, 4rem) auto 0 auto;
+    .header__container {
+      img {
+        margin-top: -0.5rem;
+        width: clamp(1.55rem, 4vw, 2.1rem);
+      }
+      h1 {
+        @include flex(baseline);
+        column-gap: 0.5rem;
+        font-weight: 600;
+        font-size: clamp(1.05rem, 3.25vw, 1.45rem);
+        color: $lightHeader;
+        transform: translateY(-0.25rem);
+        span.english::first-letter {
+          font-size: clamp(3rem, 3.25vw, 3.45rem);
+        }
+      }
+    }
+  }
+  .container__content {
+    @include flex(center, space-between);
+    margin: clamp(1.25rem, 2vw + 0.75rem, 3rem) 0 5rem 0;
+  }
+  .content__section {
+    padding: clamp(2.5rem, 2vw + 1.25rem, 4rem) clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+    height: 60rem;
+    width: 67.5rem;
+    border-radius: 0.75rem;
+    box-shadow: $boxShadow;
+    background-color: $lighterBackground;
+    @include sidebar {
+      width: 100%;
+      height: fit-content;
+    }
+    .section__header {
+      .header__top {
+        @include flex(center, space-between);
+        column-gap: clamp(1.25rem, 1vw + 1rem, 2rem);
+        .right,
+        .left {
+          width: 50%;
+        }
+        @include mobile {
+          @include flex(center, space-between, column);
+          row-gap: 1rem;
+          .right,
+          .left {
+            width: 100%;
+          }
+        }
+        .haeder__right {
+          margin-left: clamp(1.25rem, 1vw + 1rem, 2.5rem);
+          padding: 1rem;
+          height: 27rem;
+          width: 100%;
+          border: 1px solid $SeparatorColor;
+          border-radius: 1rem;
+          @include sidebar {
+            height: clamp(20rem, 22.5vw + 10rem, 27rem);
+          }
+          @include mobile {
+            height: fit-content;
+          }
+          .right__header {
+            position: relative;
+            .header__right {
+              @include flex(center);
+              column-gap: clamp(0.4rem, 0.5vw + 0.35rem, 1.25rem);
+              .header__logo {
+                @include center;
+                width: clamp(3rem, 2vw + 3rem, 5.5rem);
+                height: clamp(3rem, 2vw + 3rem, 5.5rem);
+                border-radius: 100%;
+                border: 3px solid $purpleColor;
+                img {
+                  width: 95%;
+                  height: 95%;
+                  border-radius: 100%;
+                }
+              }
+              .header__name {
+                @include flex(flex-start, flex-start, column);
+                row-gap: 0.75rem;
+
+                h4 {
+                  font-weight: 300;
+                  font-size: clamp(0.5rem, 1.25vw + 0.25rem, 1rem);
+                  color: $lightHeader;
+                }
+                figcaption {
+                  font-size: clamp(0.5rem, 1.25vw + 0.35rem, 1.1rem);
+                  color: $mainHeader;
+                }
+              }
+            }
+            .header__save {
+              position: absolute;
+              inset: 0 auto auto 0.25rem;
+              width: clamp(0.75rem, 1.1vw + 0.75rem, 1.5rem);
+              &.active {
+                fill: #2d264b !important;
+                path {
+                  &:first-child {
+                    fill: $lighterBackground;
+                  }
+                }
+              }
+            }
+          }
+          .right__title {
+            @include flex(center);
+            margin-top: clamp(1rem, 1vw + 1.25rem, 2.75rem);
+            column-gap: clamp(0.75rem, 1vw + 0.35rem, 1.25rem);
+            .title__image {
+              @include center;
+              height: clamp(1.5rem, 1.5vw + 1.15rem, 2.4rem);
+              width: clamp(1.5rem, 1.5vw + 1.15rem, 2.4rem);
+              border-radius: 5px;
+              background-color: $purpleColor;
+              img {
+                width: clamp(0.9rem, 1.25vw + 0.425rem, 1.35rem);
+              }
+            }
+            figcaption {
+              font-weight: 600;
+              font-size: clamp(0.75rem, 1vw + 0.4rem, 1.25rem);
+              color: $lightHeader;
+            }
+          }
+          .right__details {
+            @include flex(flex-start, space-between);
+            flex-wrap: wrap;
+            margin: clamp(0.75rem, 1vw + 1rem, 2.25rem) 0 clamp(0.75rem, 1vw + 1rem, 1.5rem) 0;
+            width: 100%;
+            row-gap: clamp(1vw, 1vw + 1rem, 2.25rem);
+            height: fit-content;
+            @include mobile {
+              margin: clamp(0.75rem, 1vw + 1rem, 2.25rem) 0 0 0;
+            }
+            .details__item {
+              @include flex(center);
+              column-gap: clamp(0.5rem, 1vw + 0.25rem, 1rem);
+              width: 50%;
+              height: clamp(1rem, 1vw + 1.25rem, 3rem);
+              div {
+                @include center;
+                height: clamp(1.5rem, 1.5vw + 1.15rem, 2.4rem);
+                width: clamp(1.5rem, 1.5vw + 1.15rem, 2.4rem);
+                border-radius: 5px;
+                background-color: $overlayBackground;
+                svg {
+                  width: clamp(0.9rem, 1.25vw + 0.425rem, 1.35rem);
+                }
+              }
+              figcaption {
+                color: $lightHeader;
+                width: 72.5%;
+                height: clamp(0.75rem, 1.25vw + 0.25rem, 1.5rem);
+                font-size: clamp(0.5rem, 0.5vw + 0.5rem, 1rem);
+                overflow: hidden;
+              }
+            }
+          }
+          button {
+            @include customizeButton($orangeColor, $purpleColor);
+            margin-top: clamp(-1rem, 0.5vw + 1rem, 2rem);
+            width: 100%;
+            height: clamp(1.7rem, 2.5vw + 1rem, 2.5rem);
+            font-size: clamp(0.6rem, 1vw, 1.05rem);
+            font-weight: 800;
+            border-radius: 10px;
+            color: $lighterBackground;
+            &::before {
+              width: 0.5rem;
+            }
+            &::after {
+              width: 0.5rem;
+            }
+          }
+        }
+        .header__capacity {
+          @include flex(center);
+          margin-top: clamp(0.75rem, 1vw + 0.5rem, 1.75rem);
+          margin-left: 2.5rem;
+          width: 100%;
+          height: clamp(2rem, 0.5vw + 2.5rem, 3.5rem);
+          border-radius: 0.5rem;
+          border: 1px solid $SeparatorColor;
+          .capacity__item {
+            @include flex(center, space-between);
+            position: relative;
+            width: 50%;
+            padding: 0 1rem;
+            font-size: clamp(0.5rem, 1vw + 0.15rem, 1rem);
+            @include mobile {
+              padding: 0 0.5rem;
+              font-size: clamp(0.5rem, 0.5vw + 0.5rem, 0.7rem);
+            }
+            .item__logo {
+              @include flex(center);
+              img {
+                width: clamp(1rem, 1vw + 1.3rem, 2rem);
+              }
+              .item__title {
+                margin-right: clamp(0.25rem, 0.5vw + 0.125rem, 0.75rem);
+                font-weight: 400;
+                color: $lighterHeader;
+              }
+            }
+            .item__content {
+              margin-right: 0.75rem;
+              font-weight: 700;
+              color: $mainHeader;
+            }
+            &:first-child {
+              padding-left: 1.25rem;
+              @include tablet {
+                padding-left: 0.5rem;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                inset: 50% auto auto 0;
+                width: 2px;
+                height: 75%;
+                transform: translateY(-50%);
+                border-radius: 1rem;
+                background-color: $SeparatorColor;
+              }
+            }
+            &:last-child {
+              padding-right: 1.5rem;
+              @include tablet {
+                padding-right: 0.5rem;
+              }
+            }
+          }
+        }
+        .header__left {
+          @include flex(center, space-between);
+          width: 100%;
+          height: 27rem;
+          overflow: hidden;
+          transition: all 1s;
+          border-radius: 1.5rem;
+          @include sidebar {
+            height: clamp(20rem, 22.5vw + 10rem, 27rem);
+          }
+          .swiper {
+            width: 100%;
+            height: 100%;
+          }
+          .swiper-pagination-bullet {
+            width: 0.9rem !important;
+            height: 0.9rem !important;
+            background-color: $lighterBackground !important;
+            opacity: 1 !important;
+          }
+          .swiper-pagination-bullet-active {
+            width: 2.75rem !important;
+            background-color: $purpleColor !important;
+            border-radius: 0.5rem !important;
+          }
+          .swiper-slide {
+            width: 100% !important;
+            height: 100% !important;
+            img {
+              @include center;
+              object-fit: cover;
+              width: 120%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .header__location {
+        margin-top: clamp(0.75rem, 1vw + 0.5rem, 1.75rem);
+        position: relative;
+        padding: 0;
+        height: clamp(2rem, 0.5vw + 2.5rem, 3.5rem);
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: $boxShadow;
+        .location__link {
+          @include center;
+          height: 100%;
+          width: 100%;
+          img {
+            width: 120%;
+          }
+        }
+        .link__title {
+          @include center;
+          position: absolute;
+          inset: 0 auto auto 0;
+          height: 100%;
+          width: 100%;
+          font-weight: 800;
+          font-size: clamp(0.6rem, 1vw + 0.25rem, 1.1rem);
+          color: $lighterBackground;
+          background-color: rgba(151, 151, 151, 0.7);
+        }
+      }
+    }
+    .section__dscr {
+      margin-top: 2.5rem;
+      h6 {
+        font-size: 600;
+        font-size: clamp(0.5rem, 1.5vw + 0.5rem, 1.5rem);
+        color: $lightHeader;
+      }
+      p {
+        margin: clamp(0.5rem, 1.5vw + 0.25rem, 1.25rem) clamp(0.5rem, 1.5vw + 0.5rem, 1.5rem) 0 0;
+        height: 15rem;
+        font-size: clamp(0.125rem, 1.25vw + 0.125rem, 1.125rem);
+        line-height: clamp(1.25rem, 1.5vw + 1.5rem, 2.5rem);
+        color: $lighterHeader;
+        overflow-y: auto;
+        @include mobile {
+          font-size: 0.75rem;
+          height: fit-content;
+        }
+      }
+    }
+  }
+  &__sidebar {
+    padding: 2.5rem 1.1rem 0 1.1rem;
+    position: relative;
+    height: 60rem;
+    width: 25%;
+    border-radius: 0.75rem;
+    box-shadow: $boxShadow;
+    background-color: $lighterBackground;
+    @include sidebar {
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -0.375rem auto auto 50%;
+      width: 60%;
+      height: 0.75rem;
+      border-radius: 1rem;
+      transform: translate(-50%);
+      background-color: $purpleColor;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: calc(100% - 0.375rem) auto auto 50%;
+      width: 60%;
+      height: 0.75rem;
+      border-radius: 1rem;
+      transform: translate(-50%);
+      background-color: $purpleColor;
+    }
+    .sidebar__header {
+      @include flex(center, space-between);
+      .header__icon-title {
+        @include flex(center);
+        column-gap: 1rem;
+        .header__icon {
+          @include center;
+          height: 2.4rem;
+          width: 2.4rem;
+          border-radius: 5px;
+          background-color: $overlayBackground;
+          img {
+            width: 1.35rem;
+            &.checkIcon {
+              filter: invert(1);
+            }
+          }
+        }
+        h2 {
+          font-size: 1.1rem;
+          color: $lightHeader;
+        }
+      }
+      button {
+        height: 2.2rem;
+        width: 6rem;
+        font-size: 0.9rem;
+        color: $mainHeader;
+        border-radius: 6px;
+        border: 1px solid $purpleColor;
+        transition: all 250ms;
+        &:active {
+          background-color: $purpleColor;
+          color: $lighterBackground;
+        }
+      }
+      &.second {
+        margin-top: 2rem;
+      }
+    }
+    .event__watch {
+      position: relative;
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 14rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      img {
+        height: 100%;
+        width: fit-content;
+        filter: blur(10px);
+      }
+      button {
+        @include flex(center, center);
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: 13em;
+        height: 3rem;
+        border: none;
+        column-gap: 1rem;
+        border-radius: 10px;
+        background-color: $lighterBackground;
+        outline: 5px solid #ffffff30;
+        img {
+          filter: invert(0);
+          width: 1.25rem;
+        }
+        span {
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: $lightHeader;
+        }
+      }
+    }
+    .sidebar__more-events {
+      @include flex(center, space-between, column);
+      margin-top: 1.25rem;
+      row-gap: 0.5rem;
+      width: 100%;
+      height: fit-content;
+      .more-events__event {
+        @include flex(center);
+        position: relative;
+        padding: 1rem;
+        height: 8rem;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: $boxShadow;
+        border-radius: 0.75rem;
+        column-gap: 0.75rem;
+        background: $lighterBackground;
+        box-shadow: $boxShadow;
+        .event__image {
+          width: 16rem;
+          height: 6.6rem;
+          overflow: hidden;
+          border-radius: 0.75rem;
+          img {
+            height: 100%;
+            width: fit-content;
+          }
+        }
+        .event__content {
+          h6 {
+            width: 100%;
+            height: 1.4rem;
+            font-size: 1rem;
+            overflow: hidden;
+            color: $lightHeader;
+          }
+          p {
+            @include flex(center);
+            width: 100%;
+            height: 5rem;
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            color: $lighterHeader;
+          }
+        }
+        button {
+          position: absolute;
+          inset: auto auto 0 0;
+          width: 2rem;
+          height: 2rem;
+          border: 2px solid $orangeColor;
+          border-radius: 0 0.57rem 0.75rem 1rem;
+          transition: all 250ms;
+          &:active {
+            background-color: $orangeColor;
+            svg {
+              path {
+                fill: $lighterBackground;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidebar__email-newsletters {
+      @include flex(center);
+      position: relative;
+      margin-top: 2.5rem;
+      height: 3.75rem;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: $boxShadow;
+      border: 1px solid $orangeColor;
+      input {
+        margin-right: 5%;
+        height: 2.75rem;
+        width: 67.5%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $mainHeader;
+        &::placeholder {
+          font-weight: 600;
+          color: $lighestHeader;
+        }
+      }
+      button {
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 27.5%;
+        height: 100%;
+        font-weight: 600;
+        font-size: 1.2rem;
+        border: none;
+        color: $lighterBackground;
+        border-radius: 1rem 0 2.5rem 1rem;
+        background-color: $orangeColor;
+        transition: all 250ms;
+        &:active {
+          color: $orangeColor;
+          border: 2px solid $orangeColor;
+          background-color: $lighterBackground;
+        }
+      }
+    }
+  }
+}

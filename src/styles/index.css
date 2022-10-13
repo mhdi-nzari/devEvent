@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Hairline.woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Thin.woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Light.woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Regular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Medium.woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Bold.woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-DemiBold.woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-ExtraBlack.woff2");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "dana-FaNum";
+  src: url("../assets/fonts/DanaFaNum-Heavy.woff2");
+  font-weight: 900;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "dana-FaNum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  font-family: "dana-fanum";
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+input,
+button,
+select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "dana-fanum";
+}
+button {
+  cursor: pointer;
+}

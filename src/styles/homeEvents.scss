@@ -1,0 +1,220 @@
+@import "variables";
+@import "mediaQueries";
+
+.events {
+  margin: 10rem auto 5rem auto;
+  @include mobile {
+    margin: 10rem auto 2rem auto;
+  }
+  .events__container {
+    @include flex(center, space-between);
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 1rem 2rem;
+    height: 28rem;
+    overflow: hidden;
+    margin: 2rem auto 0 auto;
+    width: 95%;
+    @media screen and (max-width: 896px) {
+      @include flex(center, center);
+    }
+    @include mobile {
+      gap: 0;
+    }
+    .events__container__content {
+      width: 26rem;
+      height: 28rem;
+      box-shadow: $boxShadow;
+      background-color: $lighterBackground;
+      border-radius: 1.25rem 1.25rem 0.5rem 0.5rem;
+      @include mobile {
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem 0 2rem 0;
+      }
+      .content__header {
+        margin: 1rem auto 0 auto;
+        position: relative;
+        width: 95%;
+        height: 15rem;
+        transition: all 500ms ease-out;
+        .header-image {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: clamp(11.75rem, 5vw + 8rem, 12.25rem);
+          border-radius: 0.5rem;
+          border-radius: 1rem 1rem 3rem 1rem;
+        }
+        .header-frame {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: clamp(11.75rem, 5vw + 8rem, 12.25rem);
+          display: none;
+        }
+        .header-logo {
+          position: absolute;
+          inset: clamp(9.9rem, 5vw + 6rem, 10.25rem) clamp(3.7rem, 5vw, 3.75rem) auto auto;
+          width: clamp(3.5rem, 5vw, 3.75rem);
+          height: clamp(3.5rem, 5vw, 3.75rem);
+          border-radius: 100%;
+          &::before {
+            content: "";
+            position: absolute;
+            inset: -15% -65% auto auto;
+            z-index: 1;
+            width: 225%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("../assets/white-hill.png");
+          }
+          img {
+            position: inherit;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+        .header-timer {
+          @include flex(center);
+          position: absolute;
+          inset: 5% auto auto 5%;
+          height: 1.5rem;
+          width: fit-content;
+          padding: 0 0.5rem;
+          column-gap: 0.5rem;
+          border-radius: 0px 0.6rem 0.6rem 0.6rem;
+          background-color: $lighterBackground;
+          svg {
+            width: 1rem;
+          }
+          time {
+            font-size: clamp(0.7rem, 2.75vw, 0.8rem);
+            margin-top: 0.1rem;
+          }
+        }
+        &:hover .header-hover {
+          opacity: 1;
+          backdrop-filter: blur(7px);
+          transition: all 500ms ease-out;
+        }
+        .header-hover {
+          @include center;
+          position: absolute;
+          inset: -1rem auto auto -0.5rem;
+          height: 105%;
+          width: 105%;
+          z-index: 1;
+          opacity: 0;
+          backdrop-filter: blur(0);
+          border-radius: 1.25rem;
+          transition: all 500ms ease-out;
+          button {
+            @include flex(center, center);
+            position: relative;
+            border: none;
+            column-gap: 1rem;
+            backdrop-filter: blur(25px);
+            background: rgba(136, 136, 136, 0.4);
+            &.see-location {
+              width: 10.5rem;
+              height: 2.25rem;
+              border-radius: 1rem;
+              a {
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: $lighterBackground;
+              }
+              svg {
+                width: 1.4rem;
+              }
+            }
+          }
+          &__rate {
+            @include flex(center, space-between);
+            position: absolute;
+            inset: 1.5rem 5% auto 0;
+            width: 90%;
+            &__caption {
+              @include flex(center, center);
+              padding: 0.5rem;
+              height: 2.25rem;
+              column-gap: 0.5rem;
+              border-radius: 1.25rem;
+              color: $lighterBackground;
+              backdrop-filter: blur(25px);
+              background: rgba(161, 161, 161, 0.6);
+
+              svg {
+                width: 1.5rem;
+              }
+            }
+            &__like {
+              @include center;
+              padding: 0.5rem;
+              height: 2.5rem;
+              column-gap: 0.5rem;
+              border-radius: 1.25rem;
+              color: $lighterBackground;
+              backdrop-filter: blur(25px);
+              background: rgba(161, 161, 161, 0.25);
+              svg {
+                width: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      .caption {
+        @include flex();
+        flex-wrap: wrap;
+        margin: clamp(0rem, 2vw, 1.5rem) auto 0 auto;
+        height: 7rem;
+        width: 95%;
+        &__item {
+          @include flex(center);
+          height: 2.25rem;
+          column-gap: 0.5rem;
+          font-size: clamp(0.65rem, 1vw + 0.5rem, 0.95rem);
+          &__icon {
+            @include center;
+            width: clamp(2rem, 3vw, 2.25rem);
+            height: clamp(2rem, 3vw, 2.25rem);
+            border-radius: 0.5rem;
+            background-color: $overlayBackground;
+            svg {
+              height: clamp(1.1rem, 2vw, 1.25rem);
+            }
+          }
+          &:nth-child(1) {
+            width: 57.5%;
+          }
+          &:nth-child(2) {
+            width: 42.5%;
+            justify-content: flex-end;
+          }
+          &:nth-child(3) {
+            width: 100%;
+          }
+        }
+      }
+      &__button {
+        @include center;
+        width: 100%;
+
+        button {
+          width: 18rem;
+          height: 2rem;
+          font-weight: 900;
+          font-size: clamp(0.65rem, 2vw, 0.85rem);
+          border-radius: 0.5rem;
+          @include mobile {
+            width: 75vw !important;
+          }
+        }
+      }
+    }
+  }
+}

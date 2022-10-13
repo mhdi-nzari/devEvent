@@ -1,0 +1,64 @@
+@import "variables";
+@import "mediaQueries";
+
+.path__container {
+  @include flex(center);
+  padding: 0 clamp(0.75rem, 0.5vw + 1rem, 1.5rem);
+  height: 4rem;
+  font-size: clamp(0.7rem, 1.15vw + 0.25rem, 1.1rem);
+  column-gap: clamp(0.5rem, 0.5vw + 0.75rem, 1.25rem);
+  border-radius: 0.5rem;
+  color: $lightHeader;
+  box-shadow: $boxShadow;
+  background-color: $lighterBackground;
+  @include mobile {
+    height: 3rem;
+    font-size: clamp(0.6rem, 1.25vw, 0.7rem);
+  }
+  .link {
+    @include flex(center);
+    column-gap: 0.8rem;
+    svg {
+      width: 1.1rem;
+      @include mobile {
+        display: none;
+      }
+      path {
+        transition: all 1s;
+      }
+      &.link__icon-home {
+        width: 1.2rem;
+      }
+    }
+    &.active {
+      color: $purpleColor;
+      svg {
+        path {
+          fill: $purpleColor;
+        }
+      }
+    }
+    a {
+      transition: all 1s;
+    }
+    &:hover {
+      a {
+        color: $lightHeader;
+      }
+      svg {
+        path {
+          fill: $lightHeader;
+        }
+        &.link__icon-home {
+          path {
+            fill: none;
+            stroke: $lightHeader;
+          }
+        }
+      }
+    }
+  }
+  &__arrow {
+    width: 0.35rem;
+  }
+}

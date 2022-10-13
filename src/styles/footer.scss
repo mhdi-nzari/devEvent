@@ -1,0 +1,118 @@
+@import "variables";
+@import "mediaQueries";
+
+footer {
+  height: 12rem;
+  width: 100%;
+  color: $lightHeader;
+  box-shadow: $boxShadow;
+  background-color: #494949;
+  .footer__container {
+    @include flex(center, space-between);
+    padding: 0 5rem;
+    height: 100%;
+    width: 100%;
+    &__call-us {
+      @include flex(center);
+      margin-top: 2rem;
+      width: 25%;
+      height: 50%;
+      color: $lighterBackground;
+
+      span {
+        margin-left: 3rem;
+      }
+      a {
+        @include center;
+        margin-right: 1rem;
+        background-color: $lighterBackground;
+        width: clamp(2rem, 6vw, 2.5rem);
+        height: clamp(2rem, 6vw, 2.5rem);
+        border-radius: 100%;
+        img {
+          width: clamp(1rem, 2vw, 1.5rem);
+        }
+      }
+    }
+    &__info {
+      @include center;
+      height: 70%;
+      row-gap: 1rem;
+      .info__name-logo {
+        @include flex(center, flex-start);
+        column-gap: 0.75rem;
+        img {
+          width: 4.25rem;
+        }
+        figcaption {
+          color: $lighterBackground;
+          font-size: 1.25rem;
+        }
+      }
+      p {
+        width: 65%;
+        text-align: center;
+        color: #888888;
+      }
+    }
+    &__links {
+      @include flex(center, space-between);
+      margin-top: 2rem;
+      width: 25%;
+      height: 50%;
+      color: $lighterBackground;
+      a {
+        margin: 0 0.5rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+      }
+    }
+    @include tablet {
+      @include flex(center, space-between, column);
+      height: 30rem;
+      &__call-us {
+        width: 13rem;
+        justify-content: center;
+      }
+      &__info {
+        width: 13rem;
+        p {
+          width: 100%;
+        }
+      }
+      &__links {
+        width: 13rem;
+      }
+    }
+  }
+  @include tablet {
+    height: fit-content;
+  }
+}
+// @media screen and (max-width: 487px) {
+//   footer {
+//     padding-bottom: 2rem;
+//     height: fit-content !important;
+//     .footer__container {
+//       flex-direction: column !important;
+//       row-gap: 3rem;
+//       width: 100%;
+//       &__call-us {
+//         width: fit-content;
+//       }
+//       .info__name-logo {
+//         @include flex(center, center, column);
+//         margin-top: 2rem;
+//         width: fit-content;
+//         row-gap: 1rem;
+//         color: $lighterBackground;
+//       }
+//       &__links {
+//         width: fit-content;
+//         column-gap: 2.5rem;
+//         a {
+//           margin-left: 0 !important;
+//         }
+//       }
+//     }
+//   }
+// }
