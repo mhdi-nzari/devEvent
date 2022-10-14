@@ -37,8 +37,8 @@ function SingleEventEvents() {
               <path
                 d="M23.3998 30L19.6975 26.3307C16.7451 23.4044 15.2688 21.9413 15.0415 20.158C14.9858 19.7211 14.9858 19.2789 15.0415 18.842C15.2688 17.0587 16.7451 15.5956 19.6975 12.6693L23.3998 9"
                 stroke="#8D56C3"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </button>
@@ -53,8 +53,8 @@ function SingleEventEvents() {
               <path
                 d="M23.3998 30L19.6975 26.3307C16.7451 23.4044 15.2688 21.9413 15.0415 20.158C14.9858 19.7211 14.9858 19.2789 15.0415 18.842C15.2688 17.0587 16.7451 15.5956 19.6975 12.6693L23.3998 9"
                 stroke="#8D56C3"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </button>
