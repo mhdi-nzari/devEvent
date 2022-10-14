@@ -7,8 +7,8 @@ import LocationRadio from "../components/locationRadio";
 import EventTypeCheckbox from "../components/eventTypeCheckbox";
 import FilterCollpaseExpand from "./../components/filterCollpaseExpand";
 
-import hamyarLogo from "./../assets/hamyar-logo.png";
-import hamyarSpace from "./../assets/hamyar-space.png";
+import hamyarLogo from "../assets/mvp/hamyar-logo.png";
+import hamyarSpace from "../assets/mvp/hamyar-space.png";
 
 import Wave from "./../assets/icons/wave.svg";
 

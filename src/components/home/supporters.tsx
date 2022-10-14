@@ -1,19 +1,19 @@
-import Header from "././header";
-
-// Icons
-import ChartIcon from "./../assets/icons/chart.svg";
+import Header from "../header";
 
 import { SwiperSlide } from "swiper/react";
+import SliderWrapper from "../sliderWrapper";
+
+// Icons
+import ChartIcon from "../../assets/icons/chart.svg";
 
 // Supporters Icons
-import RTLLogo from "./../assets/logos/rtl-theme.svg";
-import ZhakatLogo from "./../assets/logos/zhakat.svg";
-import DigikalaLogo from "./../assets/logos/digikala.svg";
-import IranHostLogo from "./../assets/logos/iran-host.svg";
-import SevenLearnLogo from "./../assets/logos/7learn.svg";
+import RTLLogo from "../../assets/logos/rtl-theme.svg";
+import ZhakatLogo from "../../assets/logos/zhakat.svg";
+import DigikalaLogo from "../../assets/logos/digikala.svg";
+import IranHostLogo from "../../assets/logos/iran-host.svg";
+import SevenLearnLogo from "../../assets/logos/7learn.svg";
 
-import "../styles/supporters.scss";
-import SliderWrapper from "././sliderWrapper";
+import "../../styles/supporters.scss";
 
 function Supporters() {
   return (

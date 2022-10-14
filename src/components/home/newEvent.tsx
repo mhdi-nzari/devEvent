@@ -1,4 +1,4 @@
-import "../styles/newEvent.scss";
+import "../../styles/newEvent.scss";
 
 function NewEvent() {
   return (

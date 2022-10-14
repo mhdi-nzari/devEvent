@@ -1,6 +1,6 @@
 import { useState, ReactNode } from "react";
 
-import Arrow from "./../assets/icons/arrow-ouline.svg";
+import Arrow from "./../assets/icons/arrow.svg";
 
 import "../styles/events.scss";
 

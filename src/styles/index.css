@@ -45,12 +45,12 @@
 }
 
 body {
+  direction: rtl;
   overflow-x: hidden;
   font-family: "dana-FaNum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  direction: rtl;
 }
 
 *,
@@ -62,14 +62,10 @@ body {
 }
 
 a {
-  text-decoration: none;
   all: unset;
   cursor: pointer;
+  text-decoration: none;
   font-family: "dana-fanum";
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 input,
@@ -80,6 +76,11 @@ select {
   background-color: transparent;
   font-family: "dana-fanum";
 }
+
 button {
   cursor: pointer;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

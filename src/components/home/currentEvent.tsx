@@ -1,34 +1,36 @@
 import { Link } from "react-router-dom";
 
-import Header from "../components/header";
+import Header from "../../components/header";
 
 // header icon
-import InProgressIcon from "./../assets/icons/in-progress.svg";
+import InProgressIcon from "../../assets/icons/in-progress.svg";
 
 // Event example images
-import EventSpaceImage from "./../assets/event-image.png";
-import EventImage from "./../assets/dev-summit.png";
+import EventSpaceImage from "../../assets/mvp/event-image.png";
+import EventImage from "../../assets/mvp/dev-summit.png";
 
-import "../styles/currentEvent.scss";
+import "../../styles/currentEvent.scss";
 
 function CurrentEvent() {
-  const text =
+  const caption =
     "اولین رویداد تخصصی جامعه توسعه دهندگان ایران که توسط مرجع رسمی فروش قالب و فروش افزونه ژاکت راه اندازی شده است";
 
   return (
     <section className="home__current-event current-event">
       <Header title="رویداد های در حال برگذاری " icon={InProgressIcon} />
-      <div className="current-event__container">
-        <div className="current-event__container__image">
+
+      <figure className="current-event__container container">
+        <div className="container__image">
           <img src={EventSpaceImage} alt="" />
         </div>
-        <div className="current-event__container__content">
-          <div className="content__header">
+
+        <div className="container__content content">
+          <div className="content__header header">
             <b />
             <b />
             <img src={EventImage} alt="" className="content__header__image" />
             <figcaption>رویداد Dev Summit</figcaption>
-            <summary>{text.length >= 110 ? text.slice(0, 128) + "..." : text}</summary>
+            <summary>{caption.length >= 110 ? caption.slice(0, 128) + "..." : caption}</summary>
 
             <div className="top-container">
               <div className="top-container__timer">
@@ -69,8 +71,8 @@ function CurrentEvent() {
               )}
             </div>
           </div>
-          <div className="content__list">
-            <div className="list__item">
+          <div className="content__list list">
+            <div className="list__item item">
               <div className="item__image">
                 <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -135,14 +137,15 @@ function CurrentEvent() {
               <span>عصرانه ، شام</span>
             </div>
           </div>
-          <div className="buttons-container">
+          <div className="content__buttons">
             <button className="buttons__capacity btn disabled">ظرفیت ثبت نام تکمیل</button>
+
             <Link to={`/events/${"Dev Summit"}`}>
               <button className="buttons__see-details btn third">مشاهده جزئیات</button>
             </Link>
           </div>
         </div>
-      </div>
+      </figure>
     </section>
   );
 }

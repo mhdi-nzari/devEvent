@@ -9,8 +9,8 @@ import CompassIcon from "./../assets/icons/compass.svg";
 import LocationIcon from "./../assets/icons/location.svg";
 import CostColorIcon from "./../assets/icons/cost.svg";
 
-import hamyarLogo from "./../assets/hamyar-logo.png";
-import hamyarSpace from "./../assets/hamyar-space.png";
+import hamyarLogo from "../assets/mvp/hamyar-logo.png";
+import hamyarSpace from "../assets/mvp/hamyar-space.png";
 
 import "../styles/singleEventEvents.scss";
 

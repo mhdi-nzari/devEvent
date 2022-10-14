@@ -41,9 +41,9 @@
           }
           &.disabled {
             box-shadow: none;
-            border: 1px solid $lightHeader;
+            border: 1px solid $lighterHeader;
             path {
-              stroke: $lightHeader;
+              stroke: $lighterHeader;
             }
           }
         }
@@ -144,9 +144,10 @@
         }
       }
       &__button {
-        @include center;
+        @include flex(center, center);
+        width: 100%;
         button {
-          width: 18rem;
+          width: 90%;
           height: 2rem;
           font-size: 0.85rem;
           border-radius: 0.5rem;

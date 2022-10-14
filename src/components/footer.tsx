@@ -1,5 +1,5 @@
 import callIcon from "./../assets/icons/tel.svg";
-import webIcon from "./../assets/icon.svg";
+import webIcon from "./../assets/icon.png";
 
 import "../styles/footer.scss";
 function Footer() {

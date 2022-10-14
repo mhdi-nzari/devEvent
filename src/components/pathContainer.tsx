@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import ArrowOutlineIcon from "./../assets/icons/arrow-ouline.svg";
+import ArrowOutlineIcon from "../assets/icons/arrow-outline.svg";
 
 import "../styles/pathContainer.scss";
 

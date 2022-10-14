@@ -1,9 +1,5 @@
-import NewEvent from "../components/newEvent";
-import Supporters from "../components/supporters";
-import HomeEvents from "../components/homeEvents";
 import AnimatedPage from "../components/animatedPage";
-import CurrentEvent from "../components/currentEvent";
-import EmailReceiver from "../components/emailReceiver";
+import { EmailReceiver, CurrentEvent, HomeEvents, Supporters, NewEvent } from "../components/home";
 
 import "../styles/home.scss";
 

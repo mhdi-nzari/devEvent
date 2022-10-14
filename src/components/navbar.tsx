@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
 
-import { CSSTransition } from "react-transition-group";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-import websiteIcon from "./../assets/icon.svg";
-import menuIcon from "./../assets/icons/menu.svg";
-import avatarIcon from "./../assets/icons/avatar-outline.svg";
-import searchIcon from "./../assets/icons/search-outline.svg";
-import notificationsIcon from "./../assets/icons/notification-outline.svg";
+import websiteIcon from "../assets/icon.png";
+import menuIcon from "../assets/icons/menu.svg";
 
 import "../styles/navbar.scss";
 
@@ -141,47 +137,6 @@ function Navbar() {
             <img src={menuIcon} alt="" />
           </button>
         </div>
-
-        <CSSTransition in={showNavbar} timeout={700} classNames="navbar" unmountOnExit>
-          <div className={`nav-mobile__container ${showNavbar && "active"}`}>
-            <div
-              className="nav-mobile__closer"
-              onClick={() => {
-                setShowNavbar(false);
-              }}
-            />
-            <div className="nav-mobile navbar">
-              <div className="nav-mobile__top">
-                <Link to={"/"}>
-                  <figure className="nav-mobile__top__logo">
-                    <img src={websiteIcon} alt="" />
-                    <figcaption>رویداد</figcaption>
-                  </figure>
-                </Link>
-              </div>
-              <ul className="nav-mobile__menu">
-                <li>
-                  <NavLink
-                    end
-                    to={"/"}
-                    className={({ isActive }) =>
-                      isActive ? "active" : location.pathname.slice(0, 7) === "/events" ? "active" : ""
-                    }
-                  >
-                    خانه
-                  </NavLink>
-                </li>
-                {links.map((item, index) => (
-                  <li>
-                    <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} key={item.path}>
-                      {item.header}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </CSSTransition>
       </nav>
     </>
   );

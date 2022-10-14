@@ -6,65 +6,71 @@
   @include mobile {
     margin: 10rem auto 2rem auto;
   }
-  .events__container {
-    @include flex(center, space-between);
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    gap: 1rem 2rem;
-    height: 28rem;
-    overflow: hidden;
+  &__container {
+    @include flex(center, space-between, row, wrap);
     margin: 2rem auto 0 auto;
     width: 95%;
+    height: 28rem;
+    gap: 1rem 2rem;
+    overflow: hidden;
+
     @media screen and (max-width: 896px) {
       @include flex(center, center);
     }
-    @include mobile {
+
+    @include tablet {
       gap: 0;
     }
-    .events__container__content {
+    &__content,
+    .content {
       width: 26rem;
       height: 28rem;
       box-shadow: $boxShadow;
       background-color: $lighterBackground;
       border-radius: 1.25rem 1.25rem 0.5rem 0.5rem;
-      @include mobile {
-        width: 100%;
-        height: fit-content;
-        padding: 0.5rem 0 2rem 0;
+
+      @media screen and (max-width: 896px) {
+        width: 24rem !important;
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
       }
-      .content__header {
-        margin: 1rem auto 0 auto;
+      @include tablet {
+        padding: 0.5rem 0 2rem 0;
+        height: fit-content;
+      }
+      @include mobile {
+        padding: 0.5rem 0 2rem 0;
+        height: fit-content;
+      }
+
+      &__header,
+      .header {
+        margin: 0.75rem auto 0 auto;
         position: relative;
         width: 95%;
         height: 15rem;
         transition: all 500ms ease-out;
-        .header-image {
+        &__space {
           position: absolute;
           top: 0;
           width: 100%;
           height: clamp(11.75rem, 5vw + 8rem, 12.25rem);
-          border-radius: 0.5rem;
           border-radius: 1rem 1rem 3rem 1rem;
         }
-        .header-frame {
+        &__logo {
           position: absolute;
-          top: 0;
-          width: 100%;
-          height: clamp(11.75rem, 5vw + 8rem, 12.25rem);
-          display: none;
-        }
-        .header-logo {
-          position: absolute;
-          inset: clamp(9.9rem, 5vw + 6rem, 10.25rem) clamp(3.7rem, 5vw, 3.75rem) auto auto;
-          width: clamp(3.5rem, 5vw, 3.75rem);
-          height: clamp(3.5rem, 5vw, 3.75rem);
+          inset: clamp(10.15rem, 5vw + 6rem, 10.25rem) clamp(3.7rem, 5vw, 3.75rem) auto auto;
+          width: clamp(3.25rem, 5vw, 3.75rem);
+          height: clamp(3.25rem, 5vw, 3.75rem);
           border-radius: 100%;
           &::before {
             content: "";
             position: absolute;
-            inset: -15% -65% auto auto;
+            inset: -15% -60% auto auto;
             z-index: 1;
-            width: 225%;
+            width: 215%;
             height: 80%;
             background-repeat: no-repeat;
             background-size: contain;
@@ -77,7 +83,7 @@
             z-index: 1;
           }
         }
-        .header-timer {
+        &__timer {
           @include flex(center);
           position: absolute;
           inset: 5% auto auto 5%;
@@ -95,12 +101,13 @@
             margin-top: 0.1rem;
           }
         }
-        &:hover .header-hover {
+        &:hover .header--hover {
           opacity: 1;
           backdrop-filter: blur(7px);
           transition: all 500ms ease-out;
         }
-        .header-hover {
+        .header--hover,
+        .hover {
           @include center;
           position: absolute;
           inset: -1rem auto auto -0.5rem;
@@ -108,8 +115,8 @@
           width: 105%;
           z-index: 1;
           opacity: 0;
-          backdrop-filter: blur(0);
           border-radius: 1.25rem;
+          backdrop-filter: blur(0);
           transition: all 500ms ease-out;
           button {
             @include flex(center, center);
@@ -118,7 +125,7 @@
             column-gap: 1rem;
             backdrop-filter: blur(25px);
             background: rgba(136, 136, 136, 0.4);
-            &.see-location {
+            &.hover__location {
               width: 10.5rem;
               height: 2.25rem;
               border-radius: 1rem;
@@ -132,7 +139,8 @@
               }
             }
           }
-          &__rate {
+          &__rate,
+          .rate {
             @include flex(center, space-between);
             position: absolute;
             inset: 1.5rem 5% auto 0;
@@ -151,7 +159,8 @@
                 width: 1.5rem;
               }
             }
-            &__like {
+            &__like,
+            .like {
               @include center;
               padding: 0.5rem;
               height: 2.5rem;
@@ -162,18 +171,26 @@
               background: rgba(161, 161, 161, 0.25);
               svg {
                 width: 1.5rem;
+                &.like--checked {
+                  fill: red !important;
+                  path {
+                    stroke: $lighterBackground;
+                  }
+                }
               }
             }
           }
         }
       }
+      &__caption,
       .caption {
         @include flex();
         flex-wrap: wrap;
         margin: clamp(0rem, 2vw, 1.5rem) auto 0 auto;
         height: 7rem;
         width: 95%;
-        &__item {
+        &__item,
+        .item {
           @include flex(center);
           height: 2.25rem;
           column-gap: 0.5rem;
@@ -186,6 +203,16 @@
             background-color: $overlayBackground;
             svg {
               height: clamp(1.1rem, 2vw, 1.25rem);
+            }
+          }
+          span {
+            max-width: 80%;
+            height: clamp(0.85rem, 1vw + 0.85rem, 1.4rem);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            &.free {
+              margin-left: 2.5rem;
             }
           }
           &:nth-child(1) {
@@ -201,11 +228,10 @@
         }
       }
       &__button {
-        @include center;
+        @include flex(center, center);
         width: 100%;
-
         button {
-          width: 18rem;
+          width: 85%;
           height: 2rem;
           font-weight: 900;
           font-size: clamp(0.65rem, 2vw, 0.85rem);

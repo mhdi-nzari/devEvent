@@ -3,27 +3,27 @@
 
 .email-reciever {
   @include center;
-  box-shadow: $boxShadow;
+  margin-right: -1.15vw;
   width: 101.5%;
   height: 32rem;
-  margin-right: -1.15vw;
   color: $lightHeader;
+  box-shadow: $boxShadow;
   background-color: $lighterBackground;
   @include tablet {
+    padding: 3rem 0 7.5rem 0;
     margin-right: -5vw;
     width: 105vw;
     height: fit-content;
-    padding: 3rem 0 7.5rem 0;
   }
   h5 {
-    font-weight: 800;
-    font-size: clamp(1rem, 2vw + 1.1rem, 2.25rem);
     margin-bottom: clamp(0.5rem, 1vw + 0.25rem, 1rem);
+    font-size: clamp(1rem, 2vw + 1.1rem, 2.25rem);
+    font-weight: 800;
   }
   p {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    font-weight: 500;
     text-align: center;
+    font-weight: 500;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     &.first {
       width: clamp(50%, 51%, 66%);
       width: 66%;
@@ -45,31 +45,32 @@
       }
     }
   }
-  &__form {
-    position: relative;
+  &__form,
+  .form {
     @include flex(center);
+    position: relative;
     padding: 0 2rem 0 1rem;
     margin-top: 3rem;
     height: 5rem;
     width: 46rem;
     border-radius: 4rem;
     background-color: $lightHeader;
-    .form__icon {
-      width: 2.25rem;
-    }
     @include tablet {
       margin-top: 5vw;
-      width: 75vw;
       height: clamp(3rem, 12vw, 4rem);
+      width: 75vw;
     }
-    .form__input {
+    &__icon {
+      width: 2.25rem;
+    }
+    &__input {
       margin: 0 3rem 0 1rem;
       position: relative;
       width: 60%;
       input {
         width: 100%;
-        outline: none;
         border: none;
+        outline: none;
         font-size: 1.2rem;
         color: $lighterBackground;
         &::placeholder {
@@ -82,8 +83,8 @@
         position: absolute;
         inset: 50% -1.5rem auto auto;
         transform: translateY(-50%);
-        width: 3px;
         height: 125%;
+        width: 3px;
         border-radius: 1rem;
         background-color: #656565;
       }
@@ -97,7 +98,7 @@
         }
       }
     }
-    .form__button {
+    &__button {
       @include flex(center, space-between);
       padding: 0 1.5rem;
       height: 75%;
@@ -121,32 +122,33 @@
           font-size: 0.9rem;
         }
       }
-      img {
-        width: 2.25rem;
+      svg {
+        width: 2.5rem;
         transition: all 1s ease-out;
         transition-delay: 500ms;
         @include tablet {
-          width: 1.6rem;
+          width: 2rem;
         }
       }
       &.active {
-        margin-right: 5%;
         padding-right: 2.75rem;
+        margin-right: 5%;
         width: 25%;
         @include tablet {
           padding-right: 1.8rem;
         }
-        img {
+        svg {
           margin-left: -4rem;
-          opacity: 0;
           width: 2.25rem;
+          opacity: 0;
+          transition: all 250ms;
         }
       }
       &:hover {
-        img {
+        svg {
           margin-left: -4rem;
-          opacity: 0;
           width: 2.25rem;
+          opacity: 0;
         }
       }
     }
@@ -160,10 +162,10 @@
         display: none;
       }
       .form__button {
-        margin: 0;
-        transform: translateX(-50%);
         position: absolute;
         inset: auto auto -95% 50%;
+        transform: translateX(-50%);
+        margin: 0;
         width: 9.5rem;
         height: 3.25rem;
         border-radius: 3.5rem;
@@ -179,7 +181,7 @@
             margin-right: 50%;
             transform: translateX(50%);
           }
-          img {
+          svg {
             margin-left: -4rem;
             opacity: 0;
             width: 2.25rem;

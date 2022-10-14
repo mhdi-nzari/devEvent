@@ -3,34 +3,34 @@
 
 .new-event {
   @include flex(center);
-  padding: 0 2.2rem 0 1rem;
   position: relative;
+  padding: 0 2.2rem 0 1rem;
   height: clamp(1.5rem, 4vw, 2rem);
   width: fit-content;
   border-radius: 1rem;
   background-color: $lightestBackground;
   span {
     margin-right: max(0.5rem);
-    font-weight: 400;
     font-size: clamp(0.65rem, 3vw, 0.9rem);
+    font-weight: 400;
     color: $lightHeader;
-    &.new-event__icon {
-      position: absolute;
-      inset: 50% clamp(0.5rem, 2vw, 0.8rem) auto auto;
-      margin: 0;
-      transform: translateY(-50%);
-      height: clamp(0.85rem, 3vw, 1rem);
-      width: clamp(0.85rem, 3vw, 1rem);
-      border-radius: 100%;
-      background-color: #47b044;
-      animation: pulse 1500ms infinite;
-    }
-    &.new-event__title {
-      margin-right: 0.25rem;
-      font-size: clamp(0.75rem, 3.75vw, 1rem);
-      font-weight: 700;
-      color: #47b044;
-    }
+  }
+  &__icon {
+    position: absolute;
+    margin: 0;
+    inset: 50% clamp(0.5rem, 2vw, 0.8rem) auto auto;
+    transform: translateY(-50%);
+    width: clamp(0.85rem, 3vw, 1rem);
+    height: clamp(0.85rem, 3vw, 1rem);
+    border-radius: 100%;
+    background-color: #47b044;
+    animation: pulse 1500ms infinite;
+  }
+  &__title {
+    margin-right: 0.25rem;
+    font-weight: 700;
+    font-size: clamp(0.75rem, 3.75vw, 1rem);
+    color: #47b044;
   }
 }
 
