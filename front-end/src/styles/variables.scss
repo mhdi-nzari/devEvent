@@ -4,7 +4,6 @@ $lightestBackground: #e9e9e9;
 $darkBackground: #212121;
 $mainHeader: #2c2c2c;
 $lighterHeader: #494949;
-$lighestHeader: #c5c5c5;
 $greenColor: #47b044;
 $lightGreenColor: rgba(9, 255, 0, 0.4);
 $transparentGreenColor: rgba(9, 255, 0, 0);
@@ -17,19 +16,44 @@ $borderColor: #efefef;
 $outlineColor: #d9d9d9;
 $redColor: #ff4e4e;
 $overlayBackground: #f4f4f4;
-$pathnameColor: #a7a7a7;
 $capacityTitle: #c7c7c7;
 $capacityCount: #494949;
 $lighterOutline: #f1f1f1;
 $commentBackground: #ebebeb;
 $buttonOverlay: #dddddd;
 $commentTextColor: #868686;
+$transition-base:all 0.6s ease-in-out !default;
+$radius-base:0.5rem;
 
 @mixin flex($align: flex-start, $justify: flex-start, $direction: row) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
+}
+
+//***** transition
+$enable-transitions: true !default;
+$transition-base: all 600ms ease-in-out !default;
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition)==0 {
+      -webkit-transition: $transition-base;
+      -moz-transition: $transition-base;
+      -ms-transition: $transition-base;
+      -o-transition: $transition-base;
+      transition: $transition-base;
+    }
+
+    @else {
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -ms-transition: $transition;
+      -o-transition: $transition;
+      transition: $transition;
+    }
+  }
 }
 
 @mixin center {
@@ -109,7 +133,7 @@ $commentTextColor: #868686;
   }
 
   &.third {
-    font-weight: 1200;
+    font-weight: 800;
     color: $purpleColor;
     background-color: $lighterBackground;
     &::before {
@@ -121,18 +145,20 @@ $commentTextColor: #868686;
   }
 
   &.disabled {
-    @include center;
-    width: 95%;
-    height: 2.25rem;
-    font-weight: 700;
+  
+   width: fit-content;
     font-size: 0.7rem;
+    font-weight: 400;
     color: $lighterBackground;
-    border: 2px dashed $redColor;
-    background-color: #ff4e4e10;
-    transition: all 1s;
-    &:hover {
-      border: 2px solid $redColor;
-    }
+    border: 1px dashed $redColor;
+    background-color: transparent;
+    padding: 10px 30px;
+    
+    //   border: 1px solid $redColor;
+
+    // &:hover {
+    //   border: 1px solid $redColor;
+    // }
   }
 }
 
@@ -145,7 +171,8 @@ $commentTextColor: #868686;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: $pathnameColor;
+  background-color: $orangeColor;
+  @include transition;
   &:hover {
     background-color: $purpleColor;
   }

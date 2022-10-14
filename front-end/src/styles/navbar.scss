@@ -45,7 +45,7 @@
         text-decoration: none;
         a {
           position: relative;
-          color: $lighestHeader;
+          color: $capacityTitle;
           transition: all 500ms;
           &.active {
             color: $mainHeader;
@@ -56,7 +56,7 @@
               height: 0.4rem;
               width: 0.4rem;
               border-radius: 100%;
-              background-color: $darkBlueColor;
+              background-color: $purpleColor;
             }
           }
           &:hover {
@@ -101,13 +101,13 @@
             height: 1.4rem;
             border: none;
             outline: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.1rem;
             color: $mainHeader;
             background-color: transparent;
             &::placeholder {
-              font-weight: 100;
-              color: $pathnameColor;
+              font-weight: 300;
+              color: $capacityTitle;
             }
           }
           &::before {

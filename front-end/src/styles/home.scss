@@ -6,10 +6,10 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 7.25rem auto auto clamp(-12.25rem, -11.5rem, -12rem);
+    inset: 10rem auto auto clamp(-12.25rem, -8rem, -8rem);
     transform: rotate(53.18deg);
-    height: clamp(12.5rem, 20vw, 17rem);
-    width: clamp(12.5rem, 20vw, 17rem);
+    height: clamp(12.5rem, 20vw, 10rem);
+    width: clamp(12.5rem, 20vw, 10rem);
     border-radius: 1.5rem;
     background-color: $purpleColor;
     opacity: 0.5;

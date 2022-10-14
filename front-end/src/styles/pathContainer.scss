@@ -5,10 +5,10 @@
   @include flex(center);
   padding: 0 clamp(0.75rem, 0.5vw + 1rem, 1.5rem);
   height: 4rem;
-  font-size: clamp(0.7rem, 1.15vw + 0.25rem, 1.1rem);
-  column-gap: clamp(0.5rem, 0.5vw + 0.75rem, 1.25rem);
-  border-radius: 0.5rem;
-  color: $pathnameColor;
+  font-size: 1.1em;
+  column-gap: 1.25rem;
+  border-radius:$radius-base;
+  color: $capacityTitle;
   box-shadow: $boxShadow;
   background-color: $lighterBackground;
   @include mobile {

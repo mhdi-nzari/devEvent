@@ -87,7 +87,7 @@ function Navbar() {
             </li>
             {links.map((item, index) => (
               <li>
-                <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} key={item.path}>
+                <NavLink to={item.path} key={index} className={({ isActive }) => (isActive ? "active" : "")} >
                   {item.header}
                 </NavLink>
               </li>

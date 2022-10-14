@@ -89,13 +89,14 @@
                 row-gap: 0.75rem;
 
                 h4 {
-                  font-weight: 300;
-                  font-size: clamp(0.5rem, 1.25vw + 0.25rem, 1rem);
-                  color: $pathnameColor;
+                  font-weight: 400;
+                  font-size: 1rem;
+                  color: $capacityTitle;
                 }
                 figcaption {
                   font-size: clamp(0.5rem, 1.25vw + 0.35rem, 1.1rem);
                   color: $mainHeader;
+                  font-weight: 500;
                 }
               }
             }
@@ -185,13 +186,47 @@
             }
           }
         }
+        .header__left {
+          @include flex(center, space-between);
+          width: 50%;
+          height: 27rem;
+          overflow: hidden;
+          transition: all 1s;
+          border-radius: 1.5rem;
+          .swiper-pagination-bullet {
+            width: 0.9rem !important;
+            height: 0.9rem !important;
+            background-color: $lighterBackground !important;
+            opacity: 1 !important;
+          }
+          .swiper-pagination-bullet-active {
+            width: 2.75rem !important;
+            background-color: $purpleColor !important;
+            border-radius: $radius-base;
+          }
+          .swiper-slide {
+            @include center;
+            width: 100%;
+            height: 27rem;
+            img {
+              width: 100%;
+              height: 27rem;
+            }
+          }
+        }
+      }
+      .header__bottom {
+        @include flex(center);
+        margin-top: 1.75rem;
+        width: 100%;
+        height: 3.5rem;
         .header__capacity {
           @include flex(center);
           margin-top: clamp(0.75rem, 1vw + 0.5rem, 1.75rem);
           margin-left: 2.5rem;
-          width: 100%;
-          height: clamp(2rem, 0.5vw + 2.5rem, 3.5rem);
-          border-radius: 0.5rem;
+          height: 100%;
+          width: 50%;
+          border-radius:$radius-base;
           border: 1px solid $outlineColor;
           .capacity__item {
             @include flex(center, space-between);
@@ -248,12 +283,11 @@
           width: 100%;
           height: 27rem;
           overflow: hidden;
-          transition: all 1s;
-          border-radius: 1.5rem;
-          @include sidebar {
-            height: clamp(20rem, 22.5vw + 10rem, 27rem);
-          }
-          .swiper {
+          border-radius:$radius-base;
+          box-shadow: $boxShadow;
+          .location__link {
+            @include center;
+            height: 100%;
             width: 100%;
             height: 100%;
           }
@@ -320,9 +354,9 @@
       p {
         margin: clamp(0.5rem, 1.5vw + 0.25rem, 1.25rem) clamp(0.5rem, 1.5vw + 0.5rem, 1.5rem) 0 0;
         height: 15rem;
-        font-size: clamp(0.125rem, 1.25vw + 0.125rem, 1.125rem);
-        line-height: clamp(1.25rem, 1.5vw + 1.5rem, 2.5rem);
-        color: $pathnameColor;
+        font-size: 1.125rem;
+        line-height: 2.5rem;
+        color: $capacityTitle;
         overflow-y: auto;
         @include mobile {
           font-size: 0.75rem;
@@ -480,7 +514,7 @@
             height: 5rem;
             font-size: 0.75rem;
             line-height: 1.25rem;
-            color: $pathnameColor;
+            color: $capacityTitle;
           }
         }
         button {
@@ -522,7 +556,7 @@
         color: $mainHeader;
         &::placeholder {
           font-weight: 600;
-          color: $lighestHeader;
+          color: $capacityTitle;
         }
       }
       button {
