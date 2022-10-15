@@ -1,18 +1,18 @@
-import Comment from "././comment";
+import Comment from "./comment";
 
-import CommentIcon from "./../assets/icons/comment.svg";
-import DoubleTIcon from "./../assets/icons/double-t.svg";
-import UnderlineColorsIcon from "./../assets/icons/underline-colors.svg";
-import OrderedListIcon from "./../assets/icons/ordered-list.svg";
-import UnOrderedListIcon from "./../assets/icons/unordered-list.svg";
-import JustifyTextIcon from "./../assets/icons/justify-text.svg";
-import RightTextIcon from "./../assets/icons/right-text.svg";
-import CenterTextIcon from "./../assets/icons/right-text.svg";
-import UnderlineIcon from "./../assets/icons/underline.svg";
-import ItalicIcon from "./../assets/icons/italic.svg";
-import BoldIcon from "./../assets/icons/bold.svg";
+import CommentIcon from "../../assets/icons/comment.svg";
+import DoubleTIcon from "../../assets/icons/double-t.svg";
+import UnderlineColorsIcon from "../../assets/icons/underline-colors.svg";
+import OrderedListIcon from "../../assets/icons/ordered-list.svg";
+import UnOrderedListIcon from "../../assets/icons/unordered-list.svg";
+import JustifyTextIcon from "../../assets/icons/justify-text.svg";
+import RightTextIcon from "../../assets/icons/right-text.svg";
+import CenterTextIcon from "../../assets/icons/right-text.svg";
+import UnderlineIcon from "../../assets/icons/underline.svg";
+import ItalicIcon from "../../assets/icons/italic.svg";
+import BoldIcon from "../../assets/icons/bold.svg";
 
-import "../styles/comments.scss";
+import "../../styles/comments.scss";
 
 function Comments() {
   return (

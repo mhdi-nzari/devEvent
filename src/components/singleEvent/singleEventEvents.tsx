@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 
-import ChartIcon from "./../assets/icons/linear-chart.svg";
-import CompassIcon from "./../assets/icons/compass.svg";
-import LocationIcon from "./../assets/icons/location.svg";
-import CostColorIcon from "./../assets/icons/cost.svg";
+import ChartIcon from "../../assets/icons/linear-chart.svg";
+import CompassIcon from "../../assets/icons/compass.svg";
+import LocationIcon from "../../assets/icons/location.svg";
+import CostColorIcon from "../../assets/icons/cost.svg";
 
-import hamyarLogo from "../assets/mvp/hamyar-logo.png";
-import hamyarSpace from "../assets/mvp/hamyar-space.png";
+import hamyarLogo from "../../assets/mvp/hamyar-logo.png";
+import hamyarSpace from "../../assets/mvp/hamyar-space.png";
 
-import "../styles/singleEventEvents.scss";
+import "../../styles/singleEventEvents.scss";
 
 function SingleEventEvents() {
   const [swipe, setSwipe] = useState<any>();

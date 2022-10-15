@@ -1,4 +1,4 @@
-import AavandProfile from "./../assets/mvp/aavand.png";
+import AavandProfile from "../../assets/mvp/aavand.png";
 
 function Reply() {
   return (

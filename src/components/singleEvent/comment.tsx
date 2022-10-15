@@ -1,6 +1,6 @@
-import Reply from "././reply";
+import Reply from "./reply";
 
-import AavandProfile from "../assets/mvp/aavand.png";
+import AavandProfile from "../../assets/mvp/aavand.png";
 
 function Comment() {
   return (
