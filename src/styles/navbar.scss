@@ -12,6 +12,9 @@
   transition: all 500ms;
   box-shadow: $boxShadow;
   background-color: $lighterBackground;
+  @include tablet {
+    display: none;
+  }
   div,
   ul {
     @include flex(center);

@@ -1,0 +1,86 @@
+@import "variables";
+@import "mediaQueries";
+
+.create {
+    margin: 0 auto 0 auto;
+    width: 95%;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: $boxShadow;
+    border: 1px solid $purpleColor;
+    background-color: $lighterBackground;
+  &__header {
+    @include flex(center);
+    padding: 0.75rem 1.5rem;
+    height: 3.8rem;
+    width: 100%;
+    overflow: hidden;
+    column-gap: 0.85rem;
+    border-bottom: 1px solid $SeparatorColor;
+    @include mobile {
+      height: 5rem;
+      flex-wrap: wrap;
+    }
+    select {
+      height: 2rem;
+      width: 8rem;
+      border: none;
+      outline: none;
+      color: $mainHeader;
+      font-family: "dana-fanum";
+      background-color: transparent;
+    }
+    button {
+      @include flex(center);
+      border: none;
+      outline: none;
+      &.first-button {
+        margin-right: 1rem;
+      }
+      svg {
+        height: 0.75rem;
+      }
+    }
+  }
+  &__form {
+    width: 100%;
+    height: calc(100% - 3.8rem);
+    @include mobile {
+      height: calc(100% - 5rem);
+    }
+    textarea {
+      padding: 1.5rem 2rem 0.5rem 2rem;
+      height: 70%;
+      width: 100%;
+      resize: none;
+      border: none;
+      outline: none;
+      font-size: clamp(0.5rem, 1vw + 0.55rem, 1.25rem);
+      font-family: "dana-fanum";
+      color: $lighterHeader;
+      @include mobile {
+        padding: 1rem 1rem 0.5rem 1rem;
+      }
+      &::placeholder {
+        color: $lighterHeader;
+      }
+    }
+    div {
+      @include flex(center, flex-end);
+      padding: 0 0 1rem 1rem;
+      height: 30%;
+      button {
+        height: clamp(2rem, 2vw + 2rem, 3rem);
+        width: clamp(5rem, 2vw + 7rem, 10rem);
+        font-family: 700;
+        font-size: clamp(0.75rem, 1vw + 0.65rem, 1.1rem);
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: $lighterBackground;
+        background-color: $purpleColor;
+      }
+    }
+  }
+}

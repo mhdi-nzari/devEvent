@@ -454,7 +454,7 @@
         height: 2.1rem;
         border: 2px solid $orangeColor;
         border-radius: 0 0.57rem 0.75rem 1rem;
-        transition: all 250ms;
+        @include transition(all 250ms ease-in-out);
         &:active {
           background-color: $orangeColor;
           svg {

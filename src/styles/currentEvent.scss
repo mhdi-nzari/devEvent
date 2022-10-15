@@ -189,8 +189,9 @@
         @include flex(flex-start, space-between);
         flex-wrap: wrap;
         margin-top: 1.5rem;
+        padding: 0 2.5%;
         height: 9.75rem;
-        width: 95%;
+        width: 100%;
         &__item,
         .item {
           @include flex(center);

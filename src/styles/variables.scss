@@ -17,6 +17,27 @@ $overlayBackground: #f4f4f4;
 $commentBG: #ebebeb;
 $boxShadow: 0px 16px 50px rgba(0, 0, 0, 0.08);
 
+$enable-transitions: true !default;
+$transition-base: all 600ms ease-in-out !default;
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      -webkit-transition: $transition-base;
+      -moz-transition: $transition-base;
+      -ms-transition: $transition-base;
+      -o-transition: $transition-base;
+      transition: $transition-base;
+    } @else {
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -ms-transition: $transition;
+      -o-transition: $transition;
+      transition: $transition;
+    }
+  }
+}
+
 @mixin flex($align: flex-start, $justify: flex-start, $direction: row, $wrap: nowrap) {
   display: flex;
   align-items: $align;

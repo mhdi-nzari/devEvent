@@ -23,6 +23,7 @@
       }
     }
   }
+
   .container__content {
     @include flex(center, space-between);
     margin: clamp(1.25rem, 2vw + 0.75rem, 3rem) 0 5rem 0;

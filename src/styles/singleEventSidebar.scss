@@ -16,7 +16,7 @@
     content: "";
     position: absolute;
     inset: -0.375rem auto auto 50%;
-    width: 60%;
+    width: 50%;
     height: 0.75rem;
     border-radius: 1rem;
     transform: translate(-50%);
@@ -26,7 +26,7 @@
     content: "";
     position: absolute;
     inset: calc(100% - 0.375rem) auto auto 50%;
-    width: 60%;
+    width: 50%;
     height: 0.75rem;
     border-radius: 1rem;
     transform: translate(-50%);
@@ -62,7 +62,7 @@
       color: $mainHeader;
       border-radius: 6px;
       border: 1px solid $purpleColor;
-      transition: all 250ms;
+      @include transition(all 250ms ease-in-out);
       &:active {
         color: $lighterBackground;
         background-color: $purpleColor;
@@ -170,14 +170,15 @@
         }
       }
       button {
+        @include transition(all 250ms ease-in-out);
         position: absolute;
         inset: auto auto 0 0;
         width: 2rem;
         height: 2rem;
         border: 2px solid $orangeColor;
         border-radius: 0 0.57rem 0.75rem 1rem;
-        transition: all 250ms;
-        &:active {
+
+        &:hover {
           background-color: $orangeColor;
           svg {
             path {
@@ -212,6 +213,7 @@
       }
     }
     button {
+      @include transition(all 250ms ease-in-out);
       position: absolute;
       inset: 0 auto auto 0;
       width: 27.5%;
@@ -222,7 +224,6 @@
       color: $lighterBackground;
       border-radius: 1rem 0 2.5rem 1rem;
       background-color: $orangeColor;
-      transition: all 250ms;
       &:active {
         color: $orangeColor;
         border: 2px solid $orangeColor;

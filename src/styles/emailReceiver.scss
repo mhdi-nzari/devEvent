@@ -141,7 +141,7 @@
           margin-left: -4rem;
           width: 2.25rem;
           opacity: 0;
-          transition: all 250ms;
+          @include transition(all 250ms ease-in-out);
         }
       }
       &:hover {
