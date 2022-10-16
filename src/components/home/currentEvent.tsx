@@ -26,19 +26,19 @@ function CurrentEvent() {
 
         <div className="container__content content">
           <div className="content__header header">
-            <span className="badge">
+            <span className="notch">
               <b />
               <b />
             </span>
-            <span className="badge">
+            <span className="notch">
               <b />
               <b />
             </span>
-            <span className="badge">
+            <span className="notch">
               <b />
               <b />
             </span>
-            <span className="badge">
+            <span className="notch">
               <b />
               <b />
             </span>
