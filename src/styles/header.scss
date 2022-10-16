@@ -4,6 +4,7 @@
 .header__container {
   @include flex(center);
   column-gap: clamp(0.5rem, 2vw, 1rem);
+
   img {
     width: clamp(1.55rem, 4vw, 2.1rem);
   }

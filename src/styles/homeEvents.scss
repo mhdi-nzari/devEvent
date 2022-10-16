@@ -1,12 +1,13 @@
 @import "variables";
 @import "mediaQueries";
 
-.events {
+.events,
+.home__events {
   margin: 10rem auto 5rem auto;
   @include mobile {
     margin: 10rem auto 2rem auto;
   }
-  &__container {
+  .events__container {
     @include flex(center, space-between, row, wrap);
     margin: 2rem auto 0 auto;
     width: 95%;
@@ -51,7 +52,7 @@
         position: relative;
         width: 95%;
         height: 15rem;
-        transition: all 500ms ease-out;
+        @include transition(all 500ms ease-out);
         &__space {
           position: absolute;
           top: 0;
@@ -104,7 +105,7 @@
         &:hover .header--hover {
           opacity: 1;
           backdrop-filter: blur(7px);
-          transition: all 500ms ease-out;
+          @include transition(all 500ms ease-out);
         }
         .header--hover,
         .hover {
@@ -117,7 +118,7 @@
           opacity: 0;
           border-radius: 1.25rem;
           backdrop-filter: blur(0);
-          transition: all 500ms ease-out;
+          @include transition(all 500ms ease-out);
           button {
             @include flex(center, center);
             position: relative;
@@ -206,11 +207,9 @@
             }
           }
           span {
+            @include ThreeDotsOverflow;
             max-width: 80%;
             height: clamp(0.85rem, 1vw + 0.85rem, 1.4rem);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
             &.free {
               margin-left: 2.5rem;
             }

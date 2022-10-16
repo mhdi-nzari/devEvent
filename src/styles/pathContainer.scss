@@ -24,7 +24,7 @@
         display: none;
       }
       path {
-        transition: all 1s;
+        @include transition(all 1s);
       }
       &.link__icon-home {
         width: 1.2rem;
@@ -39,7 +39,7 @@
       }
     }
     a {
-      transition: all 1s;
+      @include transition(all 1s);
     }
     &:hover {
       a {

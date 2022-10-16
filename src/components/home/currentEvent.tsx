@@ -26,8 +26,22 @@ function CurrentEvent() {
 
         <div className="container__content content">
           <div className="content__header header">
-            <b />
-            <b />
+            <span className="badge">
+              <b />
+              <b />
+            </span>
+            <span className="badge">
+              <b />
+              <b />
+            </span>
+            <span className="badge">
+              <b />
+              <b />
+            </span>
+            <span className="badge">
+              <b />
+              <b />
+            </span>
             <img src={EventImage} alt="" className="content__header__image" />
             <figcaption>رویداد Dev Summit</figcaption>
             <summary>{caption.length >= 110 ? caption.slice(0, 128) + "..." : caption}</summary>

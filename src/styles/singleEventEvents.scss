@@ -32,7 +32,7 @@
         border-radius: 10px;
         box-shadow: $boxShadow;
         background-color: $lighterBackground;
-        transition: all 500ms;
+        @include transition(all 500ms);
         &:first-child {
           svg {
             rotate: -180deg;
@@ -53,11 +53,12 @@
   }
   &__container,
   .container {
-    all: unset;
     @include flex(center, space-between, wrap);
     margin: 2rem auto 0 auto;
     height: 34rem;
-    flex-wrap: wrap !important;
+    @include tablet {
+      margin-top: 0;
+    }
     .swiper-slide {
       @include flex(center, space-between);
       width: 100%;
@@ -92,7 +93,7 @@
         position: relative;
         width: 92.5%;
         height: 12.5rem;
-        transition: all 500ms ease-out;
+        @include transition(all 500ms ease-out);
         &__image {
           position: absolute;
           top: 0;
@@ -150,13 +151,11 @@
             width: 100%;
           }
           span {
+            @include ThreeDotsOverflow;
             width: 75%;
             height: 1.2rem;
             font-weight: 700;
             font-size: 0.85rem;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
           }
         }
       }
@@ -165,6 +164,7 @@
         width: 100%;
         padding: 0 5%;
         button {
+          width: 90%;
           height: 2rem;
           font-size: 0.85rem;
           border-radius: 0.5rem;

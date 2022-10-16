@@ -11,7 +11,7 @@ body {
   overflow: hidden;
 }
 .app {
-  transition: all 500ms;
+  @include transition(all 500ms);
 }
 @media screen and (min-width: 1920px) {
   .app {

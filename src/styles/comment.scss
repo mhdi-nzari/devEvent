@@ -59,14 +59,12 @@
           column-gap: clamp(0.45rem, 0.5vw + 0.45rem, 0.9rem);
           flex-shrink: 1;
           h3 {
+            @include ThreeDotsOverflow;
             margin-left: 1.5rem;
             max-width: 50%;
             height: clamp(0.75rem, 1vw + 1.125rem, 2rem);
             font-size: clamp(0.75rem, 1vw + 0.75rem, 1.5rem);
             font-weight: 400;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
             color: $lightHeader;
           }
           time,

@@ -141,6 +141,7 @@
     padding: 6rem 1rem 0 1rem;
   }
   .sidebar {
+    padding: 0.75rem 0.25rem;
     width: 22.5%;
     border-radius: 10px;
     box-shadow: $boxShadow;
@@ -168,7 +169,7 @@
       color: $mainHeader;
       border-bottom: 2px solid #eeeeee;
       overflow: hidden;
-      transition: all 1s;
+      @include transition(all 1s);
       &:last-child {
         border-bottom: none;
       }
@@ -338,14 +339,12 @@
       }
       .banner_content {
         a {
+          @include ThreeDotsOverflow;
           height: 2rem;
           width: 30rem;
           font-weight: 800;
           font-size: 1.5rem;
           color: $lightHeader;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
         }
         h4 {
           @include flex(center);
@@ -360,10 +359,8 @@
             width: 0.85rem;
           }
           span {
+            @include ThreeDotsOverflow;
             color: $lightHeader;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
           }
         }
         .content_details {
@@ -515,7 +512,7 @@
           position: relative;
           width: 92.5%;
           height: 12.5rem;
-          transition: all 500ms ease-out;
+          @include transition(all 500ms ease-out);
           .header-image {
             position: absolute;
             top: 0;
@@ -571,13 +568,11 @@
               width: 100%;
             }
             span {
+              @include ThreeDotsOverflow;
               width: 75%;
               height: 1.2rem;
               font-weight: 700;
               font-size: 0.85rem;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
             }
           }
         }

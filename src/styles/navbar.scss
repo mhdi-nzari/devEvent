@@ -9,7 +9,7 @@
   height: 7rem;
   width: 100%;
   z-index: 5;
-  transition: all 500ms;
+  @include transition(all 500ms);
   box-shadow: $boxShadow;
   background-color: $lighterBackground;
   @include tablet {
@@ -49,7 +49,7 @@
         a {
           position: relative;
           color: $lighestHeader;
-          transition: all 500ms;
+          @include transition(all 500ms);
           &.active {
             color: $mainHeader;
             &::before {
@@ -78,7 +78,7 @@
       width: 3.25em;
       border-radius: 10px;
       border: 1px solid $SeparatorColor;
-      transition: all 1s;
+      @include transition(all 1s);
       svg {
         height: 1.5rem;
       }
@@ -91,7 +91,7 @@
         @include flex(center, space-between, row-reverse);
         position: relative;
         padding: 0 0.5rem;
-        transition: all 1s;
+        @include transition(all 1s);
         overflow: hidden;
         svg {
           position: relative;
