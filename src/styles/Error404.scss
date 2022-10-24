@@ -1,0 +1,124 @@
+@import "variables";
+@import "mediaQueries";
+
+.error404 {
+  min-height: 100vh;
+  padding: 8rem 1rem 0 1rem;
+  &__path,
+  .path {
+    @include flex(center);
+    padding: 0 clamp(0.75rem, 0.5vw + 1rem, 1.5rem);
+    height: 4rem;
+    font-size: clamp(0.7rem, 1.15vw + 0.25rem, 1.1rem);
+    column-gap: clamp(0.5rem, 0.5vw + 0.75rem, 1.25rem);
+    border-radius: 0.5rem;
+    color: $lighterHeader;
+    box-shadow: $boxShadow;
+    background-color: $lighterBackground;
+    @include mobile {
+      height: 3rem;
+      font-size: clamp(0.6rem, 1.25vw, 0.7rem);
+    }
+    &__link,
+    .link {
+      @include flex(center);
+      column-gap: 0.8rem;
+      svg {
+        width: 1.1rem;
+        path {
+          @include transition(all 1s);
+        }
+        &.link__icon-home {
+          width: 1.2rem;
+        }
+      }
+      &-active {
+        color: $purpleColor;
+      }
+      a {
+        @include transition(all 1s);
+      }
+      &:hover {
+        a {
+          color: $lightHeader;
+        }
+        svg {
+          &.link__icon-home {
+            path {
+              fill: none;
+              stroke: $lightHeader;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__content,
+  .content {
+    @include flex(flex-start, center, column);
+    position: relative;
+    height: 50rem;
+    padding-right: 5rem;
+    @include tablet {
+      padding-right: 2.5rem;
+      height: 40rem;
+    }
+    @include mobile {
+      padding-right: 0;
+      height: 30rem;
+    }
+    &__notFound {
+      @include flex(center);
+      padding: 0 2rem;
+      height: 3.5rem;
+      font-size: clamp(0.5rem, 1vw + 0.5rem, 1.25rem);
+      border-radius: 15px;
+      color: $lighterBackground;
+      background-color: $lighestHeader;
+      @include mobile {
+        height: 2.75rem;
+      }
+    }
+    h1 {
+      margin-top: 1.5rem;
+      color: $darkBlue;
+      font-size: clamp(1.75rem, 0.5rem + 6vw, 4.5rem);
+    }
+    p {
+      color: $lighterHeader;
+      line-height: 2.5rem;
+      font-size: clamp(0.35rem, 1vw + 0.35rem, 1.25rem);
+      @include mobile {
+        line-height: 1.5rem;
+      }
+    }
+    &__redirect {
+      @extend .content__notFound;
+      padding-left: 1.25rem;
+      margin-top: 3rem;
+      column-gap: 1rem;
+      border-radius: 15px;
+      background-color: $purpleColor;
+      @include mobile {
+        margin-top: 1rem;
+      }
+      svg {
+        height: 1.5rem;
+        @include mobile {
+          height: 1rem;
+          width: fit-content;
+        }
+      }
+    }
+    &__image {
+      position: absolute;
+      inset: 0 auto auto -1rem;
+      width: 37.5rem;
+      z-index: -1;
+      margin-top: -4rem;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}

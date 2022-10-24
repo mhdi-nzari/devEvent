@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import HomeLayout from "./pages/home";
 import AnimatedPage from "./components/animatedPage";
 
-import Navbar from "./components/navbar";
 import Events from "./pages/events";
+import Error404 from "./pages/Error404";
 import Event from "./pages/singleEvent";
 import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 
 import "./styles/App.scss";
 
@@ -27,6 +28,7 @@ function App() {
               <Route path=":event" element={<Event />} />
             </Route>
             <Route path="/about" element={<HomeLayout />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </AnimatedPage>
       </div>

@@ -6,16 +6,22 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 7.25rem auto auto clamp(-12.25rem, -11.5rem, -12rem);
+    inset: 7.75rem auto auto -13rem;
     transform: rotate(53.18deg);
-    height: clamp(12.5rem, 20vw, 17rem);
-    width: clamp(12.5rem, 20vw, 17rem);
+    height: 15rem;
+    width: 15rem;
     border-radius: 1.5rem;
     background-color: $purpleColor;
     opacity: 0.5;
     outline: $SeparatorColor solid 0.5rem;
     @media screen and (min-width: 1800px) {
       display: none;
+    }
+    @include tablet {
+      inset: 6.75rem auto auto -14rem;
+    }
+    @include mobile {
+      inset: 6.75rem auto auto -15rem;
     }
   }
 }

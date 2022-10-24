@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
 
-// const animations = {
-//   initial: { opacity: 0, scale: 0.1 },
-//   animate: { opacity: 1, scale: 1 },
-//   exit: { opacity: 1, scale: 0 },
-// };
-
 const animations = {
   initial: { opacity: 0, scale: 0.85 },
   animate: { opacity: 1, scale: 1 },

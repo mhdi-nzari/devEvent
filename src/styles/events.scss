@@ -4,49 +4,69 @@
 .events {
   margin-top: 0;
   &_header {
-    margin: 0;
-    position: relative;
     @include center;
+    position: relative;
+    margin: 0;
+    width: 100vw;
     height: 47rem;
     text-align: center;
     color: $lighterBackground;
     background-color: $orangeColor;
     background-image: url("../assets/icons/events-calendar.svg");
-    background-position: 50% 25%;
     background-repeat: no-repeat;
+    background-position: 50% 25%;
     background-size: 85%;
-    width: 100vw;
+    @include tablet {
+      margin-top: 5rem;
+      height: fit-content;
+      padding: 2rem 1.75rem;
+      background-image: none;
+    }
     span {
       margin-bottom: 2rem;
-      font-size: 1.5rem;
       font-weight: 700;
+      font-size: clamp(0.85rem, 1vw + 0.25rem, 1.5rem);
       color: $mainHeader;
+      @include tablet {
+        margin-bottom: 0.75rem;
+      }
     }
     h2 {
       font-weight: 900;
       font-size: 2.5rem;
+      font-size: clamp(0.9rem, 1vw + 1rem, 2.5rem);
     }
     p {
       margin-top: 1rem;
       width: 70%;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: clamp(1rem, 1vw + 0.5rem, 2rem);
       color: #dedede;
+      @include tablet {
+        display: none;
+      }
     }
     img {
       margin-top: 4rem;
       width: 15%;
+      @include tablet {
+        margin-top: 1.5rem;
+        width: 6.5rem;
+      }
     }
   }
   .header_filter {
     padding: 2.5rem 5%;
-    width: 80%;
-    margin-right: 10%;
+    width: 75rem;
+    margin-right: 50%;
     height: fit-content;
-    transform: translateY(-50%);
+    transform: translate(50%, -50%);
     background-image: url("../assets/filterbar.png");
     background-position: center;
     background-size: 100%;
+    @media screen and (max-width: 1168px) {
+      display: none;
+    }  
     .filter_menu {
       @include flex(center);
       column-gap: 1rem;
@@ -115,6 +135,12 @@
     width: 100vw;
     height: 22rem;
     background-color: $lighterBackground;
+    @media screen and (max-width: 1168px) {
+      margin-top: 0;
+    }
+    @include tablet {
+      display: none;
+    }
     h3 {
       font-size: 2rem;
       font-weight: 1000;

@@ -4,7 +4,7 @@ import ArrowOutlineIcon from "../assets/icons/arrow-outline.svg";
 
 import "../styles/pathContainer.scss";
 
-function PathContainer({ eventName }: { eventName?: string }) {
+function PathContainer({ eventName,  }: { eventName?: string }) {
   return (
     <section className="path__container">
       <div className="path__container__link link">

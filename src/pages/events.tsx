@@ -214,7 +214,7 @@ function Events() {
                 {Array.apply(0, new Array(4))
                   .slice(0, 3)
                   .map((item, index) => (
-                    <button>
+                    <button key={index}>
                       <img src={hamyarSpace} alt="" key={index} />
                     </button>
                   ))}
@@ -264,8 +264,8 @@ function Events() {
               </span>
             </div>
             <div className="events_box">
-              {Array.apply(0, new Array(5)).map(() => (
-                <div className="events_box_content">
+              {Array.apply(0, new Array(5)).map((item, index) => (
+                <div className="events_box_content" key={index}>
                   <div className="content__header">
                     <img src={hamyarSpace} alt="" className="header-image" />
                     <div className="header__header__container">

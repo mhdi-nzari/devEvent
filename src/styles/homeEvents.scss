@@ -186,10 +186,10 @@
       &__caption,
       .caption {
         @include flex();
+        margin-top: 1.25rem;
+        padding: 0 2.5%;
         flex-wrap: wrap;
-        margin: clamp(0rem, 2vw, 1.5rem) auto 0 auto;
         height: 7rem;
-        width: 95%;
         &__item,
         .item {
           @include flex(center);
@@ -227,17 +227,12 @@
         }
       }
       &__button {
-        @include flex(center, center);
-        width: 100%;
+        padding: 0 2.5%;
         button {
-          width: 85%;
           height: 2rem;
           font-weight: 900;
           font-size: clamp(0.65rem, 2vw, 0.85rem);
           border-radius: 0.5rem;
-          @include mobile {
-            width: 75vw !important;
-          }
         }
       }
     }
