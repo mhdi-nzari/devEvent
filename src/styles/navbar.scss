@@ -3,21 +3,28 @@
 
 .nav {
   @include flex(center, space-between);
+  @include transition(all 500ms);
   position: fixed;
   inset: 0 0 auto auto;
   padding: 0 2.5rem;
   height: 7rem;
   width: 100%;
   z-index: 5;
-  @include transition(all 500ms);
   box-shadow: $boxShadow;
   background-color: $lighterBackground;
-  @include tablet {
-    display: none;
+  @include mobile {
+    padding: 0 1.125rem;
   }
   div,
   ul {
     @include flex(center);
+  }
+  &__menuIcon {
+    width: 1.5rem;
+    display: none;
+    @include tablet {
+      display: flex;
+    }
   }
   &__right {
     &__logo {
@@ -38,6 +45,17 @@
         width: 4px;
         border-radius: 5px;
         background-color: $SeparatorColor;
+        @include tablet {
+          display: none;
+        }
+      }
+      @include mobile {
+        figcaption {
+          font-size: 1rem;
+        }
+        img {
+          width: 3.5rem;
+        }
       }
     }
     &__menu {
@@ -66,6 +84,9 @@
             color: $mainHeader;
           }
         }
+      }
+      @include tablet {
+        display: none !important;
       }
     }
   }
@@ -143,8 +164,11 @@
           animation: wave 750ms infinite;
         }
       }
-      &:last-child {
-        display: none;
+      @include tablet {
+        &:first-child,
+        &:nth-child(2) {
+          display: none;
+        }
       }
       &.notification {
         position: relative;
@@ -177,4 +201,248 @@
   100% {
     transform: rotate(0deg);
   }
+}
+.nav__closer {
+  position: fixed;
+  inset: 0 0 auto auto;
+  height: 100vh;
+  width: 100vw;
+  display: none !important;
+  z-index: 5;
+  @include tablet {
+    display: block !important;
+  }
+}
+.mobile {
+  position: fixed;
+  inset: 0 0 auto auto;
+  padding: 1.25rem 0.75rem;
+  z-index: 5;
+  width: 19rem;
+  height: 100vh;
+  display: none;
+  transition: transform 300ms;
+  border-radius: 20px 0 0 20px;
+  animation: 300ms navbarSlideIn;
+  background-color: $lighterBackground;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.25);
+  @include tablet {
+    display: block;
+  }
+  @keyframes navbarSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 300ms;
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+      transition: all 300ms;
+    }
+  }
+  &__logo {
+    @include flex(center);
+    column-gap: 0.75rem;
+    img {
+      width: 3rem;
+    }
+    figcaption {
+      font-size: 1.1rem;
+      color: $mainHeader;
+    }
+  }
+  &__closer {
+    @include center;
+    position: absolute;
+    inset: 2.25rem auto auto 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 40%;
+    background-color: $orangeColor;
+    transform: translate(-50%);
+    svg {
+      transform: rotateY(180deg);
+      width: 0.3rem;
+      path {
+        fill: $lighterBackground;
+      }
+    }
+  }
+  &__seprater {
+    margin: 0.5rem 0;
+    height: 0.1rem;
+    width: 100%;
+    background-color: $SeparatorColor;
+  }
+  &__searchBar {
+    @include flex(center);
+    margin-top: 0.5rem;
+    column-gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid $SeparatorColor;
+    border-radius: 10px;
+    button {
+      @include center;
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+    input {
+      color: $lightHeader;
+      &::placeholder {
+        color: $lighestHeader;
+      }
+    }
+  }
+  &__menu,
+  .menu {
+    margin: 1rem auto auto -0.75rem;
+    &__item,
+    .item {
+      @include flex(center);
+      position: relative;
+      column-gap: 0.75rem;
+      height: 3rem;
+      &__icon {
+        @include center;
+        width: 1.9rem;
+        height: 1.9rem;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+        svg {
+          width: 1.1rem;
+          height: 1.25rem;
+        }
+      }
+      h1 {
+        font-size: 0.9rem;
+        color: $lighterHeader;
+        font-weight: 400;
+      }
+    }
+    a.active {
+      &__item,
+      .item {
+        overflow: hidden;
+        h1 {
+          color: $lightHeader;
+        }
+        &:before {
+          content: "";
+          height: 50%;
+          width: 0.3rem;
+          position: absolute;
+          inset: 50% auto auto 0;
+          transform: translateY(-50%);
+          border-radius: 0 1rem 1rem 0;
+          background-color: $purpleColor;
+          animation: 400ms slide-in ease-in;
+          @keyframes slide-in {
+            from {
+              left: -0.5rem;
+            }
+            to {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__otherPages,
+  .otherPages {
+    margin-top: 5rem;
+    &__header,
+    .header {
+      margin: auto -0.25rem 0.75rem auto;
+      @include flex(center);
+      column-gap: 0.5rem;
+      svg {
+        width: 1.75rem;
+      }
+      h1 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $lightHeader;
+      }
+    }
+  }
+  &__footer,
+  .footer {
+    position: absolute;
+    inset: auto 0 0 auto;
+    width: 100%;
+    height: 4rem;
+    box-shadow: $boxShadow;
+    svg {
+      width: 100%;
+      position: absolute;
+      inset: auto 0 0 auto;
+      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+    }
+    &__logout {
+      @include center;
+      position: absolute;
+      inset: 0 auto auto 50%;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 100%;
+      background-color: $orangeColor;
+      transform: translate(-75%, -70%);
+      svg {
+        position: relative;
+        width: 1.1rem;
+      }
+    }
+    &__content,
+    .content {
+      @include flex(center, space-between);
+      padding: 0 1rem;
+      position: absolute;
+      inset: 0 auto 0 auto;
+      width: 100%;
+      height: 100%;
+      &__logo {
+        @include flex(center);
+        width: 90%;
+        column-gap: 0.5rem;
+        h3 {
+          width: 85%;
+          height: 1rem;
+          font-weight: 600;
+          font-size: 0.8rem;
+          color: $lightHeader;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        h4 {
+          width: 85%;
+          height: 0.8rem;
+          font-weight: 600;
+          font-size: 0.6rem;
+          color: $lighterHeader;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      svg {
+        position: relative;
+        width: 10%;
+      }
+    }
+  }
+}
+.navbar-exit {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms;
+}
+.navbar-exit-active {
+  opacity: 0;
+  transition: all 300ms;
+  transform: translateX(100%);
 }
