@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { NavLink } from "react-router-dom";
 
 interface Props {
-  icon: () => ReactElement<SVGAElement>;
+  icon: () => ReactElement<SVGElement>;
   header: string;
   path: string;
   home?: boolean | undefined;
