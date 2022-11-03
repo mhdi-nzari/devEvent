@@ -14,6 +14,7 @@ import Wave from "./../assets/icons/wave.svg";
 
 import "../styles/events.scss";
 import EventPreview from "../components/eventPreview";
+import FilterIcon from "../assets/icons/FilterIcon";
 
 function Events() {
   const DEFAULTCOSTMAX = 750000;
@@ -264,6 +265,10 @@ function Events() {
                 <span>100</span> آیتم توسط جستجو پیدا شد{" "}
               </span>
             </div>
+            <button className="filter__mobileFilterButton">
+              <FilterIcon />
+              <p>فیلتر</p>
+            </button>
             <div className="events_box">
               {Array.apply(0, new Array(5)).map((item, index) => (
                 <EventPreview />

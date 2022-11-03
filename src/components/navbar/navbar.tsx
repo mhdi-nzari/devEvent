@@ -160,25 +160,27 @@ function Navbar() {
             <input type="text" placeholder="اینجا سرچ بزن مثلا : بده بزنیم" />
           </form>
 
-          <ul className="mobile__menu menu">
-            <MobileLink icon={NavMobileHomeIcon} header="صفحه  اصلی" path="/" home />
+          <div className="mobile__links links">
+            <ul className="links__menu menu">
+              <MobileLink icon={NavMobileHomeIcon} header="صفحه  اصلی" path="/" home />
 
-            {links.map((item, index) => (
-              <MobileLink icon={item.icon} header={item.header} path={item.path} key={index} />
-            ))}
+              {links.map((item, index) => (
+                <MobileLink icon={item.icon} header={item.header} path={item.path} key={index} />
+              ))}
 
-            <MobileLink icon={PanelIcon} header="پنل کاربری" path="/panel" />
-            <MobileLink icon={TelePhoneIcon} header="تماس با ما" path="/contact" />
-          </ul>
+              <MobileLink icon={PanelIcon} header="پنل کاربری" path="/panel" />
+              <MobileLink icon={TelePhoneIcon} header="تماس با ما" path="/contact" />
+            </ul>
 
-          <div className="mobile__otherPages otherPages">
-            <div className="otherPages__header header">
-              <OtherPagesOutlineIcon />
-              <h1>صفحات دیگر</h1>
+            <div className="mobile__otherPages otherPages">
+              <div className="otherPages__header header">
+                <OtherPagesOutlineIcon />
+                <h1>صفحات دیگر</h1>
+              </div>
+
+              <MobileLink icon={InfoIcon} header="سوالات متداول" path="/commonquestions" />
+              <MobileLink icon={PanelIcon} header="راهنمای ثبت رویداد" path="/guide" />
             </div>
-
-            <MobileLink icon={InfoIcon} header="سوالات متداول" path="/commonquestions" />
-            <MobileLink icon={PanelIcon} header="راهنمای ثبت رویداد" path="/guide" />
           </div>
           <div className="mobile__footer footer">
             <svg width="360" height="70" viewBox="0 0 360 70" fill="red" xmlns="http://www.w3.org/2000/svg">

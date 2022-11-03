@@ -296,76 +296,79 @@
       }
     }
   }
-  &__menu,
-  .menu {
-    margin: 1rem auto auto -0.75rem;
-    &__item,
-    .item {
-      @include flex(center);
-      position: relative;
-      column-gap: 0.75rem;
-      height: 3rem;
-      &__icon {
-        @include center;
-        width: 1.9rem;
-        height: 1.9rem;
-        border-radius: 5px;
-        background-color: #f4f4f4;
-        svg {
-          width: 1.1rem;
-          height: 1.25rem;
-        }
-      }
-      h1 {
-        font-size: 0.9rem;
-        color: $lighterHeader;
-        font-weight: 400;
-      }
-    }
-    a.active {
+  &__links,
+  .links {
+    &__menu,
+    .menu {
+      margin: 1rem auto auto -0.75rem;
       &__item,
       .item {
-        overflow: hidden;
-        h1 {
-          color: $lightHeader;
+        @include flex(center);
+        position: relative;
+        column-gap: 0.75rem;
+        height: 3rem;
+        &__icon {
+          @include center;
+          width: 1.9rem;
+          height: 1.9rem;
+          border-radius: 5px;
+          background-color: #f4f4f4;
+          svg {
+            width: 1.1rem;
+            height: 1.25rem;
+          }
         }
-        &:before {
-          content: "";
-          height: 50%;
-          width: 0.3rem;
-          position: absolute;
-          inset: 50% auto auto 0;
-          transform: translateY(-50%);
-          border-radius: 0 1rem 1rem 0;
-          background-color: $purpleColor;
-          animation: 400ms slide-in ease-in;
-          @keyframes slide-in {
-            from {
-              left: -0.5rem;
-            }
-            to {
-              left: 0;
+        h1 {
+          font-size: 0.9rem;
+          color: $lighterHeader;
+          font-weight: 400;
+        }
+      }
+      a.active {
+        &__item,
+        .item {
+          overflow: hidden;
+          h1 {
+            color: $lightHeader;
+          }
+          &:before {
+            content: "";
+            height: 50%;
+            width: 0.3rem;
+            position: absolute;
+            inset: 50% auto auto 0;
+            transform: translateY(-50%);
+            border-radius: 0 1rem 1rem 0;
+            background-color: $purpleColor;
+            animation: 400ms slide-in ease-in;
+            @keyframes slide-in {
+              from {
+                left: -0.5rem;
+              }
+              to {
+                left: 0;
+              }
             }
           }
         }
       }
     }
-  }
-  &__otherPages,
-  .otherPages {
-    margin-top: 5rem;
-    &__header,
-    .header {
-      margin: auto -0.25rem 0.75rem auto;
-      @include flex(center);
-      column-gap: 0.5rem;
-      svg {
-        width: 1.75rem;
-      }
-      h1 {
-        font-size: 1rem;
-        font-weight: 400;
-        color: $lightHeader;
+    &__otherPages,
+    .otherPages {
+      margin-top: 5rem;
+      &__header,
+      .header {
+        margin: auto -0.25rem 0.75rem auto;
+        @include flex(center);
+        column-gap: 0.5rem;
+        svg {
+          width: 1.75rem;
+        }
+        h1 {
+          font-size: 1rem;
+          font-weight: 400;
+          color: $lightHeader;
+        }
       }
     }
   }
