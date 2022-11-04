@@ -2,24 +2,32 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+import EventPreview from "../components/eventPreview";
 import AnimatedPage from "../components/animatedPage";
 import LocationRadio from "../components/locationRadio";
 import EventTypeCheckbox from "../components/eventTypeCheckbox";
 import FilterCollpaseExpand from "./../components/filterCollpaseExpand";
+import MobileEventsFilterContainer from "../components/mobileEventsFilterContainer";
 
+import FilterIcon from "../assets/icons/FilterIcon";
 import hamyarLogo from "../assets/mvp/hamyar-logo.png";
 import hamyarSpace from "../assets/mvp/hamyar-space.png";
 
 import Wave from "./../assets/icons/wave.svg";
 
 import "../styles/events.scss";
-import EventPreview from "../components/eventPreview";
-import FilterIcon from "../assets/icons/FilterIcon";
+import { CSSTransition } from "react-transition-group";
 
 function Events() {
   const DEFAULTCOSTMAX = 750000;
 
   const [maxCost, setMaxCost] = useState<number>(DEFAULTCOSTMAX);
+
+  const [isMobileFilterSectionCollapsed, setIsMobileFilterSectionCollapsed] = useState(true);
+
+  const SetMobileSectionFilterCollapsed = () => {
+    setIsMobileFilterSectionCollapsed((prevValue) => !prevValue);
+  };
 
   const MaxCostHandler = (e: any) => {
     setMaxCost(e.target.value);
@@ -265,10 +273,11 @@ function Events() {
                 <span>100</span> آیتم توسط جستجو پیدا شد{" "}
               </span>
             </div>
-            <button className="filter__mobileFilterButton">
+            <button className="filter__mobileFilterButton" onClick={SetMobileSectionFilterCollapsed}>
               <FilterIcon />
               <p>فیلتر</p>
             </button>
+
             <div className="events_box">
               {Array.apply(0, new Array(5)).map((item, index) => (
                 <EventPreview />
@@ -276,6 +285,77 @@ function Events() {
             </div>
           </section>
         </main>
+        <div className="events__mobileFilterBlock mobileFilterBlock">
+          {!isMobileFilterSectionCollapsed && (
+            <button className="mobileFilterBlock__closer" onClick={SetMobileSectionFilterCollapsed} />
+          )}
+          <CSSTransition
+            in={!isMobileFilterSectionCollapsed}
+            timeout={1000}
+            classNames="mobileFilterSection"
+            unmountOnExit
+          >
+            <div className="mobileFilterBlock__content content">
+              <p className="content__header">فیلتر</p>
+              <div className="filter_item" style={{ height: true ? "5rem" : "fit-content" }}>
+                <MobileEventsFilterContainer title="نوع مراسم">
+                  <div className="location_container">
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                    <LocationRadio title="اصفهان" />
+                    <LocationRadio title="یزد" />
+                  </div>
+                </MobileEventsFilterContainer>
+                <MobileEventsFilterContainer title="مکان مراسم">
+                  <div className="type_container">
+                    <div className="type_item">
+                      <input
+                        type="checkbox"
+                        id={"جشنواره"}
+                        value={"جشنواره"}
+                        name={"event_type_filter"}
+                        defaultChecked
+                      />
+                      <label htmlFor={"جشنواره"}>جشنواره</label>
+                    </div>
+                    <EventTypeCheckbox title="رویداد" />
+                    <EventTypeCheckbox title="بوت کمپ آموزشی" />
+                    <EventTypeCheckbox title="دورهمی" />
+                  </div>
+                </MobileEventsFilterContainer>
+                <MobileEventsFilterContainer title="محدوده قیمت">
+                  <div className="cost_container">
+                    <input
+                      type="range"
+                      min="0"
+                      max="1000000"
+                      defaultValue={DEFAULTCOSTMAX}
+                      onChange={MaxCostHandler}
+                      style={{
+                        background: `linear-gradient(90deg, #8D56C3 ${(maxCost * 100) / 1000000}%, #8D56C380 ${
+                          (maxCost * 100) / 1000000
+                        }%)`,
+                      }}
+                    />
+                    <div className="cost_count">{maxCost === 0 ? "رایگان" : `حداکثر تا ${sepratedMaxCost} تومان`}</div>
+                  </div>
+                </MobileEventsFilterContainer>
+              </div>
+            </div>
+          </CSSTransition>
+        </div>
       </div>
     </AnimatedPage>
   );
