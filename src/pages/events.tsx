@@ -296,6 +296,7 @@ function Events() {
             unmountOnExit
           >
             <div className="mobileFilterBlock__content content">
+              <span className="content__closerBadge" onClick={SetMobileSectionFilterCollapsed} />
               <p className="content__header">فیلتر</p>
               <div className="filter_item" style={{ height: true ? "5rem" : "fit-content" }}>
                 <MobileEventsFilterContainer title="نوع مراسم">

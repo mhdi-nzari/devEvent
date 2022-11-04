@@ -748,6 +748,15 @@
           transition: all 1s;
         }
       }
+      &__closerBadge {
+        position: absolute;
+        inset: 1rem auto auto 50%;
+        transform: translateX(-50%);
+        height: 0.25rem;
+        width: 3.5rem;
+        border-radius: 10px;
+        background-color: #dfdede;
+      }
       &__header {
         margin-bottom: 1rem;
         font-weight: 700;
