@@ -224,17 +224,17 @@ function Events() {
                 {Array.apply(0, new Array(4))
                   .slice(0, 3)
                   .map((item, index) => (
-                    <button key={index}>
+                    <Link key={index} to="/events/دورهمی-برنامه-نویسان-بک-اند">
                       <img src={hamyarSpace} alt="" key={index} />
-                    </button>
+                    </Link>
                   ))}
                 {Array.apply(0, new Array(5)).length > 3 ? (
-                  <button className="spaces_more">
+                  <Link className="spaces_more" to="/events/دورهمی-برنامه-نویسان-بک-اند">
                     <img src={hamyarSpace} alt="" />
                     <div className="more_count">
                       <span>3</span>+
                     </div>
-                  </button>
+                  </Link>
                 ) : (
                   "df"
                 )}
@@ -251,14 +251,14 @@ function Events() {
                   <span>03 </span>: <span>07 </span>: <span>15 </span>
                 </time>
               </div>
-              <button className="redirect_button">
+              <Link className="redirect_button" to="/events/دورهمی-برنامه-نویسان-بک-اند">
                 <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M17.939 4.50001C17.939 4.16833 17.6567 3.89944 17.3084 3.89944L8.69129 3.89944L8.69129 2.20612C8.69129 0.378759 6.48935 -0.65349 4.9691 0.461193L1.84063 2.75507C0.638408 3.63656 0.63841 5.36344 1.84063 6.24493L4.96911 8.53881C6.48936 9.65349 8.69129 8.62124 8.69129 6.79387L8.69129 5.10057L17.3084 5.10057C17.6567 5.10057 17.939 4.83169 17.939 4.50001Z"
                     fill="#DA9E03"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
             <div className="filter_header">
               <div>
@@ -353,6 +353,10 @@ function Events() {
                     <div className="cost_count">{maxCost === 0 ? "رایگان" : `حداکثر تا ${sepratedMaxCost} تومان`}</div>
                   </div>
                 </MobileEventsFilterContainer>
+                <div className="content__buttons buttons">
+                  <button className="buttons__submit">تایید</button>
+                  <button className="buttons__reset">لغو فیلتر</button>
+                </div>
               </div>
             </div>
           </CSSTransition>

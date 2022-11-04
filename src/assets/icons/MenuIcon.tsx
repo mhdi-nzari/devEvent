@@ -9,7 +9,7 @@ function MenuIcon({ onClick, className }: { onClick: () => void; className?: str
       onClick={onClick}
       className={className}
     >
-      <path d="M6.5 16L19 16M11.5 1L19 1M1.5 8.5H19" stroke="#2D264B" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M6.5 16L19 16M11.5 1L19 1M1.5 8.5H19" stroke="#2D264B" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 }
